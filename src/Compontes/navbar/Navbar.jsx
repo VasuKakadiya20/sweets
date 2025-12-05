@@ -100,8 +100,8 @@ export default function Navbar() {
                 if (!context.islogin) {
                   e.preventDefault();
                   setOpenAuth(true);
-                  setMenuOpen(!menuOpen)
                 }
+                setMenuOpen(!menuOpen)
               }
             }
               className={({ isActive }) =>
