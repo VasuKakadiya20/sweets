@@ -14,7 +14,7 @@ import UserProfile from "./page/user/user";
 const mycontext = createContext()
 
 function App() {
-  const [islogin ,setislogin] = useState(false)
+  const [islogin ,setislogin] = useState(true)
   const value =({
     islogin,
     setislogin
