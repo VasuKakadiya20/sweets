@@ -124,17 +124,16 @@ export default function ProductPage() {
         }));
     };
 
-    const Addtocart = ()=>{
-         toast.success("Succesfully Item Add to Cart!")
+    const Addtocart = () => {
+        toast.success("Succesfully Item Add to Cart!")
     }
 
     return (
         <>
-           {/* <ToastContainer position="top-right" autoClose={2000} theme="colored" /> */}
-           <Toaster
-  position="top-right"
-  reverseOrder={false}
-/>
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
             <div className=" min-h-screen py-12">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6">
                     {products.map((item) => (
@@ -175,7 +174,7 @@ export default function ProductPage() {
                                         +
                                     </button>
                                 </div>
-                                <button className="bg-[#c19b5a] text-white px-6 py-3 rounded-md text-sm hover:bg-[#a48145] transition" onClick={()=>Addtocart()}>
+                                <button className="bg-[#c19b5a] text-white px-6 py-3 rounded-md text-sm hover:bg-[#a48145] transition" onClick={() => Addtocart()}>
                                     Add to cart
                                 </button>
                             </div>

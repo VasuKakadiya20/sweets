@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import { Link } from "react-router-dom";
 
@@ -115,10 +115,10 @@ function Bestseller() {
             },
         },
     ];
+const randomSix = useMemo(() => {
+  return [...products].sort(() => Math.random() - 0.5).slice(0, 9);
+}, []);
 
-    const randomSix = [...products]
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 9);
 
     const updateQty = (id, amount) => {
         setQuantity((prev) => ({
