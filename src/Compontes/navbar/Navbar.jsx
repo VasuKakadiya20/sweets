@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaShoppingBag } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
 import { FaUserAlt } from "react-icons/fa";
@@ -12,6 +12,7 @@ export default function Navbar() {
   const [opensidebar, setopensidebar] = useState(false)
   const [openAuth, setOpenAuth] = useState(false);
   const context = useContext(mycontext)
+  const navigate = useNavigate();
   const activeLink = "relative text-[#c19b5a] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#c19b5a] border-b-3 border-[#c19b5a]";
   const normalLink = "hover:text-[#c19b5a]";
 
@@ -49,9 +50,9 @@ export default function Navbar() {
               className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:text-[#c19b5a]"
               onClick={() => {
                 if (!context.islogin) {
-                  setOpenAuth(true); // show login popup
+                  setOpenAuth(true);
                 } else {
-                  window.location.href = "/userinfo"; // redirect to profile page
+                  navigate("/userinfo");
                 }
               }}
             >
@@ -77,19 +78,19 @@ export default function Navbar() {
 
         {menuOpen && (
           <ul className="flex flex-col gap-4 mt-4 md:hidden text-lg font-medium">
-            <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+            <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
               HOME
             </NavLink>
 
-            <NavLink to="/items" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+            <NavLink to="/items" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
               ITEMS
             </NavLink>
 
-            <NavLink to="/about" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+            <NavLink to="/about" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
               ABOUT US
             </NavLink>
 
-            <NavLink to="/contect" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+            <NavLink to="/contect" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
               CONTACTS
             </NavLink>
 
