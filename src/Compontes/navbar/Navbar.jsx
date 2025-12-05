@@ -100,8 +100,10 @@ export default function Navbar() {
                 if (!context.islogin) {
                   e.preventDefault();
                   setOpenAuth(true);
+                  setMenuOpen(!menuOpen)
                 }
-              }}
+              }
+            }
               className={({ isActive }) =>
                 !context.islogin
                   ? normalLink
@@ -113,7 +115,7 @@ export default function Navbar() {
               ACCOUNT
             </NavLink>
 
-            <NavLink to="/cart" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+            <NavLink to="/cart" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
               Cart
             </NavLink>
           </ul>
