@@ -25,7 +25,7 @@ export default function IndianSweetsSection() {
             </p>
 
             <a
-              href="/"
+              href="/items"
               className="inline-block mt-6 bg-[#c19b5a] text-white px-8 py-3 text-sm font-medium rounded hover:bg-[#a48145] transition duration-300"
             >
               Shop Now
