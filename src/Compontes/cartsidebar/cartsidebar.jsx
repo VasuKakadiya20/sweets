@@ -70,7 +70,7 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                                         <img src={item.img.image1} alt={item.name} className="w-20 h-20 border" />
                                         <div className="flex flex-col flex-1">
                                             <h3 className="font-semibold text-sm">{item.name}</h3>
-                                            <p className="text-xs text-gray-500">Weight: {item.weight}</p>
+                                            {/* <p className="text-xs text-gray-500">Weight: {item.weight}</p> */}
                                             <p className="text-sm font-semibold mt-1">₹ {item.price}</p>
 
                                             <div className="flex items-center gap-3 mt-2">
