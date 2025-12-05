@@ -25,7 +25,7 @@ function Footer() {
             <div className="space-y-2 text-gray-400 text-sm">
               <p><span className="font-semibold text-[#c19b5a]"><FaPhoneAlt /></span> +1 800 123 456 78</p>
               <p><span className="font-semibold text-[#c19b5a]"><FaMapMarkerAlt /></span> 5 Rue Dalou, 75015 Paris</p>
-              <p><span className="font-semibold text-[#c19b5a]"><FaEnvelope /></span> estiene@mail.com</p>
+              <p><span className="font-semibold text-[#c19b5a]"><FaEnvelope /></span> Info@Dairy.com</p>
             </div>
           </div>
 
@@ -33,16 +33,16 @@ function Footer() {
             <h3 className="text-xl text-[#c19b5a] font-semibold">Latest Posts</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <img src="https://crems.like-themes.com/wp-content/uploads/2019/06/gallery-02-1024x1024.jpg" alt="Post 1" className="w-16 h-16 object-cover rounded" />
+                <img src="https://www.anandsweets.in/cdn/shop/products/Doodhpeda.png?v=1740398096&width=713" alt="Post 1" className="w-16 h-16 object-cover rounded" />
                 <div>
-                  <p className="text-xs text-[#c19b5a] uppercase">Mava Kaju</p>
+                  <p className="text-xs text-[#c19b5a]">Special Doodh Peda</p>
                   <p className="text-sm">This is Our Most Selling Product</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <img src="https://crems.like-themes.com/wp-content/uploads/2019/06/gallery-01-e1597251883779.jpg" alt="Post 2" className="w-16 h-16 object-cover rounded" />
+                <img src="https://www.anandsweets.in/cdn/shop/products/KajuKatli.png?v=1747477294&width=493" alt="Post 2" className="w-16 h-16 object-cover rounded" />
                 <div>
-                  <p className="text-xs text-[#c19b5a] uppercase">Mava Bdam</p>
+                  <p className="text-xs text-[#c19b5a] uppercase">Kaju Katli</p>
                   <p className="text-sm">This is Our Most Selling Product</p>
                 </div>
               </div>
@@ -53,6 +53,7 @@ function Footer() {
         <div className=" border-t border-gray-800 pt-3 text-center text-gray-500 text-sm">
           &copy; 2025 Dairy. All Rights Reserved.
         </div>
+
       </footer>
     </>
   )

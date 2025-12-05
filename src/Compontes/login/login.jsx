@@ -50,7 +50,7 @@ export default function AuthDialog({ open, setOpen }) {
         <CloseIcon />
       </IconButton>
 
-      <div className="px-4 py-4 w-[450px]">
+      <div className="px-4 py-4 md:w-[450px]">
         <Tabs
           value={tab}
           onChange={(e, newVal) => setTab(newVal)}

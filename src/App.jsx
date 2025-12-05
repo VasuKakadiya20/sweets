@@ -9,8 +9,8 @@ import Items from "./page/Items/items";
 import Footer from "./Compontes/Footer/footer";
 import Detailpage from "./page/detailpage/detail";
 import CartPage from "./page/cart/cart";
-import LoginPage from "./page/login/login";
 import { createContext, useState } from "react";
+import UserProfile from "./page/user/user";
 const mycontext = createContext()
 
 function App() {
@@ -52,8 +52,8 @@ function App() {
             element={<CartPage/>}
             />
             <Route 
-            path="/login"
-            element={<LoginPage/>}
+            path="/userinfo"
+            element={<UserProfile/>}
             />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

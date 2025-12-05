@@ -47,10 +47,17 @@ export default function Navbar() {
           <div className="hidden md:flex items-center">
             <button
               className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:text-[#c19b5a]"
-              onClick={() => setOpenAuth(true)}
+              onClick={() => {
+                if (!context.islogin) {
+                  setOpenAuth(true); // show login popup
+                } else {
+                  window.location.href = "/userinfo"; // redirect to profile page
+                }
+              }}
             >
               <FaUserAlt className="h-10" />
             </button>
+
 
             <button className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:text-[#c19b5a]" onClick={() => setopensidebar(true)}>
               <FaShoppingBag className="h-10" />
@@ -86,6 +93,25 @@ export default function Navbar() {
               CONTACTS
             </NavLink>
 
+            <NavLink
+              to={context.islogin ? "/userinfo" : "/login-placeholder"}
+              onClick={(e) => {
+                if (!context.islogin) {
+                  e.preventDefault();
+                  setOpenAuth(true);
+                }
+              }}
+              className={({ isActive }) =>
+                !context.islogin
+                  ? normalLink
+                  : isActive
+                    ? activeLink
+                    : normalLink
+              }
+            >
+              ACCOUNT
+            </NavLink>
+
             <NavLink to="/cart" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
               Cart
             </NavLink>
@@ -95,7 +121,7 @@ export default function Navbar() {
       </nav>
       {
         context.islogin === false && (
-          <AuthDialog open={openAuth}  setOpen={setOpenAuth} />
+          <AuthDialog open={openAuth} setOpen={setOpenAuth} />
         )
       }
     </>

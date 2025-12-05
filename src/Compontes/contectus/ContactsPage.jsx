@@ -66,7 +66,7 @@ export default function ContactsPage() {
               <FaEnvelope className="text-[#c19b5a] text-xl" />
               <div>
                 <h4 className="font-semibold">Email</h4>
-                <p className="text-gray-600 text-sm">estiene@mail.com</p>
+                <p className="text-gray-600 text-sm">Info@Dairy.com</p>
               </div>
             </div>
 

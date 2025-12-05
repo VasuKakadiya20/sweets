@@ -36,7 +36,7 @@ export default function ProductPage() {
         },
         {
             id: 4,
-            name: "Anand Mysore Pak",
+            name: "Kaju Katli",
             price: 280,
             img: {
                 image1: "https://www.anandsweets.in/cdn/shop/products/KajuKatli.png?v=1747477294&width=493",
@@ -90,7 +90,7 @@ export default function ProductPage() {
         },
         {
             id: 10,
-            name: "Anand Mysore Pak",
+            name: "Kaju Katli",
             price: 280,
             img: {
                 image1: "https://www.anandsweets.in/cdn/shop/products/KajuKatli.png?v=1747477294&width=493",
