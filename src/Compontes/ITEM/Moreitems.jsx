@@ -4,28 +4,33 @@ import { Link } from "react-router-dom";
 
 function Relatedproduct() {
     const [quantity, setQuantity] = useState({});
-
     const products = [
         {
-            id: 3,
-            name: "Anand Mysore Pak",
-            price: 280,
-            image1: "https://www.anandsweets.in/cdn/shop/products/KajuKatli.png?v=1747477294&width=493",
-            image2: "https://www.anandsweets.in/cdn/shop/files/Kaju_Katli_BOP.png?v=1747477294&width=493",
-        },
-        {
-            id: 5,
-            name: "Coconut Burfi",
-            price: 260,
-            image1: "https://www.anandsweets.in/cdn/shop/products/Coconutburfi.png?v=1752650243&width=493",
-            image2: "https://www.anandsweets.in/cdn/shop/files/coco-barfi.png?v=1752650243&width=713",
-        },
-        {
-            id: 6,
-            name: "California Badam Halwa",
+            id: 2,
+            name: "Motichoor Laddu",
             price: 230,
-            image1: "https://www.anandsweets.in/cdn/shop/files/BadamHalwaTinFront.jpg?v=1716457083&width=1946",
-            image2: "https://www.anandsweets.in/cdn/shop/products/badamHalwa.png?v=1716457083&width=990",
+            img: {
+                image1: "https://www.anandsweets.in/cdn/shop/files/Laddu_f08f1645-4330-4433-a58c-a1acefe0357e.png?v=1741338627&width=713",
+                image2: "https://www.anandsweets.in/cdn/shop/products/MotichurLaddu_1.png?v=1741338627&width=713",
+            },
+        },
+        {
+            id: 4,
+            name: "Kaju Katli",
+            price: 280,
+            img: {
+                image1: "https://www.anandsweets.in/cdn/shop/products/KajuKatli.png?v=1747477294&width=493",
+                image2: "https://www.anandsweets.in/cdn/shop/files/Kaju_Katli_BOP.png?v=1747477294&width=493",
+            },
+        },
+        {
+            id: 9,
+            name: "Anjeer Dry Fruit Burfi",
+            price: 230,
+            img: {
+                image1: "https://www.anandsweets.in/cdn/shop/products/Figberry-Sugar-Free.jpg?v=1752650579&width=493",
+                image2: "https://www.anandsweets.in/cdn/shop/files/Anjeer_Dry_Fruit_Burfi_Nutrition.png?v=1741338515&width=713",
+            },
         },
     ];
 
@@ -35,10 +40,11 @@ function Relatedproduct() {
             [id]: Math.max(1, (prev[id] || 1) + amount),
         }));
     };
+    
     const addtocart = () => {
         toast.success("Succesfully Item Add to Cart !")
     }
-    
+
     return (
         <>
             <Toaster
@@ -56,13 +62,13 @@ function Relatedproduct() {
                             <Link to={`/items/${item.id}`}>
                                 <div className="relative w-full h-72 flex justify-center items-center group cursor-pointer">
                                     <img
-                                        src={item.image1}
+                                        src={item.img.image1}
                                         alt={item.name}
                                         className="absolute w-auto h-full object-contain transition-opacity duration-500 opacity-100 group-hover:opacity-0"
                                     />
 
                                     <img
-                                        src={item.image2}
+                                        src={item.img.image2}
                                         alt="Hover"
                                         className="absolute w-auto h-full object-contain opacity-1 transition-opacity duration-500 group-hover:opacity-100"
                                     />

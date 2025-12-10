@@ -115,9 +115,9 @@ function Bestseller() {
             },
         },
     ];
-const randomSix = useMemo(() => {
-  return [...products].sort(() => Math.random() - 0.5).slice(0, 9);
-}, []);
+    const randomSix = useMemo(() => {
+        return [...products].sort(() => Math.random() - 0.5).slice(0, 9);
+    }, []);
 
 
     const updateQty = (id, amount) => {
@@ -127,16 +127,16 @@ const randomSix = useMemo(() => {
         }));
     };
 
-       const Addtocart = ()=>{
-         toast.success("Succesfully Item Add to Cart!")
+    const Addtocart = () => {
+        toast.success("Succesfully Item Add to Cart!")
     }
 
     return (
         <>
-         <Toaster
-  position="top-right"
-  reverseOrder={false}
-/>
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
             <div className=" min-h-screen py-12">
                 <h1 className='text-center text-3xl font-bold pb-5 text-[#c19b5a] '>Best Sellers</h1>
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6">
@@ -181,7 +181,7 @@ const randomSix = useMemo(() => {
                                     </button>
                                 </div>
 
-                                <button className="bg-[#c19b5a] text-white px-6 py-3 rounded-md text-sm hover:bg-[#a48145] transition" onClick={()=>Addtocart()}>
+                                <button className="bg-[#c19b5a] text-white px-6 py-3 rounded-md text-sm hover:bg-[#a48145] transition" onClick={() => Addtocart()}>
                                     Add to cart
                                 </button>
                             </div>

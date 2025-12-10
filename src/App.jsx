@@ -11,10 +11,14 @@ import Detailpage from "./page/detailpage/detail";
 import CartPage from "./page/cart/cart";
 import { createContext, useState } from "react";
 import UserProfile from "./page/user/user";
+import AddClient from "./Compontes/addItem/addItemFrom";
+
 const mycontext = createContext()
 
 function App() {
-  const [islogin ,setislogin] = useState(false)
+  const [islogin, setislogin] = useState(() => {
+    return localStorage.getItem("islogin") === "true";
+  });
   const value =({
     islogin,
     setislogin
@@ -54,6 +58,10 @@ function App() {
             <Route 
             path="/userinfo"
             element={<UserProfile/>}
+            />
+            <Route
+            path="/item"
+            element={<AddClient/>}
             />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

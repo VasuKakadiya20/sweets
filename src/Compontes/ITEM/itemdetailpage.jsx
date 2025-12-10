@@ -27,16 +27,16 @@ function Itemdetailpage() {
     }));
   };
 
-    const Addtocart = ()=>{
-         toast.success("Succesfully Item Add to Cart!")
-    }
+  const Addtocart = () => {
+    toast.success("Succesfully Item Add to Cart!")
+  }
 
   return (
     <>
       <Toaster
-  position="top-right"
-  reverseOrder={false}
-/>
+        position="top-right"
+        reverseOrder={false}
+      />
       {products.map((item) => (
         <div key={item.id} className="max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-10">
 
@@ -78,7 +78,7 @@ function Itemdetailpage() {
                 </button>
               </div>
 
-              <button className="bg-[#c19b5a] text-white px-6 py-3 rounded-md text-sm hover:bg-[#a48145] transition" onClick={()=>Addtocart()}>
+              <button className="bg-[#c19b5a] text-white px-6 py-3 rounded-md text-sm hover:bg-[#a48145] transition" onClick={() => Addtocart()}>
                 Add to Cart
               </button>
             </div>

@@ -2,59 +2,25 @@ import React, { useState } from "react";
 import { FaStar, FaCheckCircle } from "react-icons/fa";
 import Rating from '@mui/material/Rating';
 import Addreviewfrom from "./addreviewfrom";
+import { useEffect } from "react";
+import { fetchDataFromApi } from "../../../api";
 
 
 function Reviewsection() {
-
   const [rating, setRating] = useState(0);
   const [showfrom, setshowfrom] = useState(false)
-  const [clientreview, setclientreview] = useState([
-    {
-      id: 1,
-      rating: 3,
-      date: "11/21/2025",
-      name: "Jayapal Kandala",
-      title: "Special Boondi Laddu",
-      message: "Fresh and Excellent taste"
-    },
-    {
-      id: 2,
-      rating: 3.5,
-      date: "11/24/2025",
-      name: "Prakhar Singh",
-      title: "GOOD",
-      message: "Very Good"
-    },
-    {
-      id: 3,
-      rating: 1.5,
-      date: "11/19/2025",
-      name: "SHAILESH",
-      title: "Mysore Pak",
-      message: "It was delicious."
-    },
-    {
-      id: 4,
-      rating: 4.5,
-      date: "11/06/2025",
-      name: "Anita Deane",
-      title: "Anand Mysore pak",
-      message: "It was delicious."
-    },
-    {
-      id:5,
-      rating:1,
-      date:"12/04/2025",
-      name:"Hitesh Nimavat",
-      title:"Not good",
-      message:"The packing was not good at retail store we got steel box inside which the small square cubes of sweets were wrapped in polythene bags but I received through Courrier was a plastic box and all sweets was melted and had become one big square due to heat all the square cubes were melted I am not happy with the packing of the parcel very much disappointed"
-    }
-  ])
+  const [clientreview, setclientreview] = useState([])
+
+  useEffect(()=>{
+    fetchDataFromApi("/review/").then((data)=>{
+      // console.log("Review Data:-",data)
+      setclientreview(data)
+    })
+  },[]) 
 
   const totalReviews = clientreview.length;
   const avgRating =
-    clientreview.reduce((sum, r) => sum + r.rating, 0) / totalReviews;
-
+    clientreview.reduce((sum, r) => sum + r.Rating, 0) / totalReviews;
   const starCounts = {
     5: 0,
     4: 0,
@@ -63,12 +29,10 @@ function Reviewsection() {
     1: 0,
   };
 
-
   clientreview.forEach((r) => {
-    const rounded = Math.ceil(r.rating);
+    const rounded = Math.ceil(r.Rating);
     starCounts[rounded] += 1;
   });
-
 
   const starData = [5, 4, 3, 2, 1].map((star) => {
     const count = starCounts[star];
@@ -121,43 +85,42 @@ function Reviewsection() {
                 </button>
               )
             }
-            {
+            {/* {
               showfrom && (
                 <button className="px-4 py-2 rounded hover:bg-[#c19b5a] hover:text-white border-2 border-[#c19b5a]" onClick={() => { setshowfrom(false) }}>
                   Cancel Review
                 </button>
               )
-            }
+            } */}
           </div>
 
         </div>
         <Addreviewfrom showfrom={showfrom} setshowfrom={setshowfrom} />
 
         <div className="space-y-10 mt-3">
-          {clientreview.sort((a, b) => new Date(b.date) - new Date(a.date)).map((item, index) => (
+          {clientreview.sort((a, b) => new Date(b.Date) - new Date(a.Date)).map((item, index) => (
             <div className="border-b pb-6" key={item.id}>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
-                  <span className="text-lg font-semibold"> {item.name.charAt(0)}</span>
+                  <span className="text-lg font-semibold"> {item.Name.charAt(0)}</span>
                 </div>
                 <div>
                   <div className="flex gap-2">
-                    <Rating name="read-only" value={item.rating} readOnly />
-                    <p className="text-gray-600 text-sm">{item.date}</p>
+                    <Rating name="read-only" value={item.Rating} readOnly />
+                    <p className="text-gray-600 text-sm">{item.Date}</p>
                   </div>
 
                   <div className="flex items-center gap-2 mt-2">
                     <span className="bg-black text-white text-xs px-2 py-1 rounded">
                       Verified
                     </span>
-                    <p className="font-medium">{item.name}</p>
+                    <p className="font-medium">{item.Name}</p>
                   </div>
                 </div>
               </div>
-
-
-              <p className="mt-3 font-medium">{item.title}</p>
-              <p className="text-gray-700 text-sm mt-1">{item.message}</p>
+              
+              <p className="mt-3 font-medium">{item.Review_Title}</p>
+              <p className="text-gray-700 text-sm mt-1">{item.Review_msg}</p>
             </div>
           ))
           }

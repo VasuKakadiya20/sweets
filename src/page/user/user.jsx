@@ -1,29 +1,59 @@
-import React, { useState } from "react";
+import React, { useState,useEffect,useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { fetchDataFromApi, updatedata } from "../../../api";
+import { FaSignOutAlt } from "react-icons/fa";
+import { mycontext } from "../../App";
+import { useNavigate } from "react-router-dom";
 
 export default function UserProfile() {
     const [editing, setEditing] = useState(false);
-
+    const context = useContext(mycontext)
+    const Navigate = useNavigate()
     const [form, setForm] = useState({
-        firstName: "test",
-        lastName: "test",
-        phone: "9876543210",
-        email: "test@example.com",
-        landmark: "Near City Mall",
-        pincode: "380001",
-        city: "Ahmedabad",
-        state: "Gujarat",
-        password: "test1234",
+        Firstname: "",
+        Lastname: "",
+        phonenumber: "",
+        Email: "",
+        Landmark: "",
+        Pin_Code: "",
+        City: "",
+        State: "",
+        password: "*******",
     });
+    const id = localStorage.getItem("username")
+
+    useEffect(() => {
+        fetchDataFromApi(`/client/${id}`).then((data) => {
+            console.log("this is a user data:-", data);
+            setForm(data)
+        })
+    }, [])
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    const handleSave = () => {
-        setEditing(false);
-        toast.success("Profile Updated Successfully!");
+    const handleSave = async (e) => {
+        e.preventDefault();
+        try {
+            const res = await updatedata(`/client/${id}`, form)
+            console.log("this is a data", res)
+            setEditing(false);
+            toast.success("Profile Updated Successfully!");
+        } catch (error) {
+            console.log(err.response?.data?.msg)
+        }
     };
+
+    const logout = async () => {
+        toast.success("Logout Successfully!")
+        context.setislogin(false)
+        localStorage.removeItem("username")
+        localStorage.removeItem("islogin")
+        setTimeout(()=>{
+        Navigate("/")
+    },2000)
+    }
 
     const handleCancel = () => {
         setEditing(false);
@@ -38,16 +68,23 @@ export default function UserProfile() {
             <div className="max-w-3xl mx-auto bg-white shadow-xl p-10 rounded-3xl mt-10 mb-10">
                 <div className="flex justify-between items-center mb-8">
                     <h2 className="text-2xl font-bold text-[#c19b5a] border-l-4 border-[#c19b5a] pl-4">Your Profile</h2>
-
-                    {!editing && (
+                    <div className="">
                         <button
-                            onClick={() => setEditing(true)}
-                            className="px-5 py-2 bg-[#c19b5a] text-white rounded-full hover:bg-[#b28e4f]"
+                            onClick={() => logout()}
+                            className="px-5 py-2 bg-[#c19b5a] text-white rounded-full hover:bg-[#b28e4f] mr-3 gap-2"
                         >
-                            Edit
+                            <FaSignOutAlt className="mr-2 text-base" />
+                            Logout
                         </button>
-                    )}
-
+                        {!editing && (
+                            <button
+                                onClick={() => setEditing(true)}
+                                className="px-5 py-2 bg-[#c19b5a] text-white rounded-full hover:bg-[#b28e4f]"
+                            >
+                                Edit
+                            </button>
+                        )}
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -56,8 +93,8 @@ export default function UserProfile() {
                         <input
                             disabled={!editing}
                             type="text"
-                            name="firstName"
-                            value={form.firstName}
+                            name="Firstname"
+                            value={form.Firstname}
                             onChange={handleChange}
                             placeholder="First Name"
                             className={`
@@ -75,8 +112,8 @@ export default function UserProfile() {
                         <input
                             disabled={!editing}
                             type="text"
-                            name="lastName"
-                            value={form.lastName}
+                            name="Lastname"
+                            value={form.Lastname}
                             onChange={handleChange}
                             placeholder="Last Name"
                             className={`
@@ -94,8 +131,8 @@ export default function UserProfile() {
                         <input
                             disabled={!editing}
                             type="text"
-                            name="phone"
-                            value={form.phone}
+                            name="phonenumber"
+                            value={form.phonenumber}
                             onChange={handleChange}
                             placeholder="Phone Number"
                             className={`
@@ -113,8 +150,8 @@ export default function UserProfile() {
                         <input
                             disabled={!editing}
                             type="text"
-                            name="email"
-                            value={form.email}
+                            name="Email"
+                            value={form.Email}
                             onChange={handleChange}
                             placeholder="Email"
                             className={`
@@ -132,8 +169,8 @@ export default function UserProfile() {
                         <input
                             disabled={!editing}
                             type="text"
-                            name="landmark"
-                            value={form.landmark}
+                            name="Landmark"
+                            value={form.Landmark}
                             onChange={handleChange}
                             placeholder="Landmark"
                             className={`
@@ -151,8 +188,8 @@ export default function UserProfile() {
                         <input
                             disabled={!editing}
                             type="text"
-                            name="pincode"
-                            value={form.pincode}
+                            name="Pin_Code"
+                            value={form.Pin_Code}
                             onChange={handleChange}
                             placeholder="Pin Code"
                             className={`
@@ -170,8 +207,8 @@ export default function UserProfile() {
                         <input
                             disabled={!editing}
                             type="text"
-                            name="city"
-                            value={form.city}
+                            name="City"
+                            value={form.City}
                             onChange={handleChange}
                             placeholder="City"
                             className={`
@@ -189,8 +226,8 @@ export default function UserProfile() {
                         <input
                             disabled={!editing}
                             type="text"
-                            name="state"
-                            value={form.state}
+                            name="State"
+                            value={form.State}
                             onChange={handleChange}
                             placeholder="State"
                             className={`
@@ -209,7 +246,7 @@ export default function UserProfile() {
                             disabled={!editing}
                             type="text"
                             name="password"
-                            value={editing ? form.password : "******"}
+                            value={form.password}
                             onChange={handleChange}
                             className={`
                             w-full px-4 py-3 rounded-full border 
