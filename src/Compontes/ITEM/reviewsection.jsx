@@ -13,14 +13,13 @@ function Reviewsection() {
 
   useEffect(()=>{
     fetchDataFromApi("/review/").then((data)=>{
-      // console.log("Review Data:-",data)
       setclientreview(data)
     })
   },[]) 
 
   const totalReviews = clientreview.length;
-  const avgRating =
-    clientreview.reduce((sum, r) => sum + r.Rating, 0) / totalReviews;
+  const avgRating = clientreview.reduce((sum, r) => sum + r.Rating, 0) / totalReviews;
+
   const starCounts = {
     5: 0,
     4: 0,
