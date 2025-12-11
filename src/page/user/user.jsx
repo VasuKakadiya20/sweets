@@ -246,7 +246,7 @@ export default function UserProfile() {
                             disabled={!editing}
                             type="text"
                             name="password"
-                            value={form.password}
+                          value={editing ? form.password : "******"}
                             onChange={handleChange}
                             className={`
                             w-full px-4 py-3 rounded-full border 
@@ -271,7 +271,7 @@ export default function UserProfile() {
                                 onClick={handleCancel}
                                 className="px-8 py-3 border-1 border-[#c19b5a] text-[#c19b5a] rounded-full "
                             >
-                                Cancel{/*hover:bg-[#c19b5a] hover:text-white */}
+                                Cancel
                             </button>
                         </div>
                     )}

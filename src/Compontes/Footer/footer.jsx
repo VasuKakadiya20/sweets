@@ -10,7 +10,7 @@ function Footer() {
           <div className="space-y-4">
             <h2 className="text-2xl font-serif text-[#c19b5a]">Dairy</h2>
             <p className="text-gray-400 text-sm">
-              Etiam consequat sem ullamcorper, euismod metus sit amet, tristique justo. Vestibulum mattis, nisi ut.
+             Crafting premium Indian sweets with tradition and love. Freshly made every day for unforgettable taste.
             </p>
             <div className="flex space-x-4 mt-2">
               <a href="https://x.com/" className="hover:text-[#c19b5a]"><FaTwitter /></a>
