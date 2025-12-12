@@ -9,7 +9,7 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
     const userid = localStorage.getItem('username')
     useEffect(() => {
         fetchDataFromApi(`/Cart/`).then((res) => {
-            console.log("this is a cart data:-", res)
+            // console.log("this is a cart data:-", res)
             setCartItems(res)
         })
     }, [])

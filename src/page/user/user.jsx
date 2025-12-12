@@ -21,10 +21,11 @@ export default function UserProfile() {
         password: "*******",
     });
     const id = localStorage.getItem("username")
+    console.log("id",id)
 
     useEffect(() => {
         fetchDataFromApi(`/client/${id}`).then((data) => {
-            console.log("this is a user data:-", data);
+            // console.log("this is a user data:-", data);
             setForm(data)
         })
     }, [])
@@ -37,7 +38,7 @@ export default function UserProfile() {
         e.preventDefault();
         try {
             const res = await updatedata(`/client/${id}`, form)
-            console.log("this is a data", res)
+            // console.log("this is a data", res)
             setEditing(false);
             toast.success("Profile Updated Successfully!");
         } catch (error) {
