@@ -136,7 +136,7 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                                     <span>Subtotal</span>
                                     <span>₹ {subtotal}</span>
                                 </div>
-                                <Link to="/checkoutsecond">
+                                <Link to="/Checkout">
                                     <button className="w-full py-3 bg-[#c19b5a] text-white rounded-md font-medium" onClick={() => setopensidebar(false)}>
                                         Check out
                                     </button>
