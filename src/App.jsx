@@ -11,6 +11,8 @@ import Detailpage from "./page/detailpage/detail";
 import CartPage from "./page/cart/cart";
 import { createContext, useState } from "react";
 import UserProfile from "./page/user/user";
+import Checkout from "./page/checkout/checkout";
+import Checkoutp from "./page/Checkout2/Checkout2";
 
 const mycontext = createContext()
 
@@ -57,6 +59,14 @@ function App() {
             <Route 
             path="/userinfo"
             element={<UserProfile/>}
+            />
+            <Route
+            path="/Checkout"
+            element={<Checkout/>}
+            />
+            <Route
+            path="/Checkoutsecond"
+            element={<Checkoutp/>}
             />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

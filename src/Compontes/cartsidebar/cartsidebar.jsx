@@ -92,7 +92,7 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                                 userCartItems.map((item, index) => (
                                     <div key={index} className="mb-6 flex gap-4">
                                         <Link to={`/items/${item.itemid}`}>
-                                        <img src={item.itemimg} alt={item.producttitle} className="w-20 h-20 border" />
+                                            <img src={item.itemimg} alt={item.producttitle} className="w-20 h-20 border" />
                                         </Link>
                                         <div className="flex flex-col flex-1">
                                             <h3 className="font-semibold text-sm">{item.producttitle}</h3>
@@ -136,10 +136,11 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                                     <span>Subtotal</span>
                                     <span>₹ {subtotal}</span>
                                 </div>
-
-                                <button className="w-full py-3 bg-[#c19b5a] text-white rounded-md font-medium">
-                                    Check out
-                                </button>
+                                <Link to="/checkoutsecond">
+                                    <button className="w-full py-3 bg-[#c19b5a] text-white rounded-md font-medium" onClick={() => setopensidebar(false)}>
+                                        Check out
+                                    </button>
+                                </Link>
 
                                 <Link to="/cart"><button className="w-full text-sm underline mt-2" onClick={() => setopensidebar(false)}>
                                     View Cart

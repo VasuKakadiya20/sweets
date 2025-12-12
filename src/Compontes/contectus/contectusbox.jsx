@@ -27,7 +27,7 @@ function Contectusbox() {
                         ></textarea>
                         <button
                             type="submit"
-                            className="md:col-span-2 mx-auto border border-[#c19b5a] text-[#c19b5a] rounded-full px-8 py-3 hover:bg-[#c19b5a] hover:text-white transition "
+                            className="md:col-span-2 mx-auto border-1 border-[#c19b5a] text-[#c19b5a] rounded-full px-8 py-3 hover:bg-[#c19b5a] hover:text-white transition "
                         >
                             SUBMIT
                         </button>

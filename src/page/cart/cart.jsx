@@ -131,10 +131,11 @@ const CartPage = () => {
             <p className="text-sm text-gray-500 mt-1 font-bold">
               Tax included. Shipping calculated at checkout.
             </p>
-
-            <button className="mt-6 bg-[#C19B3B] text-white w-full py-3 rounded-md font-semibold transition hover:opacity-90">
-              CHECK OUT
-            </button>
+            <Link to='/checkout'>
+              <button className="mt-6 bg-[#C19B3B] text-white w-full py-3 rounded-full font-semibold transition hover:opacity-90">
+                CHECK OUT
+              </button>
+            </Link>
           </div>
         </div>
       </div>
