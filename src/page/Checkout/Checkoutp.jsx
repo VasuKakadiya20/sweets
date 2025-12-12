@@ -1,5 +1,5 @@
 import React from 'react'
-import CheckoutPage from '../../Compontes/Checkout2/checkout'
+import CheckoutPage from '../../Compontes/Checkout/checkout'
 
 function Checkoutp() {
   return (

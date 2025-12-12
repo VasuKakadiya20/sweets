@@ -1,6 +1,6 @@
 import React from 'react'
-import Userinfocheck from '../../Compontes/Checkout/userinfo'
-import Checkoutitem from '../../Compontes/Checkout/item'
+import Userinfocheck from '../../Compontes/Checkout2/userinfo'
+import Checkoutitem from '../../Compontes/Checkout2/item'
 
 function Checkout() {
   return (

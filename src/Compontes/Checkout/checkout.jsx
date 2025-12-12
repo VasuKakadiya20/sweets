@@ -35,6 +35,16 @@ export default function CheckoutPage() {
     });
   }, []);
 
+   const removeItem = (_id) => {
+        Deletedata(`/Cart/${_id}`).then((res) => {
+            toast.success("Item Remove to Cart !")
+            fetchDataFromApi(`/Cart/${userid}`).then((res) => {
+                console.log("this is a cart data:-", res)
+                setItems(res)
+            })
+        })
+    };
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -176,6 +186,7 @@ export default function CheckoutPage() {
                 <div>
                   <p className="font-medium">{item.producttitle}</p>
                   <p className="text-sm text-gray-500">₹ {item.price}</p>
+                  <button onClick={()=> removeItem(item._id)} className="text-sm underline">Remove</button>
                 </div>
               </div>
               <div className="flex items-center gap-2">

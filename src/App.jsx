@@ -11,8 +11,8 @@ import Detailpage from "./page/detailpage/detail";
 import CartPage from "./page/cart/cart";
 import { createContext, useState } from "react";
 import UserProfile from "./page/user/user";
-import Checkout from "./page/checkout/checkout";
-import Checkoutp from "./page/Checkout2/Checkout2";
+import Checkout from "./page/checkout2/checkout";
+import Checkoutp from "./page/Checkout/Checkoutp";
 
 const mycontext = createContext()
 
@@ -62,11 +62,11 @@ function App() {
             />
             <Route
             path="/Checkout"
-            element={<Checkout/>}
+            element={<Checkoutp />}
             />
             <Route
             path="/Checkoutsecond"
-            element={<Checkoutp/>}
+            element={<Checkout/>}
             />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
