@@ -223,7 +223,7 @@ export default function UserProfile() {
                     </div>
 
                     <div>
-                        <label className="text-gray-600 text-sm mb-1 block">State</label>
+                        <label className="text-gray-600 text-sm mb-1 block">Street address</label>
                         <input
                             disabled={!editing}
                             type="text"
