@@ -47,7 +47,7 @@ const CartPage = () => {
   const removeItem = (_id) => {
     Deletedata(`/Cart/${_id}`).then((res) => {
       toast.success("Item Remove to Cart !")
-      fetchDataFromApi(`/Cart/${id}`).then((res) => {
+      fetchDataFromApi(`/Cart/${userid}`).then((res) => {
         console.log("this is a cart data:-", res)
         setItems(res)
       })
