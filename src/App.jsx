@@ -54,7 +54,7 @@ function App() {
             />
             <Route 
             path="/cart"
-            element={<CartPage/>}
+            element={islogin ? <CartPage/> :<Home />}
             />
             <Route 
             path="/userinfo"
@@ -62,7 +62,7 @@ function App() {
             />
             <Route
             path="/Checkout"
-            element={<Checkoutp />}
+            element={islogin ? <Checkoutp /> : <Home/>}
             />
             <Route
             path="/Checkoutsecond"

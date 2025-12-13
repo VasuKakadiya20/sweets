@@ -9,7 +9,6 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
     const userid = localStorage.getItem('username')
     useEffect(() => {
         fetchDataFromApi(`/Cart/`).then((res) => {
-            // console.log("this is a cart data:-", res)
             setCartItems(res)
         })
     }, [])
@@ -50,15 +49,12 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
         Deletedata(`/Cart/${_id}`).then((res) => {
             toast.success("Item Remove to Cart !")
             fetchDataFromApi(`/Cart/${id}`).then((res) => {
-                console.log("this is a cart data:-", res)
                 setCartItems(res)
             })
         })
     };
 
     const userCartItems = cartItems.filter(item => item.userid === userid);
-
-
     const subtotal = userCartItems.reduce((sum, item) => sum + item.price * item.qty, 0);
 
     return (
@@ -83,7 +79,6 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                         </div>
 
                         <div className="flex-1 overflow-y-auto p-6">
-
                             {userCartItems.length === 0 ? (
                                 <div className="text-gray-700 text-sm">
                                     <p className='font-bold mb-2'>Your cart is currently empty.</p>
@@ -97,7 +92,6 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                                         <div className="flex flex-col flex-1">
                                             <h3 className="font-semibold text-sm">{item.producttitle}</h3>
                                             <p className="text-sm font-semibold mt-1">₹ {item.price}</p>
-
                                             <div className="flex items-center gap-3 mt-2">
                                                 <button
                                                     onClick={() => updateQty(item._id, "dec")}
@@ -119,7 +113,6 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                                                 </button>
                                             </div>
                                         </div>
-
                                     </div>
                                 ))
                             )}
@@ -127,7 +120,6 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                                 <img src={cartsvg} alt="delivery" className="w-4" />
                                 <span>Delivered fresh in 2–3 days</span>
                             </div>
-
                         </div>
 
                         {userCartItems.length !== 0 && (
@@ -148,7 +140,6 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                                 </Link>
                             </div>
                         )}
-
                     </div>
                 </>
             )}

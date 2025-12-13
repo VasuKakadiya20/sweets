@@ -6,8 +6,6 @@ import { fetchDataFromApi, Deletedata } from "../../../api";
 import { mycontext } from "../../App";
 
 export default function CheckoutPage() {
-  const context = useContext(mycontext);
-
   const [items, setItems] = useState([]);
   const [form, setForm] = useState({
     Firstname: "",

@@ -11,12 +11,8 @@ function Aboutuspage() {
         <>
             <div className="contact-banner">
                 <div className="overlay"></div>
-
-                {/* <div className="wave-top"></div> */}
-
                 <div className="content">
                     <h1>About us</h1>
-
                     <div className="breadcrumb">
                         <a href="/" className="text-[#c19b5a] font-bold text-sm">Home</a>
                         <span className="font-bold text-sm text-white">//</span>
@@ -29,7 +25,6 @@ function Aboutuspage() {
                 <h1 className="text-3xl md:text-4xl font-bold text-[#c19b5a] mb-4 "> 
                     Excellence in Every Morsel
                 </h1>
-
                 <p className="text-gray-600 md:text-lg mb-8 text-sm">
                     For over 3 decades, Dairy has grown to be synonymous with premium quality Indian Sweets. It has created a niche
                     for itself for being one of the most premium and giftable brands in Surat today.
@@ -48,7 +43,6 @@ function Aboutuspage() {
                             Quality that delights, In every bite.
                         </p>
                         <br />
-
                         <p className="text-gray-600 md:text-lg mb-8 text-sm">
                             Over decades, Dairy has grown to be synonymous with premium quality Indian sweets. Using technique, skill and science, our mithai artisans have
                             perfected our recipes, packaging and processes. At hygienic, state- of the - art making facility we mould over 30,000 kgs of sweets everyday to
@@ -56,7 +50,6 @@ function Aboutuspage() {
                             the country go into making every bite.
                         </p>
                     </div>
-
                     <div className="relative">
                         <img
                             src={img1}
@@ -76,18 +69,15 @@ function Aboutuspage() {
                             className="rounded-lg w-full object-cover shadow-md"
                         />
                     </div>
-
                     <div>
                         <p className="text-sm font-semibold tracking-widest text-[#c19b5a] mb-2 border-l-4 border-[#c19b5a] pl-3">
                             About Us
                         </p>
                         <br />
-
                         <h2 className="text-3xl font-serif font-bold text-gray-900 leading-snug mb-4">
                             Taste of<br />
                             Royal India
                         </h2>
-
                         <p className="text-gray-600 md:text-lg mb-8 text-sm">
                             Dairy owes its success to its know-how that is the culmination of tradition, innovation and uncompromising quality. The dynamism
                             of Dairy is also the result of it’s unrelenting quest to restyle and update its product range, packaging , to cater to the changing demographic and dynamics of changing India.
@@ -103,20 +93,16 @@ function Aboutuspage() {
                             Our Philosophy
                         </p>
                         <br />
-
                         <h2 className="text-3xl font-serif font-bold text-gray-900 leading-snug mb-4">
                             Luxurious Mithais,<br />
                             Accessible To Everyone
                         </h2>
-
                         <p className="text-gray-600 md:text-lg mb-8 text-sm">
                             We are obsessed with authenticity and believe in curating flavours that suit your taste and your celebrations.
                             The sweet smelling saffron in our Malpua we get from Kashmir, and the melt-in-your-mouth paneer in our savouries
                             from Delhi - because great taste can never have boundaries.
                         </p>
-
                     </div>
-
                     <div className="relative">
                         <img
                             src={img3}

@@ -20,8 +20,6 @@ function Bestseller() {
         return [...product].sort(() => Math.random() - 0.5).slice(0, 9);
     }, [product]);
 
-
-
     const updateQty = (_id, amount) => {
         setQuantity((prev) => ({
             ...prev,
@@ -113,7 +111,6 @@ function Bestseller() {
                         ))}
                     </div>
                 </div>
-
             </div>
         </>
     )
