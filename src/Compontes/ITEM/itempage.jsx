@@ -15,7 +15,7 @@ export default function ProductPage() {
     useEffect(() => {
         fetchDataFromApi("/Item/").then((res) => {
             setproduct(res)
-            console.log("this is a Item", res)
+            
         })
     }, [])
 
