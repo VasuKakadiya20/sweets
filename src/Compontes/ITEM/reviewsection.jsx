@@ -44,9 +44,7 @@ function Reviewsection() {
     <>
       <div className="max-w-5xl mx-auto py-10 px-4">
         <h2 className="text-3xl font-bold mb-6">Customer Reviews</h2>
-
         <div className="flex flex-col md:flex-row md:items-start gap-20 border-b pb-6">
-
           <div>
             <div className="flex items-center gap-1 text-yellow-500 text-xl">
               <Rating value={avgRating} precision={0.5} readOnly />
@@ -92,7 +90,6 @@ function Reviewsection() {
               )
             } */}
           </div>
-
         </div>
         <Addreviewfrom showfrom={showfrom} setshowfrom={setshowfrom} />
 
@@ -108,7 +105,6 @@ function Reviewsection() {
                     <Rating name="read-only" value={item.Rating} readOnly />
                     <p className="text-gray-600 text-sm">{item.Date}</p>
                   </div>
-
                   <div className="flex items-center gap-2 mt-2">
                     <span className="bg-black text-white text-xs px-2 py-1 rounded">
                       Verified
@@ -117,14 +113,12 @@ function Reviewsection() {
                   </div>
                 </div>
               </div>
-              
               <p className="mt-3 font-medium">{item.Review_Title}</p>
               <p className="text-gray-700 text-sm mt-1">{item.Review_msg}</p>
             </div>
           ))
           }
         </div>
-
       </div>
     </>
   )

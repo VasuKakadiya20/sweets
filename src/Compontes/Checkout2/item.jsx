@@ -6,15 +6,14 @@ import { Link } from "react-router-dom";
 
 function Checkoutitem() {
     const [items, setItems] = useState([]);
-
     const userid = localStorage.getItem('username')
+    
     useEffect(() => {
         fetchDataFromApi(`/Cart/`).then((res) => {
             console.log("this is a cart data:-", res)
             setItems(res)
         })
     }, [])
-
 
     const removeItem = (_id) => {
         Deletedata(`/Cart/${_id}`).then((res) => {
@@ -30,7 +29,6 @@ function Checkoutitem() {
     const subtotal = userCartItems.reduce((sum, item) => sum + item.qty * item.price, 0);
     const shippingCharge = 100;
     const total = subtotal + shippingCharge;
-
 
     return (
         <>

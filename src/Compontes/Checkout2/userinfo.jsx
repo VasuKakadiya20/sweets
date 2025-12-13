@@ -189,7 +189,6 @@ export default function Userinfocheck() {
       required
                         />
                     </div>
-
                 </div>
             </div>
             

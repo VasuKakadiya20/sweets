@@ -92,7 +92,6 @@ export default function ContactsPage() {
                 <Link to={"https://www.instagram.com/"}><FaInstagram className="text-lg" /></Link>
               </button>
             </div>
-
           </div>
         </div>
       </section>

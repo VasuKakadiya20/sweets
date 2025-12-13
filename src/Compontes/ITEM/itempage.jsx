@@ -73,7 +73,6 @@ export default function ProductPage() {
                                         alt={item.itemtitle}
                                         className="absolute w-auto h-full object-contain transition-opacity duration-500 opacity-100 group-hover:opacity-0"
                                     />
-
                                     <img
                                         src={item.images[1]}
                                         alt={item.itemtitle}
@@ -105,7 +104,6 @@ export default function ProductPage() {
                                 >
                                     Add to cart
                                 </button>
-
                             </div>
                         </div>
                     ))}

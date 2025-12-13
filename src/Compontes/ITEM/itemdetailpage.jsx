@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 import { fetchDataFromApi, postData } from '../../../api';
 import { mycontext } from '../../App';
 
-
 function Itemdetailpage() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -51,8 +50,7 @@ const Addtocart = async (product) => {
   }
 };
 
-
-  if (!product) return <div>Loading...</div>;
+  if (!product) return <div className='text-2xl text-center mt-20 text-[#c19b5a]'>Loading...</div>;
 
   return (
     <>
@@ -81,12 +79,9 @@ const Addtocart = async (product) => {
           </div>
         </div>
 
-
         <div>
           <h2 className="text-2xl font-semibold text-gray-800">{product.itemtitle}</h2>
           <div className="text-xl font-bold text-[#c19b5a] mt-2">₹ {product.price}</div>
-
-
           <div className="flex gap-3 mt-4">
             <div className="flex items-center border border-gray-300 rounded-md">
               <button className="px-3 py-2 text-lg" onClick={() => updateQty(-1)}>−</button>
@@ -102,7 +97,6 @@ const Addtocart = async (product) => {
             </button>
           </div>
 
-
           <div className="mt-8">
             <h3 className="text-lg font-semibold mb-2">Description</h3>
             <p className="text-gray-600">{product.Description}</p>
@@ -116,7 +110,6 @@ const Addtocart = async (product) => {
             </p>
           </div>
         </div>
-
       </div>
     </>
   );

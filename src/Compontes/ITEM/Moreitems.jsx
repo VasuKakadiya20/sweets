@@ -9,6 +9,7 @@ function Relatedproduct() {
     const [quantity, setQuantity] = useState({});
     const [product, setproduct] = useState([])
     const context = useContext(mycontext)
+
     useEffect(() => {
         fetchDataFromApi("/Item/").then((res) => {
             setproduct(res)
@@ -19,7 +20,6 @@ function Relatedproduct() {
         if (!product || product.length === 0) return [];
         return [...product].sort(() => Math.random() - 0.5).slice(0, 3);
     }, [product]);
-
 
     const updateQty = (_id, amount) => {
         setQuantity((prev) => ({
@@ -33,7 +33,6 @@ function Relatedproduct() {
           try {
               const userid = localStorage.getItem("username");
               const qty = quantity[item._id] || 1;
-  
               const cartData = {
                   userid: userid,
                   itemid: item._id,
@@ -76,14 +75,12 @@ function Relatedproduct() {
                                         alt={item.name}
                                         className="absolute w-auto h-full object-contain transition-opacity duration-500 opacity-100 group-hover:opacity-0"
                                     />
-
                                     <img
                                         src={item.images[1]}
                                         alt="Hover"
                                         className="absolute w-auto h-full object-contain opacity-1 transition-opacity duration-500 group-hover:opacity-100"
                                     />
                                 </div>
-
                                 <h3 className="text-gray-900 font-medium mt-4 text-center">{item.itemtitle}</h3>
                                 <p className="text-gray-700 text-sm font-semibold text-center">₹ {item.price}</p>
                             </Link>
@@ -103,7 +100,6 @@ function Relatedproduct() {
                                         +
                                     </button>
                                 </div>
-
                                 <button className="bg-[#c19b5a] text-white px-6 py-3 rounded-md text-sm hover:bg-[#a48145] transition"
                                 onClick={() => Addtocart(item)}
                                 >
@@ -112,7 +108,6 @@ function Relatedproduct() {
                             </div>
                         </div>
                     ))}
-
                 </div>
             </div>
         </>

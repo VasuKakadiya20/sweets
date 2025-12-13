@@ -13,7 +13,6 @@ function Addreviewfrom({ showfrom, setshowfrom }) {
         Review_msg: ""
     });
     const [rating, setRating] = useState(4);
-
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
@@ -110,8 +109,7 @@ function Addreviewfrom({ showfrom, setshowfrom }) {
 
                     <button className="px-5 py-2 rounded text-[#c19b5a] hover:bg-[#c19b5a] hover:text-white border-2 border-[#c19b5a] ml-3" onClick={() => { setshowfrom(false) }}>
                         Cancel Review
-                    </button>
-                    
+                    </button>     
                 </form>
             )}
         </>
