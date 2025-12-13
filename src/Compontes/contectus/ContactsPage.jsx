@@ -50,7 +50,7 @@ export default function ContactsPage() {
               <FaMapMarkerAlt className="text-[#c19b5a] text-xl" />
               <div>
                 <h4 className="font-semibold">Location</h4>
-                <p className="text-gray-600 text-sm">5 Rue Dalou, 75015 Paris</p>
+                <p className="text-gray-600 text-sm"> 34 Gandhi Road,Surat.</p>
               </div>
             </div>
 
@@ -58,7 +58,7 @@ export default function ContactsPage() {
               <FaPhoneAlt className="text-[#c19b5a] text-xl" />
               <div>
                 <h4 className="font-semibold">Phone</h4>
-                <p className="text-gray-600 text-sm">+1 800 123 456 78</p>
+                <p className="text-gray-600 text-sm"> +91 99461 37919</p>
               </div>
             </div>
 
