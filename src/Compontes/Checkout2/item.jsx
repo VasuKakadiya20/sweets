@@ -84,51 +84,6 @@ function Checkoutitem() {
                     </div>
                 ))}
 
-
-                {/* <div className="mt-6 border-t pt-4">
-                    <p className="text-lg font-semibold text-gray-800 mb-3">Shipping</p>
-
-                    <div className="space-y-3 text-gray-700">
-
-                        <label className="flex items-center gap-2 cursor-pointer">
-                            <input
-                                type="radio"
-                                name="shipping"
-                                value="free"
-                                checked={shipping === "free"}
-                                onChange={(e) => setShipping(e.target.value)}
-                                className="accent-[#c19b5a]"
-                            />
-                            Free Shipping (₹0)
-                        </label>
-
-                        <label className="flex items-center gap-2 cursor-pointer">
-                            <input
-                                type="radio"
-                                name="shipping"
-                                value="local"
-                                checked={shipping === "local"}
-                                onChange={(e) => setShipping(e.target.value)}
-                                className="accent-[#c19b5a]"
-                            />
-                            Local Pickup (₹0)
-                        </label>
-
-                        <label className="flex items-center gap-2 cursor-pointer">
-                            <input
-                                type="radio"
-                                name="shipping"
-                                value="flat"
-                                checked={shipping === "flat"}
-                                onChange={(e) => setShipping(e.target.value)}
-                                className="accent-[#c19b5a]"
-                            />
-                            Flat Rate (₹10)
-                        </label>
-
-                    </div>
-                </div> */}
-
                 <div className="mt-10 w-full flex justify-end">
                     <div className="w-full md:w-1/2">
                         <div className="flex items-center justify-between">
@@ -140,7 +95,6 @@ function Checkoutitem() {
                             <p className="text-base font-semibold text-gray-500">Shipping Charge</p>
                             <p className="text-lg font-bold text-gray-800">₹ {shippingCharge}</p>
                         </div>
-
 
                         <div className="flex items-center justify-between mt-3 border-t pt-3">
                             <p className="text-xl font-bold text-gray-900">Total</p>

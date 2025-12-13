@@ -43,16 +43,6 @@ export default function Userinfocheck() {
             <div className="max-w-7xl mx-auto bg-white p-10 rounded-3xl mt-10 mb-10">
                 <div className="flex justify-between items-center mb-8">
                     <h2 className="text-2xl font-bold text-[#c19b5a] border-l-4 border-[#c19b5a] pl-4">Delivery Information</h2>
-                    {/* <div className="">
-                        {!editing && ( 
-                            <button
-                                onClick={() => setEditing(true)}
-                                className="px-5 py-2 bg-[#c19b5a] text-white rounded-full hover:bg-[#b28e4f]"
-                            >
-                                Edit
-                            </button>
-                        )}
-                    </div> */}
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
