@@ -35,15 +35,15 @@ export default function CheckoutPage() {
     });
   }, []);
 
-   const removeItem = (_id) => {
-        Deletedata(`/Cart/${_id}`).then((res) => {
-            toast.success("Item Remove to Cart !")
-            fetchDataFromApi(`/Cart/${userid}`).then((res) => {
-                console.log("this is a cart data:-", res)
-                setItems(res)
-            })
-        })
-    };
+  const removeItem = (_id) => {
+    Deletedata(`/Cart/${_id}`).then((res) => {
+      toast.success("Item Remove to Cart !")
+      fetchDataFromApi(`/Cart/${userid}`).then((res) => {
+        console.log("this is a cart data:-", res)
+        setItems(res)
+      })
+    })
+  };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -177,7 +177,7 @@ export default function CheckoutPage() {
               key={item._id}
               className="flex items-center justify-between mb-4"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 w-[50%]">
                 <img
                   src={item.itemimg}
                   alt={item.producttitle}
@@ -186,17 +186,15 @@ export default function CheckoutPage() {
                 <div>
                   <p className="font-medium">{item.producttitle}</p>
                   <p className="text-sm text-gray-500">₹ {item.price}</p>
-                  <button onClick={()=> removeItem(item._id)} className="text-sm underline">Remove</button>
+                  <button onClick={() => removeItem(item._id)} className="text-sm underline">Remove</button>
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                {/* <button
-                  onClick={() => removeItem(item._id)}
-                  className="text-sm text-red-500 underline"
-                >
-                  Remove
-                </button> */}
                 <p className="font-medium">Qty: {item.qty}</p>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <p className="font-medium">₹ {item.totalprice}</p>
               </div>
             </div>
           ))}
@@ -217,7 +215,7 @@ export default function CheckoutPage() {
           </div>
 
           <button className="mt-6 w-full bg-[#C19B3B] text-white py-3 rounded-full font-semibold hover:opacity-90 transition">
-       process to pay
+            process to pay
           </button>
         </div>
       </div>
