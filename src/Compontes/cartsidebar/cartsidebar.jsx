@@ -25,7 +25,6 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                 }
                 : item
         );
-
         setCartItems(updatedItems);
 
         const updatedItem = updatedItems.find((i) => i._id === _id);
