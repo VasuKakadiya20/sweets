@@ -48,7 +48,7 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
     const removeItem = (_id) => {
         Deletedata(`/Cart/${_id}`).then((res) => {
             toast.success("Item Remove to Cart !")
-            fetchDataFromApi(`/Cart/${id}`).then((res) => {
+            fetchDataFromApi(`/Cart/${userid}`).then((res) => {
                 setCartItems(res)
             })
         })
