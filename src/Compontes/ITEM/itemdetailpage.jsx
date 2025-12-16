@@ -9,48 +9,64 @@ function Itemdetailpage() {
   const [product, setProduct] = useState(null);
   const [activeImage, setActiveImage] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const [loading, setLoading] = useState(true);
   const context = useContext(mycontext)
 
   useEffect(() => {
+    setLoading(true);
     fetchDataFromApi(`/Item/${id}`).then((res) => {
       setProduct(res);
       if (res.images && res.images.length > 0) {
         setActiveImage(res.images[0]);
       }
+      setLoading(false);
     });
   }, [id]);
+
 
   const updateQty = (amount) => {
     setQuantity((prev) => Math.max(1, prev + amount));
   };
 
-const Addtocart = async (product) => {
-  if (context.islogin === true) {
-    try {
-      const userid = localStorage.getItem("username");
+  const Addtocart = async (product) => {
+    if (context.islogin === true) {
+      try {
+        const userid = localStorage.getItem("username");
 
-      const cartData = {
-        userid: userid,
-        itemid: product._id,
-        qty: quantity,                    
-        producttitle: product.itemtitle,
-        price: product.price,
-        totalprice: product.price * quantity,
-        itemimg:product.images[0] 
-      };
+        const cartData = {
+          userid: userid,
+          itemid: product._id,
+          qty: quantity,
+          producttitle: product.itemtitle,
+          price: product.price,
+          totalprice: product.price * quantity,
+          itemimg: product.images[0]
+        };
 
-      await postData("/Cart/create", cartData);
-      toast.success("Successfully added to cart!");
-    } catch (error) {
-      console.error(error);
-      toast.error("Failed to add to cart!");
+        await postData("/Cart/create", cartData);
+        toast.success("Successfully added to cart!");
+      } catch (error) {
+        console.error(error);
+        toast.error("Failed to add to cart!");
+      }
+    } else {
+      toast.error("Please login to add items to cart!");
     }
-  } else {
-    toast.error("Please login to add items to cart!");
-  }
-};
+  };
 
-  if (!product) return <div className='text-2xl text-center mt-20 text-[#c19b5a]'>Loading...</div>;
+  if (loading) {
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-12 h-12 border-4 border-[#c19b5a] border-t-transparent rounded-full animate-spin"></div>
+          <p className="text-[#c19b5a] font-semibold tracking-wide">
+            Loading product...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
 
   return (
     <>
@@ -83,14 +99,14 @@ const Addtocart = async (product) => {
           <h2 className="text-2xl font-semibold text-gray-800">{product.itemtitle}</h2>
           <div className="text-xl font-bold text-[#c19b5a] mt-2">₹ {product.price}</div>
           <div className="flex gap-3 mt-4">
-            <div className="flex items-center border border-gray-300 rounded-md">
+            <div className="flex items-center border border-gray-300 rounded-full">
               <button className="px-3 py-2 text-lg" onClick={() => updateQty(-1)}>−</button>
               <span className="px-4 py-2">{quantity}</span>
               <button className="px-3 py-2 text-lg" onClick={() => updateQty(1)}>+</button>
             </div>
 
             <button
-              className="bg-[#c19b5a] text-white px-6 py-3 rounded-md text-sm hover:bg-[#a48145] transition"
+              className="bg-[#c19b5a] text-white px-6 py-3 rounded-full text-sm hover:bg-[#a48145] transition"
               onClick={() => Addtocart(product)}
             >
               Add to Cart

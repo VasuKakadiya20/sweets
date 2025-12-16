@@ -6,13 +6,13 @@ export default function IndianSweetsSection() {
   return (
     <>
       <section
-        className="md:h-[700px] w-full bg-cover bg-center bg-no-repeat py-20 md:py-28"
+        className="md:h-[700px] w-full bg-cover bg-center bg-no-repeat py-20 md:py-28 slideUp"
         style={{
           backgroundImage:
             `url(${bgimg})`
         }}
       >
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6 bg-white/70 p-8 rounded-xl backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6 bg-white/70 p-8 rounded-xl backdrop-blur-sm slideDownH">
 
           <div className="flex-1 text-start md:text-left">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
@@ -26,7 +26,7 @@ export default function IndianSweetsSection() {
 
             <a
               href="/items"
-              className="inline-block mt-6 bg-[#c19b5a] text-white px-8 py-3 text-sm font-medium rounded hover:bg-[#a48145] transition duration-300"
+              className="inline-block mt-6 bg-[#c19b5a] text-white px-8 py-3 text-sm font-medium rounded-full hover:bg-[#a48145] transition duration-300"
             >
               Shop Now
             </a>

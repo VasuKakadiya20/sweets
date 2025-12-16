@@ -4,12 +4,15 @@ import img1 from '../../assets/Pattern_Banner_2.png'
 import img2 from '../../assets/about-us.png'
 import img3 from "../../assets/contect.jpg"
 import Certifications from './Priority'
+import useScrollAnimation from '../useScrollAnimation'
+
 
 
 function Aboutuspage() {
+    useScrollAnimation();
     return (
         <>
-            <div className="contact-banner">
+            <div className="contact-banner slideU">
                 <div className="overlay"></div>
                 <div className="content">
                     <h1>About us</h1>
@@ -21,7 +24,7 @@ function Aboutuspage() {
                 </div>
             </div>
 
-            <section className="max-w-6xl mx-auto text-center py-12 px-6 slideUp">
+            <section className="max-w-6xl mx-auto text-center py-12 px-6 slideU">
                 <h1 className="text-3xl md:text-4xl font-bold text-[#c19b5a] mb-4 "> 
                     Excellence in Every Morsel
                 </h1>
@@ -36,7 +39,7 @@ function Aboutuspage() {
                 />
             </section>
 
-            <section className="w-full py-10 bg-white slideUp">
+            <section className="w-full py-10 bg-white slideRight">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                     <div>
                         <p className="text-2xl font-serif font-bold tracking-widest text-[#c19b5a] mb-2 border-l-4 border-[#c19b5a] pl-2">
@@ -60,7 +63,7 @@ function Aboutuspage() {
                 </div>
             </section>
 
-            <section className="w-full py-10 bg-white slideUp">
+            <section className="w-full py-10 bg-white slideLeft">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                     <div className="relative">
                         <img
@@ -86,7 +89,7 @@ function Aboutuspage() {
                 </div>
             </section>
 
-            <section className="w-full py-10 bg-white slideUp">
+            <section className="w-full py-10 bg-white slideRight">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                     <div>
                         <p className="text-sm font-semibold tracking-widest text-[#c19b5a] mb-2 border-l-4 border-[#c19b5a] pl-3">

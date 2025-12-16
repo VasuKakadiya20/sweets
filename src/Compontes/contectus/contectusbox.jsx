@@ -1,9 +1,11 @@
 import React from 'react'
+import useScrollAnimation from '../useScrollAnimation'
 
 function Contectusbox() {
+    useScrollAnimation()
     return (
         <>
-            <section className="py-12 px-6 slideUp " >
+            <section className="py-12 px-6 slideU">
                 <div className="max-w-5xl mx-auto text-center shadow-2xl p-8 rounded-2xl ">
                     <p className="inline-block text-sm font-semibold tracking-widest text-[#c19b5a] mb-6 border-l-4 border-[#c19b5a] pl-3">
                         OUR CONTACTS

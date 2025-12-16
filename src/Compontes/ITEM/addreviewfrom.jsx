@@ -3,7 +3,7 @@ import Rating from "@mui/material/Rating";
 import toast, { Toaster } from "react-hot-toast";
 import { postData } from "../../../api";
 
-function Addreviewfrom({ showfrom, setshowfrom }) {
+function Addreviewfrom({ showfrom, setshowfrom, onReviewAdded }) {
     const todaydate = new Date().toISOString().split("T")[0];
     const userid = localStorage.getItem("username")
     const [form, setForm] = useState({
@@ -34,6 +34,7 @@ function Addreviewfrom({ showfrom, setshowfrom }) {
             toast.success("Review added successfully!");
             console.log(res.data);
             setForm({ Name: "", Email: "", Review_Title: "", Review_msg: "" })
+            onReviewAdded();
             setshowfrom(false)
         } catch (err) {
             toast.error("Error saving review");
@@ -102,14 +103,14 @@ function Addreviewfrom({ showfrom, setshowfrom }) {
 
                     <button
                         type="submit"
-                        className="mt-6 bg-[#c19b5a] text-white px-5 py-2 rounded"
+                        className="mt-6 bg-[#c19b5a] text-white px-5 py-2 rounded-full h-12 ml-3"
                     >
                         Submit Review
                     </button>
 
-                    <button className="px-5 py-2 rounded text-[#c19b5a] hover:bg-[#c19b5a] hover:text-white border-2 border-[#c19b5a] ml-3" onClick={() => { setshowfrom(false) }}>
+                    <button className="h-12 px-5 py-2 rounded-full text-[#c19b5a] hover:bg-[#c19b5a] hover:text-white border-2 border-[#c19b5a] ml-3 mt-3" onClick={() => { setshowfrom(false) }}>
                         Cancel Review
-                    </button>     
+                    </button>
                 </form>
             )}
         </>

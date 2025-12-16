@@ -10,12 +10,15 @@ function Reviewsection() {
   const [rating, setRating] = useState(0);
   const [showfrom, setshowfrom] = useState(false)
   const [clientreview, setclientreview] = useState([])
-
-  useEffect(()=>{
-    fetchDataFromApi("/review/").then((data)=>{
+  const fetchreview = () => {
+    fetchDataFromApi("/review/").then((data) => {
       setclientreview(data)
     })
-  },[]) 
+  }
+
+  useEffect(() => {
+    fetchreview();
+  }, [])
 
   const totalReviews = clientreview.length;
   const avgRating = clientreview.reduce((sum, r) => sum + r.Rating, 0) / totalReviews;
@@ -77,8 +80,8 @@ function Reviewsection() {
           <div className="">
             {
               !showfrom && (
-                <button className="px-4 py-2 rounded hover:bg-[#c19b5a] hover:text-white border-2 border-[#c19b5a]" onClick={() => { setshowfrom(true) }}>
-                  Write a review 
+                <button className="px-4 py-2 rounded-full hover:bg-[#c19b5a] hover:text-white border-2 border-[#c19b5a]" onClick={() => { setshowfrom(true) }}>
+                  Write a review
                 </button>
               )
             }
@@ -91,11 +94,11 @@ function Reviewsection() {
             } */}
           </div>
         </div>
-        <Addreviewfrom showfrom={showfrom} setshowfrom={setshowfrom} />
+        <Addreviewfrom showfrom={showfrom} setshowfrom={setshowfrom} onReviewAdded={fetchreview} />
 
         <div className="space-y-10 mt-3">
           {clientreview.sort((a, b) => new Date(b.Date) - new Date(a.Date)).map((item, index) => (
-            <div className="border-b pb-6" key={item.id}>
+            <div className="border-b pb-6" key={item._id}>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
                   <span className="text-lg font-semibold"> {item.Name.charAt(0)}</span>

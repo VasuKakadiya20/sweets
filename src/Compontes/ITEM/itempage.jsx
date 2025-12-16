@@ -15,7 +15,7 @@ export default function ProductPage() {
     useEffect(() => {
         fetchDataFromApi("/Item/").then((res) => {
             setproduct(res)
-            
+
         })
     }, [])
 
@@ -26,32 +26,32 @@ export default function ProductPage() {
         }));
     };
 
-   const Addtocart = async (item) => {
-    if (context.islogin === true) {
-        try {
-            const userid = localStorage.getItem("username");
-            const qty = quantity[item._id] || 1;
+    const Addtocart = async (item) => {
+        if (context.islogin === true) {
+            try {
+                const userid = localStorage.getItem("username");
+                const qty = quantity[item._id] || 1;
 
-            const cartData = {
-                userid: userid,
-                itemid: item._id,
-                qty: qty,
-                producttitle: item.itemtitle,
-                price: item.price,
-                totalprice: item.price * qty,
-                itemimg:item.images[0]
-            };
+                const cartData = {
+                    userid: userid,
+                    itemid: item._id,
+                    qty: qty,
+                    producttitle: item.itemtitle,
+                    price: item.price,
+                    totalprice: item.price * qty,
+                    itemimg: item.images[0]
+                };
 
-            await postData("/Cart/create", cartData);
-            toast.success("Successfully added to cart!");
-        } catch (error) {
-            console.error(error);
-            toast.error("Failed to add to cart!");
+                await postData("/Cart/create", cartData);
+                toast.success("Successfully added to cart!");
+            } catch (error) {
+                console.error(error);
+                toast.error("Failed to add to cart!");
+            }
+        } else {
+            toast.error("Please login to add items to cart!");
         }
-    } else {
-        toast.error("Please login to add items to cart!");
-    }
-};
+    };
 
     return (
         <>
@@ -59,7 +59,7 @@ export default function ProductPage() {
                 position="top-right"
                 reverseOrder={false}
             />
-            <div className=" min-h-screen py-12">
+            <div className=" min-h-screen py-12 slideUp">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6">
                     {product.map((item) => (
                         <div
@@ -82,8 +82,8 @@ export default function ProductPage() {
                                 <h3 className="text-gray-900 font-medium mt-4 text-center">{item.itemtitle}</h3>
                                 <p className="text-gray-700 text-sm font-semibold text-center">₹ {item.price}</p>
                             </Link>
-                            <div className="flex place-content-center gap-3 mt-4 ">
-                                <div className="flex items-center border border-gray-300 rounded-md">
+                            <div className="flex flex-col md:flex-row items-center justify-center gap-3 mt-4">
+                                <div className="flex items-center border border-gray-300 rounded-full">
                                     <button
                                         className="px-3 py-2 text-lg"
                                         onClick={() => updateQty(item._id, -1)}
@@ -99,7 +99,7 @@ export default function ProductPage() {
                                     </button>
                                 </div>
                                 <button
-                                    className="bg-[#c19b5a] text-white px-6 py-3 rounded-md text-sm hover:bg-[#a48145] transition"
+                                    className="bg-[#c19b5a] text-white px-6 py-3 rounded-full text-sm hover:bg-[#a48145] transition"
                                     onClick={() => Addtocart(item)}
                                 >
                                     Add to cart

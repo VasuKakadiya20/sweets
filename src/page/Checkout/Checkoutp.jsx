@@ -3,9 +3,9 @@ import CheckoutPage from '../../Compontes/Checkout/checkout'
 
 function Checkoutp() {
   return (
-  <>
-    <CheckoutPage/>
-  </>
+    <>
+      <CheckoutPage />
+    </>
   )
 }
 
