@@ -62,7 +62,7 @@ function Bestseller() {
             />
 
             <div className=" min-h-screen py-12">
-                <h1 className='text-center text-3xl font-bold pb-5 text-[#c19b5a] '>Best Sellers</h1>
+                <h1 className='text-center text-3xl font-bold pb-3 text-[#c19b5a] '>Best Sellers</h1>
                 <div className=" min-h-screen py-12">
                     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6">
                         {randomSix.map((item) => (

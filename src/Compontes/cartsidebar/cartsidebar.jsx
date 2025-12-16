@@ -85,7 +85,7 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                             ) : (
                                 userCartItems.map((item, index) => (
                                     <div key={index} className="mb-6 flex gap-4">
-                                        <Link to={`/items/${item.itemid}`}>
+                                        <Link to={`/items/${item.itemid}`} onClick={()=> setopensidebar(false)}>
                                             <img src={item.itemimg} alt={item.producttitle} className="w-20 h-20 border" />
                                         </Link>
                                         <div className="flex flex-col flex-1">
