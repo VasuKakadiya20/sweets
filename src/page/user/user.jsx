@@ -66,7 +66,7 @@ export default function UserProfile() {
                 position="top-right"
                 reverseOrder={false}
             />
-            <div className="max-w-3xl mx-auto bg-white shadow-xl p-10 rounded-3xl mt-10 mb-10">
+            <div className="max-w-3xl mx-auto shadow-xl p-10 rounded-3xl mt-10 mb-10">
                 <div className="flex justify-between items-center mb-8 gap-2">
                     <h2 className="text-2xl font-bold text-[#c19b5a] border-l-4 border-[#c19b5a] pl-4">Your Profile</h2>
                     <div className="">

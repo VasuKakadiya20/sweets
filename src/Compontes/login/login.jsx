@@ -226,7 +226,6 @@ export default function AuthDialog({ open, setOpen }) {
         password: formData.password,
       });
       toast.success("Login successfully!")
-      // console.log(res)
       context.setislogin(true)
       localStorage.setItem("islogin", true)
       localStorage.setItem("username", res.user.id);

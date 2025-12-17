@@ -87,7 +87,7 @@ function Bestseller() {
                                     <h3 className="text-gray-900 font-medium mt-4 text-center">{item.itemtitle}</h3>
                                     <p className="text-gray-700 text-sm font-semibold text-center">₹ {item.price}</p>
                                 </Link>
-                                {/* <div className="md:flex place-content-center gap-3 mt-4 "> */}
+
                                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 mt-4">
                                     <div className="flex items-center border-1 border-gray-300 rounded-full">
 

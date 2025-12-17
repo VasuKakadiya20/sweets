@@ -37,7 +37,7 @@ function Aboutuspage() {
                 />
             </section>
 
-            <section className="w-full py-10 bg-white slideRight">
+            <section className="w-full py-10 slideRight">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                     <div>
                         <p className="text-2xl font-serif font-bold tracking-widest text-[#c19b5a] mb-2 border-l-4 border-[#c19b5a] pl-2">
@@ -61,7 +61,7 @@ function Aboutuspage() {
                 </div>
             </section>
 
-            <section className="w-full py-10 bg-white slideLeft">
+            <section className="w-full py-10 slideLeft">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                     <div className="relative">
                         <img
@@ -87,7 +87,7 @@ function Aboutuspage() {
                 </div>
             </section>
 
-            <section className="w-full py-10 bg-white slideRight">
+            <section className="w-full py-10 slideRight">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                     <div>
                         <p className="text-sm font-semibold tracking-widest text-[#c19b5a] mb-2 border-l-4 border-[#c19b5a] pl-3">

@@ -13,7 +13,7 @@ function Home() {
             <IndianSweetsSection />
             <Bestseller />
             <Certifications />
-            <section className="w-full py-10 bg-white slideU">
+            <section className="w-full py-10 slideU">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                     <div>
                         <p className="text-sm font-semibold tracking-widest text-[#c19b5a] mb-2 border-l-4 border-[#c19b5a] pl-3">

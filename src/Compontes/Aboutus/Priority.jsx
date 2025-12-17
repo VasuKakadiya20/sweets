@@ -8,7 +8,7 @@ function Certifications() {
     useScrollAnimation();
   return (
   <>
-      <section className='w-full py-10 bg-white slideU'>
+      <section className='w-full py-10 slideU'>
                 <div className='max-w-6xl mx-auto text-center py-10 px-6'>
                     <p className="text-gray-900 md:text-base text-sm font-bold">Priority<br /></p>
                     <h2 className="text-3xl font-serif font-bold text-gray-900 leading-snug mb-2">
