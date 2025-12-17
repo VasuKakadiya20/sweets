@@ -105,11 +105,11 @@ export default function ContactsPage() {
           className="w-full h-full border-0"
           allowFullScreen=""
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+          referrerPolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
 
-      <Contectusbox/>
+      <Contectusbox />
     </>
   );
 }

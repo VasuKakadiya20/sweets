@@ -1,9 +1,6 @@
 .slideUp {
   animation: slideUp 0.8s ease-out forwards;
 }
-/* .slideUp {
-  animation: slideUp 1.2s ease-out forwards;
-} */
 
 @keyframes slideUp {
   0% {
@@ -18,7 +15,7 @@
 
 .slideDownH {
   animation: slideDown 1.2s ease-out forwards;
-  animation-delay: 0.4s; 
+  animation-delay: 0.8s; 
   opacity: 0;
 }
 

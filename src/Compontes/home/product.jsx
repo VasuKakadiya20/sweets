@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import { Link } from "react-router-dom";
-import { fetchDataFromApi, postData } from '../../../api';
+import { fetchDataFromApi, postData } from '../../api';
 import { mycontext } from '../../App';
 import useScrollAnimation from '../useScrollAnimation';
 

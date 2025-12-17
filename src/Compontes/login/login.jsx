@@ -174,7 +174,7 @@ import {
   IconButton,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import { postData } from "../../../api";
+import { postData } from "../../api";
 import toast, { Toaster } from "react-hot-toast";
 import { useContext, useState } from "react";
 import { mycontext } from "../../App";

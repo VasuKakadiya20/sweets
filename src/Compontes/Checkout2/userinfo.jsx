@@ -1,6 +1,6 @@
 import React, { useState,useEffect,useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { fetchDataFromApi, updatedata } from "../../../api";
+import { fetchDataFromApi, updatedata } from "../../api";
 import { FaSignOutAlt } from "react-icons/fa";
 import { mycontext } from "../../App";
 import { useNavigate } from "react-router-dom";

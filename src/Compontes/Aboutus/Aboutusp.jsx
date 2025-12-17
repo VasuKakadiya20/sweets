@@ -6,8 +6,6 @@ import img3 from "../../assets/contect.jpg"
 import Certifications from './Priority'
 import useScrollAnimation from '../useScrollAnimation'
 
-
-
 function Aboutuspage() {
     useScrollAnimation();
     return (

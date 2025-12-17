@@ -3,7 +3,7 @@ import { FaStar, FaCheckCircle } from "react-icons/fa";
 import Rating from '@mui/material/Rating';
 import Addreviewfrom from "./addreviewfrom";
 import { useEffect } from "react";
-import { fetchDataFromApi } from "../../../api";
+import { fetchDataFromApi } from "../../api";
 
 
 function Reviewsection() {

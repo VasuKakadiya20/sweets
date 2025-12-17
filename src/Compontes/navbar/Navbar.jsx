@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaShoppingBag } from "react-icons/fa";
-import { MdAccountCircle } from "react-icons/md";
 import { FaUserAlt } from "react-icons/fa";
 import Cartsidebar from "../cartsidebar/cartsidebar";
 import AuthDialog from "../login/login";

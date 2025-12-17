@@ -15,6 +15,7 @@ function Certifications() {
                         Certifications
                     </h2>
                 </div>
+                
                 <div className="max-w-6xl mx-auto flex flex-col items-center gap-6 md:flex-row md:justify-between sm:ml-2">
                     <img
                         src={isosvg}

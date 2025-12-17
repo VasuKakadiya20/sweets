@@ -1,6 +1,6 @@
 import React, { useState,useEffect,useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { fetchDataFromApi, updatedata } from "../../../api";
+import { fetchDataFromApi, updatedata } from "../../api";
 import { FaSignOutAlt } from "react-icons/fa";
 import { mycontext } from "../../App";
 import { useNavigate } from "react-router-dom";
@@ -67,7 +67,7 @@ export default function UserProfile() {
                 reverseOrder={false}
             />
             <div className="max-w-3xl mx-auto bg-white shadow-xl p-10 rounded-3xl mt-10 mb-10">
-                <div className="flex justify-between items-center mb-8">
+                <div className="flex justify-between items-center mb-8 gap-2">
                     <h2 className="text-2xl font-bold text-[#c19b5a] border-l-4 border-[#c19b5a] pl-4">Your Profile</h2>
                     <div className="">
                         <button
@@ -80,7 +80,7 @@ export default function UserProfile() {
                         {!editing && (
                             <button
                                 onClick={() => setEditing(true)}
-                                className="px-5 py-2 bg-[#c19b5a] text-white rounded-full hover:bg-[#b28e4f]"
+                                className="px-5 py-2 bg-[#c19b5a] text-white rounded-full hover:bg-[#b28e4f] mt-2"
                             >
                                 Edit
                             </button>

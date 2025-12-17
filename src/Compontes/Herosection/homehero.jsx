@@ -31,6 +31,7 @@ export default function IndianSweetsSection() {
               Shop Now
             </a>
           </div>
+
           <div className="flex-1 flex justify-center">
             <img
               src={heroimg}
@@ -38,7 +39,9 @@ export default function IndianSweetsSection() {
               className="w-full max-w-lg object-contain drop-shadow-2xl"
             />
           </div>
+
         </div>
+        
       </section>
     </>
   );

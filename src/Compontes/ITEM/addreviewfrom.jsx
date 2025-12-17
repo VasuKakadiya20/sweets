@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Rating from "@mui/material/Rating";
 import toast, { Toaster } from "react-hot-toast";
-import { postData } from "../../../api";
+import { postData } from "../../api";
 
 function Addreviewfrom({ showfrom, setshowfrom, onReviewAdded }) {
     const todaydate = new Date().toISOString().split("T")[0];

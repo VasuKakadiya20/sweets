@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
-import { fetchDataFromApi, postData } from "../../../api";
+import { fetchDataFromApi, postData } from "../../api";
 import { mycontext } from "../../App";
 
 

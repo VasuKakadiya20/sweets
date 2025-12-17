@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import cartsvg from '../../assets/cart.svg'
 import { Link } from 'react-router-dom';
-import { Deletedata, fetchDataFromApi, updatedata } from '../../../api';
+import { Deletedata, fetchDataFromApi, updatedata } from '../../api';
 import toast, { Toaster } from 'react-hot-toast';
 
 function Cartsidebar({ opensidebar, setopensidebar, }) {

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { useParams } from 'react-router-dom';
-import { fetchDataFromApi, postData } from '../../../api';
+import { fetchDataFromApi, postData } from '../../api';
 import { mycontext } from '../../App';
 
 function Itemdetailpage() {
@@ -87,7 +87,7 @@ function Itemdetailpage() {
                 src={img}
                 alt={`Thumb ${i}`}
                 onClick={() => setActiveImage(img)}
-                className={`w-20 h-20 object-cover cursor-pointer rounded-md border
+                className={`w-20 h-20 object-cover cursor-pointer rounded-md
                   ${activeImage === img ? "border-[#c19b5a] border-2" : "border-gray-300"}
                 `}
               />

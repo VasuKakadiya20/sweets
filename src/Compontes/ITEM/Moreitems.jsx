@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import { Link } from "react-router-dom";
-import { fetchDataFromApi, postData } from '../../../api';
+import { fetchDataFromApi, postData } from '../../api';
 import { mycontext } from '../../App';
 
 
@@ -111,14 +111,14 @@ function Relatedproduct() {
                 </div>
             </div> */}
 
-            <div className="py-12">
-                <h1 className='text-lg font-bold ml-5 md:ml-[150px] mb-4 text-[#c19b5a] border-l-4 border-[#c19b5a] pl-3'>Our Products</h1>
+               <div className="py-16 bg-[#faf9f7]">
+                <div className="max-w-7xl mx-auto px-6">
+                    <h1 className="text-xl font-bold text-[#c19b5a] border-l-4 border-[#c19b5a] pl-4 mb-10"> Our Products </h1>
                     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6">
                         {randomSix.map((item) => (
                             <div
                                 key={item._id}
-                                className="p-5 rounded-xl overflow-hidden transition-all duration-300 border-1 border-[#c19b5a]"
-                            >
+                                className="py-4 rounded-xl overflow-hidden transition-all duration-300 border-1 border-[#c19b5a]">
                                 <Link to={`/items/${item._id}`}>
                                     <div className="relative w-full h-72 flex justify-center items-center group cursor-pointer">
                                         <img
@@ -134,8 +134,7 @@ function Relatedproduct() {
                                     <h3 className="text-gray-900 font-medium mt-4 text-center">{item.itemtitle}</h3>
                                     <p className="text-gray-700 text-sm font-semibold text-center">₹ {item.price}</p>
                                 </Link>
-                                {/* <div className="flex place-content-center gap-3 mt-4 "> */}
-                                <div className="flex flex-col md:flex-row items-center justify-center gap-3 mt-4">
+                                <div className="flex flex-col md:flex-row items-center justify-center gap-2 mt-4">
                                     <div className="flex items-center border-1 border-gray-300 rounded-full">
                                         <button
                                             className="px-3 py-2 text-lg"
@@ -160,6 +159,7 @@ function Relatedproduct() {
                             </div>
                         ))}
                     </div>
+                </div>
                 </div>
         </>
     )
