@@ -16,7 +16,7 @@ export default function ContactsPage() {
         <div className="content">
           <h1>Contacts</h1>
           <div className="breadcrumb">
-            <a href="/" className="text-[#c19b5a] font-bold text-sm">Home</a>
+            <a href="/" className="text-[#E09F40] font-bold text-sm">Home</a>
             <span className="font-bold text-sm text-white">//</span>
             <span className="font-bold text-sm text-white">Contacts</span>
           </div>
@@ -34,7 +34,7 @@ export default function ContactsPage() {
           </div>
 
         <div>
-            <p className="text-sm font-semibold tracking-widest text-[#c19b5a] mb-2 border-l-4 border-[#c19b5a] pl-3">
+            <p className="text-sm font-semibold tracking-widest text-[#E09F40] mb-2 border-l-4 border-[#E09F40] pl-3">
               OUR CONTACTS
             </p>
 
@@ -49,7 +49,7 @@ export default function ContactsPage() {
             </p>
 
             <div className="flex items-start gap-4 mb-5 transition-transform duration-300 ">
-              <FaMapMarkerAlt className="text-[#c19b5a] text-xl" />
+              <FaMapMarkerAlt className="text-[#E09F40] text-xl" />
               <div>
                 <h4 className="font-semibold">Location</h4>
                 <p className="text-gray-600 text-sm"> 34 Gandhi Road,Surat.</p>
@@ -57,7 +57,7 @@ export default function ContactsPage() {
             </div>
 
             <div className="flex items-start gap-4 mb-5">
-              <FaPhoneAlt className="text-[#c19b5a] text-xl" />
+              <FaPhoneAlt className="text-[#E09F40] text-xl" />
               <div>
                 <h4 className="font-semibold">Phone</h4>
                 <p className="text-gray-600 text-sm"> +91 99461 37919</p>
@@ -65,7 +65,7 @@ export default function ContactsPage() {
             </div>
 
             <div className="flex items-start gap-4 mb-8">
-              <FaEnvelope className="text-[#c19b5a] text-xl" />
+              <FaEnvelope className="text-[#E09F40] text-xl" />
               <div>
                 <h4 className="font-semibold">Email</h4>
                 <p className="text-gray-600 text-sm">Info@Dairy.com</p>
@@ -74,22 +74,22 @@ export default function ContactsPage() {
 
             <div className="flex gap-4">
               <button
-                className="w-10 h-10 border rounded-full flex justify-center items-center hover:bg-[#c19b5a] hover:text-white transition"
+                className="w-10 h-10 border rounded-full flex justify-center items-center hover:bg-[#E09F40] hover:text-white transition"
               >
                 <Link to={"https://telegram.org/"}><FaPaperPlane className="text-lg" /></Link>
               </button>
               <button
-                className="w-10 h-10 border rounded-full flex justify-center items-center hover:bg-[#c19b5a] hover:text-white transition"
+                className="w-10 h-10 border rounded-full flex justify-center items-center hover:bg-[#E09F40] hover:text-white transition"
               >
                 <Link to={"https://www.facebook.com/"}><FaFacebookF className="text-lg" /></Link>
               </button>
               <button
-                className="w-10 h-10 border rounded-full flex justify-center items-center hover:bg-[#c19b5a] hover:text-white transition"
+                className="w-10 h-10 border rounded-full flex justify-center items-center hover:bg-[#E09F40] hover:text-white transition"
               >
                 <Link to={"https://x.com/"}><FaTwitter className="text-lg" /></Link>
               </button>
               <button
-                className="w-10 h-10 border rounded-full flex justify-center items-center hover:bg-[#c19b5a] hover:text-white transition"
+                className="w-10 h-10 border rounded-full flex justify-center items-center hover:bg-[#E09F40] hover:text-white transition"
               >
                 <Link to={"https://www.instagram.com/"}><FaInstagram className="text-lg" /></Link>
               </button>
