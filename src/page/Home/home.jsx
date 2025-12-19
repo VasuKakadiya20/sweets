@@ -1,10 +1,11 @@
 import React from 'react'
 import IndianSweetsSection from '../../Compontes/Herosection/homehero'
 import Contectusbox from '../../Compontes/contectus/contectusbox'
-import Certifications from '../../Compontes/Aboutus/Priority'
 import Bestseller from '../../Compontes/home/product'
 import img2 from '../../assets/about-us.png'
 import useScrollAnimation from '../../Compontes/useScrollAnimation'
+import SweetsAbout from '../../Compontes/home/abouth'
+import BestSellingDishes from '../../Compontes/home/viewitem'
 
 function Home() {
     useScrollAnimation()
@@ -12,11 +13,12 @@ function Home() {
         <>
             <IndianSweetsSection />
             <Bestseller />
-            <Certifications />
+            <SweetsAbout/>
+            <BestSellingDishes/>
             <section className="w-full py-10 slideU">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                     <div>
-                        <p className="text-sm font-semibold tracking-widest text-[#c19b5a] mb-2 border-l-4 border-[#c19b5a] pl-3">
+                        <p className="text-sm font-semibold tracking-widest text-[#713722] mb-2 border-l-4 border-[#713722] pl-3">
                             Our Philosophy
                         </p>
                         <br />

@@ -1,27 +1,25 @@
 import React from 'react'
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPaperPlane, FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
+import Logo from "../../assets/Logo_Marvel.png"
 
 function Footer() {
   return (
     <>
       <footer className="bg-black text-gray-300 py-12 px-6 ">
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-3">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-5">
 
           <div className="space-y-4">
-
-            <h2 className="text-2xl font-serif text-[#c19b5a]">Dairy</h2>
+            <img src={Logo} alt='Logo' className='h-24'/>
             <p className="text-gray-400 text-sm">
              Crafting premium Indian sweets with tradition and love. Freshly made every day for unforgettable taste.
             </p>
-            
             <div className="flex space-x-4 mt-2">
               <a href="https://x.com/" className="hover:text-[#c19b5a]"><FaTwitter /></a>
               <a href="https://www.facebook.com/" className="hover:text-[#c19b5a]"><FaFacebookF /></a>
               <a href="https://www.instagram.com/" className="hover:text-[#c19b5a]"><FaInstagram /></a>
               <a href="https://telegram.org/" className="hover:text-[#c19b5a]"><FaPaperPlane /></a>
             </div>
-
           </div>
 
           <div className="space-y-4">
@@ -58,7 +56,6 @@ function Footer() {
         <div className=" border-t border-gray-800 pt-3 text-center text-gray-500 text-sm">
           &copy; 2025 Dairy. All Rights Reserved.
         </div>
-
       </footer>
     </>
   )

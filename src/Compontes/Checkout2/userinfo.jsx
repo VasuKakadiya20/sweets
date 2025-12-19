@@ -1,14 +1,8 @@
-import React, { useState,useEffect,useContext } from "react";
+import React, { useState,useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { fetchDataFromApi, updatedata } from "../../api";
-import { FaSignOutAlt } from "react-icons/fa";
-import { mycontext } from "../../App";
-import { useNavigate } from "react-router-dom";
+import { fetchDataFromApi } from "../../api";
 
 export default function Userinfocheck() {
-    const [editing, setEditing] = useState(false);
-    const context = useContext(mycontext)
-    const Navigate = useNavigate()
     const [form, setForm] = useState({
         Firstname: "",
         Lastname: "",
@@ -33,7 +27,6 @@ export default function Userinfocheck() {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-
     return (
         <>
             <Toaster
@@ -55,12 +48,12 @@ export default function Userinfocheck() {
                             onChange={handleChange}
                             placeholder="First Name"
                             className={`
-        w-full px-4 py-3 rounded-full border bg-gray-100
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
-        outline-none transition-all duration-200
-      `}
-      required
+                                w-full px-4 py-3 rounded-full border bg-gray-100
+                                border-gray-300 text-gray-700
+                                focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+                                outline-none transition-all duration-200
+                            `}
+                            required
                         />
                     </div>
 
@@ -73,12 +66,12 @@ export default function Userinfocheck() {
                             onChange={handleChange}
                             placeholder="Last Name"
                             className={`
-        w-full px-4 py-3 rounded-full border bg-gray-100
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
-        outline-none transition-all duration-200
-      `}
-      required
+                            w-full px-4 py-3 rounded-full border bg-gray-100
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+                            outline-none transition-all duration-200
+                        `}
+                        required
                         />
                     </div>
 
@@ -91,12 +84,12 @@ export default function Userinfocheck() {
                             onChange={handleChange}
                             placeholder="Phone Number"
                             className={`
-        w-full px-4 py-3 rounded-full border bg-gray-100
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
-        outline-none transition-all duration-200
-      `}
-      required
+                            w-full px-4 py-3 rounded-full border bg-gray-100
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+                            outline-none transition-all duration-200
+                        `}
+                        required
                         />
                     </div>
 
@@ -109,12 +102,12 @@ export default function Userinfocheck() {
                             onChange={handleChange}
                             placeholder="Email"
                             className={`
-        w-full px-4 py-3 rounded-full border bg-gray-100
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
-        outline-none transition-all duration-200
-      `}
-      required
+                            w-full px-4 py-3 rounded-full border bg-gray-100
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+                            outline-none transition-all duration-200
+                        `}
+                        required
                         />
                     </div>
 
@@ -127,12 +120,12 @@ export default function Userinfocheck() {
                             onChange={handleChange}
                             placeholder="Landmark"
                             className={`
-        w-full px-4 py-3 rounded-full border bg-gray-100
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
-        outline-none transition-all duration-200
-      `}
-      required
+                            w-full px-4 py-3 rounded-full border bg-gray-100
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+                            outline-none transition-all duration-200
+                        `}
+                        required
                         />
                     </div>
 
@@ -145,12 +138,12 @@ export default function Userinfocheck() {
                             onChange={handleChange}
                             placeholder="Pin Code"
                             className={`
-        w-full px-4 py-3 rounded-full border bg-gray-100
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
-        outline-none transition-all duration-200
-      `}
-      required
+                            w-full px-4 py-3 rounded-full border bg-gray-100
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+                            outline-none transition-all duration-200
+                        `}
+                        required
                         />
                     </div>
 
@@ -163,12 +156,12 @@ export default function Userinfocheck() {
                             onChange={handleChange}
                             placeholder="City"
                             className={`
-        w-full px-4 py-3 rounded-full border bg-gray-100
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
-        outline-none transition-all duration-200
-      `}
-      required
+                                w-full px-4 py-3 rounded-full border bg-gray-100
+                                border-gray-300 text-gray-700
+                                focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+                                outline-none transition-all duration-200
+                            `}
+                            required
                         />
                     </div>
 
@@ -181,12 +174,12 @@ export default function Userinfocheck() {
                             onChange={handleChange}
                             placeholder="State"
                             className={`
-        w-full px-4 py-3 rounded-full border bg-gray-100
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
-        outline-none transition-all duration-200
-      `}
-      required
+                            w-full px-4 py-3 rounded-full border bg-gray-100
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+                            outline-none transition-all duration-200
+                        `}
+                        required
                         />
                     </div>
                 </div>

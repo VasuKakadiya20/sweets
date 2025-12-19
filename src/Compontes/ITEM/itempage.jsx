@@ -5,8 +5,6 @@ import { useEffect } from "react";
 import { fetchDataFromApi, postData } from "../../api";
 import { mycontext } from "../../App";
 
-
-
 export default function ProductPage() {
     const [quantity, setQuantity] = useState({});
     const [product, setproduct] = useState([])

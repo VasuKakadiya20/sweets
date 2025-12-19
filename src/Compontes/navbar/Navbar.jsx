@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FaShoppingBag } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
 import Cartsidebar from "../cartsidebar/cartsidebar";
 import AuthDialog from "../login/login";
 import { mycontext } from "../../App";
+import Logo from "../../assets/Logo_Marvel.png"
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,18 +13,18 @@ export default function Navbar() {
   const [openAuth, setOpenAuth] = useState(false);
   const context = useContext(mycontext)
   const navigate = useNavigate();
-  const activeLink = "relative text-[#c19b5a] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#c19b5a] border-b-3 border-[#c19b5a]";
-  const normalLink = "hover:text-[#c19b5a]";
+  const activeLink = "relative text-[#713722] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#713722] border-b-3 border-[#713722]";
+  const normalLink = "hover:text-[#713722]";
 
   return (
     <>
-      <nav className="w-full bg-[#fbf8f4] border-b border-gray-200 px-6 py-4">
+      <nav className="w-full bg-[#fbf8f4] border-b border-gray-200">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center gap-2">
             <span className="text-3xl"></span>
-            <h1 className="text-xl tracking-[0.3em] font-normal text-gray-900">
-              Dairy
-            </h1>
+            <Link to="/">
+            <img src={Logo} alt="Logo" className="h-22 w-full"/>
+            </Link>
           </div>
 
           <ul className="hidden md:flex items-center gap-10 text-sm font-medium">
@@ -46,7 +47,7 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center">
             <button
-              className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:text-[#c19b5a]"
+              className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:text-[#713722]"
               onClick={() => {
                 if (!context.islogin) {
                   setOpenAuth(true);
@@ -58,8 +59,7 @@ export default function Navbar() {
               <FaUserAlt className="h-10" />
             </button>
 
-
-            <button className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:text-[#c19b5a]" onClick={() => setopensidebar(true)}>
+            <button className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:text-[#713722]" onClick={() => setopensidebar(true)}>
               <FaShoppingBag className="h-10" />
             </button>
 
@@ -67,16 +67,15 @@ export default function Navbar() {
               opensidebar={opensidebar}
               setopensidebar={setopensidebar}
             />
-
           </div>
 
-          <button className="md:hidden text-3xl" onClick={() => setMenuOpen(!menuOpen)}>
+          <button className="mr-3 md:hidden text-3xl" onClick={() => setMenuOpen(!menuOpen)}>
             ☰
           </button>
         </div>
 
         {menuOpen && (
-          <ul className="flex flex-col gap-4 mt-4 md:hidden text-lg font-medium">
+          <ul className="flex flex-col gap-4 mt-4 md:hidden text-lg font-medium ml-5">
             <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
               HOME
             </NavLink>
@@ -119,8 +118,8 @@ export default function Navbar() {
             </NavLink>
           </ul>
         )}
-
       </nav>
+      
       {
         context.islogin === false && (
           <AuthDialog open={openAuth} setOpen={setOpenAuth} />

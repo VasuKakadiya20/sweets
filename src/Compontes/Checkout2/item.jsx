@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaMinus, FaPlus } from "react-icons/fa";
-import { Deletedata, fetchDataFromApi, updatedata } from "../../api";
+import { Deletedata, fetchDataFromApi } from "../../api";
 import toast, { Toaster } from 'react-hot-toast';
 import { Link } from "react-router-dom";
 

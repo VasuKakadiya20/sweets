@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { FaStar, FaCheckCircle } from "react-icons/fa";
 import Rating from '@mui/material/Rating';
 import Addreviewfrom from "./addreviewfrom";
 import { useEffect } from "react";
 import { fetchDataFromApi } from "../../api";
 
-
 function Reviewsection() {
-  const [rating, setRating] = useState(0);
   const [showfrom, setshowfrom] = useState(false)
   const [clientreview, setclientreview] = useState([])
   const fetchreview = () => {
@@ -85,13 +82,6 @@ function Reviewsection() {
                 </button>
               )
             }
-            {/* {
-              showfrom && (
-                <button className="px-4 py-2 rounded hover:bg-[#c19b5a] hover:text-white border-2 border-[#c19b5a]" onClick={() => { setshowfrom(false) }}>
-                  Cancel Review
-                </button>
-              )
-            } */}
           </div>
         </div>
         <Addreviewfrom showfrom={showfrom} setshowfrom={setshowfrom} onReviewAdded={fetchreview} />

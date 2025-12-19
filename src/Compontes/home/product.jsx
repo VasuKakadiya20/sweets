@@ -1,16 +1,16 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import { Link } from "react-router-dom";
-import { fetchDataFromApi, postData } from '../../api';
-import { mycontext } from '../../App';
+import { fetchDataFromApi } from '../../api';
 import useScrollAnimation from '../useScrollAnimation';
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 function Bestseller() {
     useScrollAnimation();
-    const [quantity, setQuantity] = useState({});
+
     const [product, setproduct] = useState([])
-    const context = useContext(mycontext)
     useEffect(() => {
         fetchDataFromApi("/Item/").then((res) => {
             setproduct(res)
@@ -19,42 +19,8 @@ function Bestseller() {
 
     const randomSix = useMemo(() => {
         if (!product || product.length === 0) return [];
-        return [...product].sort(() => Math.random() - 0.5).slice(0, 9);
+        return [...product].sort(() => Math.random() - 0.5).slice(0, 6);
     }, [product]);
-
-    const updateQty = (_id, amount) => {
-        setQuantity((prev) => ({
-            ...prev,
-            [_id]: Math.max(1, (prev[_id] || 1) + amount),
-        }));
-    };
-
-    const Addtocart = async (item) => {
-        if (context.islogin === true) {
-            try {
-                const userid = localStorage.getItem("username");
-                const qty = quantity[item._id] || 1;
-
-                const cartData = {
-                    userid: userid,
-                    itemid: item._id,
-                    qty: qty,
-                    producttitle: item.itemtitle,
-                    price: item.price,
-                    totalprice: item.price * qty,
-                    itemimg: item.images[0]
-                };
-
-                await postData("/Cart/create", cartData);
-                toast.success("Successfully added to cart!");
-            } catch (error) {
-                console.error(error);
-                toast.error("Failed to add to cart!");
-            }
-        } else {
-            toast.error("Please login to add items to cart!");
-        }
-    };
 
     return (
         <>
@@ -63,56 +29,53 @@ function Bestseller() {
                 reverseOrder={false}
             />
 
-            <div className=" min-h-screen py-12">
-                <h1 className='text-center text-3xl font-bold pb-3 text-[#c19b5a] '>Best Sellers</h1>
-                <div className=" min-h-screen py-12">
-                    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6 ">
-                        {randomSix.map((item) => (
-                            <div
-                                key={item._id}
-                                className="p-5 rounded-xl overflow-hidden transition-all duration-300 border-1 border-[#c19b5a]"
-                            >
-                                <Link to={`/items/${item._id}`}>
-                                    <div className="relative w-full h-72 flex justify-center items-center group cursor-pointer">
-                                        <img
-                                            src={item.images[0]}
-                                            alt={item.itemtitle}
-                                            className="absolute w-auto h-full object-contain transition-opacity duration-500 opacity-100 group-hover:opacity-0" />
-                                        <img
-                                            src={item.images[1]}
-                                            alt={item.itemtitle}
-                                            className="absolute w-auto h-full object-contain opacity-1 transition-opacity duration-500 group-hover:opacity-100"
-                                        />
-                                    </div>
-                                    <h3 className="text-gray-900 font-medium mt-4 text-center">{item.itemtitle}</h3>
-                                    <p className="text-gray-700 text-sm font-semibold text-center">₹ {item.price}</p>
-                                </Link>
+            <div className="py-12 bg-[#FFF8F0]">
+                <h1 className='text-center text-xl text-[#713722] font-bold'>Best Sweets</h1>
+                <p className='text-center text-2xl font-bold pb-3 text-[#E09F40]'>Popular Sweets Items</p>
+                <div className="py-16">
+                    <div className="max-w-7xl mx-auto px-6">
+                        <Swiper
+                            modules={[Autoplay]}
+                            spaceBetween={30}
+                            slidesPerView={1}
+                            loop={true}
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                            }}
+                            breakpoints={{
+                                640: { slidesPerView: 2 },
+                                1024: { slidesPerView: 4 },
+                            }}
+                        >
+                            {randomSix.map((item) => (
+                                <SwiperSlide key={item._id}>
+                                    <div className="rounded-2xl p-6 text-center transition-all duration-300">
 
-                                <div className="flex flex-col md:flex-row items-center justify-center gap-3 mt-4">
-                                    <div className="flex items-center border-1 border-gray-300 rounded-full">
+                                        <Link to={`/items/${item._id}`}>
+                                            <div className="relative w-60 h-60 mx-auto mb-5">
 
-                                        <button
-                                            className="px-3 py-2 text-lg"
-                                            onClick={() => updateQty(item._id, -1)}
-                                        >
-                                            −
-                                        </button>
-                                        <span className="px-4 py-2">{quantity[item._id] || 1}</span>
-                                        <button
-                                            className="px-3 py-2 text-lg"
-                                            onClick={() => updateQty(item._id, 1)}
-                                        >
-                                            +
-                                        </button>
+                                                <div className="absolute inset-0 rounded-full border-2 border-dashed border-[#E09F40] animate-spin-slow"></div>
+                                                <img
+                                                    src={item.images[0]}
+                                                    alt={item.itemtitle}
+                                                    className="w-full h-60 rounded-full object-cover p-3 bg-white"
+                                                />
+                                            </div>
+                                        </Link>
+
+                                        <h3 className="text-xl font-bold text-[#713722]">
+                                            {item.itemtitle}
+                                        </h3>
+
+                                        <p className="text-[#E09F40] font-bold mt-1 text-lg">
+                                            ₹ {item.price}
+                                        </p>
+
                                     </div>
-                                    <button className="bg-[#c19b5a] text-white px-6 py-3 rounded-full text-sm hover:bg-[#a48145] transition"
-                                        onClick={() => Addtocart(item)}
-                                    >
-                                        Add to cart
-                                    </button>
-                                </div>
-                            </div>
-                        ))}
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 </div>
             </div >

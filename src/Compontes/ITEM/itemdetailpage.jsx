@@ -23,7 +23,6 @@ function Itemdetailpage() {
     });
   }, [id]);
 
-
   const updateQty = (amount) => {
     setQuantity((prev) => Math.max(1, prev + amount));
   };
@@ -66,7 +65,6 @@ function Itemdetailpage() {
       </div>
     );
   }
-
 
   return (
     <>

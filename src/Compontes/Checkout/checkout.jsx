@@ -1,9 +1,6 @@
-import React, { useEffect, useState, useContext } from "react";
-import { FaMinus, FaPlus } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { Link } from "react-router-dom";
 import { fetchDataFromApi, Deletedata } from "../../api";
-import { mycontext } from "../../App";
 
 export default function CheckoutPage() {
   const [items, setItems] = useState([]);

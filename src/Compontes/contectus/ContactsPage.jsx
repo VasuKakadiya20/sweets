@@ -33,7 +33,7 @@ export default function ContactsPage() {
             />
           </div>
 
-          <div>
+        <div>
             <p className="text-sm font-semibold tracking-widest text-[#c19b5a] mb-2 border-l-4 border-[#c19b5a] pl-3">
               OUR CONTACTS
             </p>

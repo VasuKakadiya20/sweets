@@ -102,7 +102,7 @@
 
 .nav-item a.active {
   position: relative;
-  color: #b49359; 
+  color: #713722; 
   font-weight: 600;
 }
 
@@ -115,7 +115,7 @@
   margin: auto;
   width: 16px;
   height: 2px;
-  background-color: #b49359; 
+  background-color: #713722; 
 }
 
 .nav-item a.active::before {
@@ -127,5 +127,5 @@
   margin: auto;
   width: 28px;
   height: 2px;
-  background-color: #b49359; 
+  background-color: #713722; 
 }
