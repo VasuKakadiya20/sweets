@@ -11,7 +11,7 @@ export default function SweetsAbout() {
         style={{ backgroundImage: `url(${bg_img})` }}
       >
         <div className="hidden md:block absolute left-0">
-          <div className="w-[280px] h-[280px] rounded-full overflow-hidden shadow-2xl animate-spin-slowh">
+          <div className="w-[280px] h-[280px] rounded-full overflow-hidden shadow-2xl animate-spin-slowha">
             <img
               src={img1}
               alt="Sweet Plate"
@@ -38,7 +38,7 @@ export default function SweetsAbout() {
         </div>
 
         <div className="hidden md:block absolute right-0">
-          <div className="w-[280px] h-[280px] rounded-full overflow-hidden shadow-2xl animate-spin-slowh">
+          <div className="w-[280px] h-[280px] rounded-full overflow-hidden shadow-2xl animate-spin-slowha">
             <img
               src={img2}
               alt="Sweet Dish"

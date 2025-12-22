@@ -1,3 +1,4 @@
+
 .slideUp {
   animation: slideUp 0.8s ease-out forwards;
 }
@@ -63,32 +64,17 @@
   transform: translateY(0px);
 }
 
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Shap 1 and 2  up down  */
+.float-updown {
+  animation: floatY 4s ease-in-out infinite;
 }
 
-.animate-spin-slow {
-  animation: spin-slow 10s linear infinite;
-}
-@keyframes spinSlowh {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.float-updown-delay {
+  animation: floatY 4s ease-in-out infinite;
+  animation-delay: 1.5s;
 }
 
-.animate-spin-slowh {
-  animation: spinSlowh 18s linear infinite;
-}
-
-@keyframes float {
+@keyframes floatY {
   0% {
     transform: translateY(0);
   }
@@ -100,6 +86,44 @@
   }
 }
 
-.animate-float {
-  animation: float 3.5s ease-in-out infinite;
+/* img around */
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotateCircle 12s linear infinite;
+}
+
+/* About home spin */
+@keyframes spinSlowha {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slowha {
+  animation: spinSlowha 18s linear infinite;
+}
+
+@layer components {
+  .shape-base {
+    @apply absolute object-contain hidden xl:block;
+  }
+
+  .shape-sm {
+    @apply w-[180px] h-[180px];
+  }
+
+  .shape-lg {
+    @apply w-[260px] h-[260px];
+  }
 }

@@ -1,0 +1,100 @@
+.sellingcar:hover {
+  background-color: #0B1A27;
+  /* transform: translateY(-8px); */
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+}
+
+.sellingcar img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sellingcar:hover img {
+  transform: scale(1.05);
+}
+
+.sellingcar h3 {
+  color: #713722;
+  transition: color 0.5s ease;
+}
+
+.sellingcar:hover h3 {
+  color: #ffffff;
+}
+
+.sellingcar span {
+  color: #E09F40;
+  font-weight: 700;
+}
+
+.sellingcar {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.sellingcar:hover {
+  background-color: #0B1A27;
+  transform: translateY(-6px);
+}
+
+.product-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sellingcar:hover .product-img {
+  transform: scale(1.05);
+}
+
+.add-to-cart-btn {
+  position: absolute;
+  top: 10%;
+  right: 12px;           
+  transform: translateY(-50%) translateX(20px);
+  opacity: 0;
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  color: #E09F40;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.4s ease;
+  cursor: pointer;
+  z-index: 30;
+}
+
+.sellingcar:hover .add-to-cart-btn {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #E09F40;
+  color: #ffffff;
+}
+
+.sellingcar:hover .add{
+    color: #fff;
+}
+
+/* Floating top-left shape */
+.floating-shape {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  width: 180px;
+  z-index: 1;
+  pointer-events: none;
+}

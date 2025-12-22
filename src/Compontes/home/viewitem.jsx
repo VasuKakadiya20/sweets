@@ -60,10 +60,10 @@ export default function BestSellingDishes() {
         position="top-right"
         reverseOrder={false}
       />
-      <section className="bg-gradient-to-b from-[#fff7f0] to-[#f8f5f0] py-16">
+      <section className="bg-[#F4F1EA] py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-center text-xl text-[#713722] font-bold">Popular Sweets</h1>
-          <p className="text-center text-2xl font-bold pb-3 text-[#E09F40]">Best Selling Sweets</p>
+          <p className="text-[40px] font-bold mb-5 leading-tight max-lg:text-[32px] pb-3 text-[#E09F40]">Best Selling Sweets</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
             {randomSix.map((item) => (

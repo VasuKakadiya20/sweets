@@ -1,0 +1,121 @@
+import { FaShoppingBag } from "react-icons/fa";
+import toast, { Toaster } from "react-hot-toast";
+import shape1 from "../../assets/best_selling2.png";
+import React, { useContext, useEffect, useMemo, useState } from 'react';
+import { mycontext } from '../../App';
+import { fetchDataFromApi, postData } from '../../api';
+import "./BestSellingDishes.css"
+
+
+export default function BestSellingDishes() {
+  const [product, setProduct] = useState([]);
+  const [quantity, setQuantity] = useState({});
+  const context = useContext(mycontext);
+
+  useEffect(() => {
+    fetchDataFromApi("/Item/").then((res) => {
+      setProduct(res);
+    });
+  }, []);
+
+  const updateQty = (_id, amount) => {
+    setQuantity((prev) => ({
+      ...prev,
+      [_id]: Math.max(1, (prev[_id] || 1) + amount),
+    }));
+  };
+
+  const Addtocart = async (item) => {
+    if (context.islogin === true) {
+      try {
+        const userid = localStorage.getItem("username");
+        const qty = quantity[item._id] || 1;
+
+        const cartData = {
+          userid: userid,
+          itemid: item._id,
+          qty: qty,
+          producttitle: item.itemtitle,
+          price: item.price,
+          totalprice: item.price * qty,
+          itemimg: item.images[0]
+        };
+
+        await postData("/Cart/create", cartData);
+        toast.success("Successfully added to cart!");
+      } catch (error) {
+        console.error(error);
+        toast.error("Failed to add to cart!");
+      }
+    } else {
+      toast.error("Please login to add items to cart!");
+    }
+  };
+
+  return (
+    <>
+     <Toaster
+        position="top-right"
+        reverseOrder={false}
+      />
+    <section className="bg-[#F7F3EA] py-24 relative">
+      <div className="max-w-8xl mx-auto px-6">
+        <img
+  src={shape1}
+  alt="shape"
+  className="floating-shape float-updown"
+/>
+        <div className="text-center mb-14">
+          <div className="text-[#E09F40] font-bold tracking-widest mb-2 text-[16px]">
+            POPULAR DISHES
+          </div>
+          <h2 className="text-[40px] font-bold text-[#111] mb-5 leading-tight max-lg:text-[32px]">
+            Best Selling Dishes
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 h-[1200px]">
+          {product.map((item, i) => (
+            <div className="relative rounded-2xl overflow-hidden sellingcar pt-4">
+              <button
+                onClick={() => Addtocart(item)}
+                className="add-to-cart-btn"
+              >
+                <FaShoppingBag />
+              </button>
+
+              <div className="relative z-20 p-6 flex justify-center">
+                <img
+                  src={item.images[0]}
+                  alt={item.title}
+                  className="product-img"
+                />
+              </div>
+
+              <div className="relative z-20 text-center pb-6 px-4">
+                <h3 className="text-lg font-bold mb-1 text-[#713722] group-hover:text-white">{item.itemtitle}</h3>
+                <span className="font-bold text-lg text-[#E09F40] ">₹ {item.price}</span>
+                 <div className="flex items-center border-1 border-gray-300 rounded-full px-4">
+                    <button
+                      className="px-3 py-2 text-lg hover:text-[#E09F40] transition-colors add"
+                      onClick={() => updateQty(item._id, -1)}
+                    >
+                      −
+                    </button>
+                    <span className="px-4 py-2">{quantity[item._id] || 1}</span>
+                    <button
+                      className="px-3 py-2 text-lg hover:text-[#E09F40] transition-colors add"
+                      onClick={() => updateQty(item._id, 1)}
+                    >
+                      +
+                    </button>
+                  </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    </>
+  );
+}
