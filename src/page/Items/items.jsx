@@ -11,7 +11,7 @@ function Items() {
           <h1>Item</h1>
 
           <div className="breadcrumb">
-            <a href="/" className="text-[#c19b5a] font-bold text-sm">Home</a>
+            <a href="/" className="text-[#E09F40] font-bold text-sm">Home</a>
             <span className='font-bold text-sm text-white'>//</span>
             <span className='font-bold text-sm text-white'>Items</span>
           </div>

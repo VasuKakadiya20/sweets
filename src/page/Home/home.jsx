@@ -4,9 +4,7 @@ import Contectusbox from '../../Compontes/contectus/contectusbox'
 import Bestseller from '../../Compontes/home/product'
 import img2 from '../../assets/about-us.png'
 import useScrollAnimation from '../../Compontes/useScrollAnimation'
-// import SweetsAbout from '../../Compontes/home/abouth'
-// import BestSellingDishes from '../../Compontes/home/viewitem'
-import AboutSectionHome from '../../Compontes/home/contect'
+import AboutSectionHome from '../../Compontes/home/AboutSection'
 import BestSellingDishes from '../../Compontes/home/BestSellingDishes'
 
 
@@ -16,9 +14,7 @@ function Home() {
         <>
             <IndianSweetsSection />
             <Bestseller />
-            {/* <SweetsAbout/> */}
             <AboutSectionHome/>
-            {/* <BestSellingDishes/> */}
             <BestSellingDishes/>
             <section className="w-full py-10 slideU">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">

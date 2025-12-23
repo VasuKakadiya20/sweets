@@ -89,7 +89,6 @@
     color: #fff;
 }
 
-/* Floating top-left shape */
 .floating-shape {
   position: absolute;
   top: 60px;
@@ -97,4 +96,31 @@
   width: 180px;
   z-index: 1;
   pointer-events: none;
+}
+
+.floating-shape2 {
+  position: absolute;
+  bottom: 60px;
+  left: -20px;
+  width: 180px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* .btn-viewall{
+  background: #E09F40;
+} */
+
+.btn-viewall {
+  display: block;
+  margin: 40px auto 0;
+  background-color: #E09F40;
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-viewall:hover {
+  background-color: #c8872f;
 }

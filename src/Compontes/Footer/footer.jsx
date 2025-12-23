@@ -23,28 +23,28 @@ function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl text-[#c19b5a] font-semibold">Explore</h3>
+            <h3 className="text-xl text-[#E09F40] font-semibold">Explore</h3>
             <div className="space-y-2 text-gray-400 text-sm">
-              <p className='gap-2'><span className="font-semibold text-[#c19b5a]"><FaPhoneAlt /></span> +91 99461 37919</p>
-              <p className='gap-2'><span className="font-semibold text-[#c19b5a]"><FaMapMarkerAlt /></span> 34 Gandhi Road,Surat.</p>
-              <p className='gap-2'><span className="font-semibold text-[#c19b5a]"><FaEnvelope /></span> Info@Dairy.com</p>
+              <p className='gap-2'><span className="font-semibold text-[#E09F40]"><FaPhoneAlt /></span> +91 99461 37919</p>
+              <p className='gap-2'><span className="font-semibold text-[#E09F40]"><FaMapMarkerAlt /></span> 34 Gandhi Road,Surat.</p>
+              <p className='gap-2'><span className="font-semibold text-[#E09F40]"><FaEnvelope /></span> Info@Dairy.com</p>
             </div>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl text-[#c19b5a] font-semibold">Latest Posts</h3>
+            <h3 className="text-xl text-[#E09F40] font-semibold">Latest Posts</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <img src="https://www.anandsweets.in/cdn/shop/products/Doodhpeda.png?v=1740398096&width=713" alt="Post 1" className="w-16 h-16 object-cover rounded" />
                 <div>
-                  <p className="text-xs text-[#c19b5a]">Special Doodh Peda</p>
+                  <p className="text-xs text-[#E09F40]">Special Doodh Peda</p>
                   <p className="text-sm">This is Our Most Selling Product</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <img src="https://www.anandsweets.in/cdn/shop/products/KajuKatli.png?v=1747477294&width=493" alt="Post 2" className="w-16 h-16 object-cover rounded" />
                 <div>
-                  <p className="text-xs text-[#c19b5a] uppercase">Kaju Katli</p>
+                  <p className="text-xs text-[#E09F40] uppercase">Kaju Katli</p>
                   <p className="text-sm">This is Our Most Selling Product</p>
                 </div>
               </div>

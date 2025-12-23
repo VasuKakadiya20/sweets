@@ -2,9 +2,10 @@ import React from 'react'
 import mainimg from '../../assets/Pattern_Banner_1.png'
 import img1 from '../../assets/Pattern_Banner_2.png'
 import img2 from '../../assets/about-us.png'
-import img3 from "../../assets/contect.jpg"
+import img3 from "../../assets/Contacts_Img.png"
 import Certifications from './Priority'
 import useScrollAnimation from '../useScrollAnimation'
+// import bg from "../../assets/bg_img12.jpg"
 
 function Aboutuspage() {
     useScrollAnimation();
@@ -15,7 +16,7 @@ function Aboutuspage() {
                 <div className="content">
                     <h1>About us</h1>
                     <div className="breadcrumb">
-                        <a href="/" className="text-[#c19b5a] font-bold text-sm">Home</a>
+                        <a href="/" className="text-[#E09F40] font-bold text-sm">Home</a>
                         <span className="font-bold text-sm text-white">//</span>
                         <span className="font-bold text-sm text-white">About us</span>
                     </div>

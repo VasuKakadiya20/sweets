@@ -4,6 +4,9 @@ import toast, { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
 import { fetchDataFromApi, postData } from "../../api";
 import { mycontext } from "../../App";
+import shape1 from "../../assets/Best_Selling.png";
+import shape2 from "../../assets/Best_Selling_2.png";
+import { FaShoppingBag } from "react-icons/fa";
 
 export default function ProductPage() {
     const [quantity, setQuantity] = useState({});
@@ -57,7 +60,8 @@ export default function ProductPage() {
                 position="top-right"
                 reverseOrder={false}
             />
-            <div className=" min-h-screen py-12 slideUp">
+
+            {/* <div className=" min-h-screen py-12 slideUp">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6">
                     {product.map((item) => (
                         <div
@@ -106,7 +110,135 @@ export default function ProductPage() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
+
+              <section className="bg-[#F7F3EA] py-24 relative">
+                    <div className="max-w-8xl mx-auto px-6">
+                      <img
+                        src={shape1}
+                        alt="shape"
+                        className="floating-shape float-updown hidden md:block"
+                      />
+                      <img
+                        src={shape2}
+                        alt="shape"
+                        className="floating-shape2 float-updown hidden md:block"
+                      />
+                      <div className="text-center mb-14">
+                        <div className="text-[#E09F40] font-bold tracking-widest mb-2 text-[16px]">
+                          POPULAR DISHES
+                        </div>
+                        <h2 className="text-[40px] font-bold text-[#111] mb-5 leading-tight max-lg:text-[32px]">
+                          Our Most Popular Dishes
+                        </h2>
+                      </div>
+            
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 ">
+                        {product.map((item, i) => (
+                          <div className="relative rounded-2xl overflow-hidden sellingcar pt-4">
+                            <button
+                              onClick={() => Addtocart(item)}
+                              className="add-to-cart-btn"
+                            >
+                              <FaShoppingBag />
+                            </button>
+                            
+                              <Link to={`/items/${item._id}`}>
+                            <div className="relative z-20 p-6 flex justify-center">
+                              <img
+                                src={item.images[0]}
+                                alt={item.title}
+                                className="product-img"
+                              />
+                            </div>
+                             </Link>
+            
+                            <div className="relative z-20 text-center pb-6 px-4">
+                              <h3 className="text-lg font-bold mb-1 text-[#713722] group-hover:text-white">{item.itemtitle}</h3>
+                              <span className="font-bold text-lg text-[#E09F40] ">₹ {item.price}</span>
+                              {/* <div className="flex items-center border-1 border-gray-300 rounded-full px-4 text-center">
+                                <button
+                                  className="px-3 py-2 text-lg hover:text-[#E09F40] transition-colors add"
+                                  onClick={() => updateQty(item._id, -1)}
+                                >
+                                  − 
+                                </button>
+                                <span className="px-4 py-2">{quantity[item._id] || 1}</span>
+                                <button
+                                  className="px-3 py-2 text-lg hover:text-[#E09F40] transition-colors add"
+                                  onClick={() => updateQty(item._id, 1)}
+                                >
+                                  +
+                                </button>
+                              </div> */}
+                              <div
+  className="
+    mt-4
+    mx-auto
+    flex
+    items-center
+    justify-between
+    w-full
+    max-w-[220px]
+    sm:max-w-[260px]
+    border
+    border-gray-300
+    rounded-full
+    px-4
+    py-2
+    text-center
+  "
+>
+  <button
+    className="
+      w-8 h-8
+      flex items-center justify-center
+      text-lg
+      text-gray-700
+      hover:text-[#E09F40]
+      transition-colors
+      add
+    "
+    onClick={() => updateQty(item._id, -1)}
+  >
+    −
+  </button>
+
+  <span
+    className="
+      min-w-[32px]
+      text-center
+      font-semibold
+      text-gray-800
+      text-sm
+      sm:text-base
+    "
+  >
+    {quantity[item._id] || 1}
+  </span>
+
+  <button
+    className="
+      w-8 h-8
+      flex items-center justify-center
+      text-lg
+      text-gray-700
+      hover:text-[#E09F40]
+      transition-colors
+      add
+    "
+    onClick={() => updateQty(item._id, 1)}
+  >
+    +
+  </button>
+</div>
+
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </section>
         </>
     );
 }
