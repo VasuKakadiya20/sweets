@@ -112,7 +112,7 @@ export default function ProductPage() {
                 </div>
             </div> */}
 
-              <section className="bg-[#F7F3EA] py-24 relative">
+              <section className="bg-[#F4F1EA] py-24 relative">
                     <div className="max-w-8xl mx-auto px-6">
                       <img
                         src={shape1}
@@ -128,7 +128,7 @@ export default function ProductPage() {
                         <div className="text-[#E09F40] font-bold tracking-widest mb-2 text-[16px]">
                           POPULAR DISHES
                         </div>
-                        <h2 className="text-[40px] font-bold text-[#111] mb-5 leading-tight max-lg:text-[32px]">
+                        <h2 className="text-[40px] font-bold text-[#713722] mb-5 leading-tight max-lg:text-[32px]">
                           Our Most Popular Dishes
                         </h2>
                       </div>

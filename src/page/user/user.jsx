@@ -68,11 +68,11 @@ export default function UserProfile() {
             />
             <div className="max-w-3xl mx-auto shadow-xl p-10 rounded-3xl mt-10 mb-10">
                 <div className="flex justify-between items-center mb-8 gap-2">
-                    <h2 className="text-2xl font-bold text-[#c19b5a] border-l-4 border-[#c19b5a] pl-4">Your Profile</h2>
+                    <h2 className="text-2xl font-bold text-[#713722] border-l-4 border-[#713722] pl-4">Your Profile</h2>
                     <div className="">
                         <button
                             onClick={() => logout()}
-                            className="px-5 py-2 bg-[#c19b5a] text-white rounded-full hover:bg-[#b28e4f] mr-3 gap-2"
+                            className="px-5 py-2 bg-[#E09F40] text-white rounded-full hover:bg-[#cf8f32] mr-3 gap-2"
                         >
                             <FaSignOutAlt className="mr-2 text-base" />
                             Logout
@@ -80,7 +80,7 @@ export default function UserProfile() {
                         {!editing && (
                             <button
                                 onClick={() => setEditing(true)}
-                                className="px-5 py-2 bg-[#c19b5a] text-white rounded-full hover:bg-[#b28e4f] mt-2"
+                                className="px-5 py-2 bg-[#E09F40] text-white rounded-full hover:bg-[#cf8f32] mt-2"
                             >
                                 Edit
                             </button>
@@ -102,7 +102,7 @@ export default function UserProfile() {
         w-full px-4 py-3 rounded-full border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
         outline-none transition-all duration-200
       `}
                         />
@@ -121,7 +121,7 @@ export default function UserProfile() {
         w-full px-4 py-3 rounded-full border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
         outline-none transition-all duration-200
       `}
                         />
@@ -140,7 +140,7 @@ export default function UserProfile() {
         w-full px-4 py-3 rounded-full border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
         outline-none transition-all duration-200
       `}
                         />
@@ -159,7 +159,7 @@ export default function UserProfile() {
         w-full px-4 py-3 rounded-full border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
         outline-none transition-all duration-200
       `}
                         />
@@ -178,7 +178,7 @@ export default function UserProfile() {
         w-full px-4 py-3 rounded-full border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
         outline-none transition-all duration-200
       `}
                         />
@@ -197,7 +197,7 @@ export default function UserProfile() {
         w-full px-4 py-3 rounded-full border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
         outline-none transition-all duration-200
       `}
                         />
@@ -216,7 +216,7 @@ export default function UserProfile() {
         w-full px-4 py-3 rounded-full border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
         outline-none transition-all duration-200
       `}
                         />
@@ -235,7 +235,7 @@ export default function UserProfile() {
         w-full px-4 py-3 rounded-full border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
         outline-none transition-all duration-200
       `}
                         />
@@ -253,7 +253,7 @@ export default function UserProfile() {
                             w-full px-4 py-3 rounded-full border 
                             ${editing ? "bg-white" : "bg-gray-100"} 
                             border-gray-300 text-gray-700
-                            focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a]
+                            focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
                             outline-none transition-all duration-200
                         `}
                         />
@@ -263,14 +263,14 @@ export default function UserProfile() {
                         <div className="flex gap-4 md:col-span-2 justify-center mt-4 ml-[50%]">
                             <button
                                 onClick={handleSave}
-                                className="px-8 py-3 bg-[#c19b5a] text-white rounded-full hover:bg-[#b28e4f]"
+                                className="px-8 py-3 bg-[#E09F40] text-white rounded-full hover:bg-[#cf8f32]"
                             >
                                 Save
                             </button>
 
                             <button
                                 onClick={handleCancel}
-                                className="px-8 py-3 border-1 border-[#c19b5a] text-[#c19b5a] rounded-full "
+                                className="px-8 py-3 border-1 border-[#E09F40] text-[#E09F40] rounded-full "
                             >
                                 Cancel
                             </button>

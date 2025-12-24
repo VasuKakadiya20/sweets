@@ -23,7 +23,7 @@ export default function ContactsPage() {
         </div>
       </div>
 
-      <section className="w-full py-20">
+      <section className="w-full py-20 bg-[#F4F1EA]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 slideU">
           <div className="relative">
             <img
@@ -32,8 +32,8 @@ export default function ContactsPage() {
               className="rounded-lg w-full object-cover shadow-md"
             />
           </div>
-
         <div>
+          
             <p className="text-sm font-semibold tracking-widest text-[#E09F40] mb-2 border-l-4 border-[#E09F40] pl-3">
               OUR CONTACTS
             </p>
@@ -98,7 +98,7 @@ export default function ContactsPage() {
         </div>
       </section>
 
-      <div className="w-full h-[500px] relative mb-5 slideU">
+      <div className="w-full h-[500px] relative slideU">
         <iframe
           title="Google Map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238180.9166140213!2d72.73537647745898!3d21.129430990993836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1764668364246!5m2!1sen!2sin"

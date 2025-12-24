@@ -7,6 +7,7 @@ import { mycontext } from '../../App';
 import { fetchDataFromApi, postData } from '../../api';
 import "./BestSellingDishes.css"
 import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 
 
 export default function BestSellingDishes() {
@@ -65,7 +66,7 @@ export default function BestSellingDishes() {
         position="top-right"
         reverseOrder={false}
       />
-      <section className="bg-[#F7F3EA] py-24 relative">
+      <section className="bg-[#F4F1EA] py-24 relative">
         <div className="max-w-8xl mx-auto px-6">
           <img
             src={shape1}
@@ -81,10 +82,11 @@ export default function BestSellingDishes() {
             <div className="text-[#E09F40] font-bold tracking-widest mb-2 text-[16px]">
               POPULAR DISHES
             </div>
-            <h2 className="text-[40px] font-bold text-[#111] mb-5 leading-tight max-lg:text-[32px]">
+            <h2 className="text-[40px] font-bold text-[#713722] mb-5 leading-tight max-lg:text-[32px]">
               Best Selling Dishes
             </h2>
           </div>
+          
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:h-[800px]">
             {randomTen.map((item, i) => (
@@ -131,7 +133,7 @@ export default function BestSellingDishes() {
           
           <button className="px-8 py-3 rounded-md btn-viewall">
             <a href="/items">
-              View All Item
+              View All Item <FaArrowRight/>
             </a>
           </button>
         </div>

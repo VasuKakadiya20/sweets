@@ -24,7 +24,7 @@ function Aboutuspage() {
             </div>
 
             <section className="max-w-6xl mx-auto text-center py-12 px-6 slideU">
-                <h1 className="text-3xl md:text-4xl font-bold text-[#c19b5a] mb-4 "> 
+                <h1 className="text-3xl md:text-4xl font-bold text-[#713722] mb-4 ">
                     Excellence in Every Morsel
                 </h1>
                 <p className="text-gray-600 md:text-lg mb-8 text-sm">
@@ -41,15 +41,17 @@ function Aboutuspage() {
             <section className="w-full py-10 slideRight">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                     <div>
-                        <p className="text-2xl font-serif font-bold tracking-widest text-[#c19b5a] mb-2 border-l-4 border-[#c19b5a] pl-2">
+                        <p className="text-2xl font-serif font-bold tracking-widest text-[#713722] mb-2 border-l-4 border-[#713722] pl-2">
                             Quality that delights, In every bite.
                         </p>
                         <br />
                         <p className="text-gray-600 md:text-lg mb-8 text-sm">
-                            Over decades, Dairy has grown to be synonymous with premium quality Indian sweets. Using technique, skill and science, our mithai artisans have
-                            perfected our recipes, packaging and processes. At hygienic, state- of the - art making facility we mould over 30,000 kgs of sweets everyday to
-                            deliver noticeable freshness, patrons can feel, taste and enjoy. Only absolutely fresh, carefully selected ingredients sourced from the best across
-                            the country go into making every bite.
+                            At <b>Marvel Crunch</b>, we create chikki with passion, tradition, and precision.
+                            Our artisans combine time-honored methods with modern food science for the perfect crunch.
+                            Each batch is made in a hygienic, state-of-the-art facility to ensure freshness.
+                            We use only carefully selected peanuts, dry fruits, jaggery, and rich chocolate.
+                            No artificial shortcuts—just pure ingredients and authentic taste.
+                            Every bite delivers quality, crunch, and unforgettable flavor.
                         </p>
                     </div>
                     <div className="relative">
@@ -72,17 +74,17 @@ function Aboutuspage() {
                         />
                     </div>
                     <div>
-                        <p className="text-sm font-semibold tracking-widest text-[#c19b5a] mb-2 border-l-4 border-[#c19b5a] pl-3">
+                        <p className="text-sm font-semibold tracking-widest text-[#713722] mb-2 border-l-4 border-[#713722] pl-3">
                             About Us
                         </p>
                         <br />
                         <h2 className="text-3xl font-serif font-bold text-gray-900 leading-snug mb-4">
-                            Taste of<br />
-                            Royal India
+                            Luxury<br />
+                            Modern Brand Feel
                         </h2>
                         <p className="text-gray-600 md:text-lg mb-8 text-sm">
-                            Dairy owes its success to its know-how that is the culmination of tradition, innovation and uncompromising quality. The dynamism
-                            of Dairy is also the result of it’s unrelenting quest to restyle and update its product range, packaging , to cater to the changing demographic and dynamics of changing India.
+                            <b>Marvel Crunch</b> is where tradition meets innovation in every chikki bite.
+                            Crafted with premium ingredients and hygienic processes, our chikkis deliver unmatched freshness and crunch.Every piece reflects quality, care, and authentic Indian taste.
                         </p>
                     </div>
                 </div>
@@ -96,13 +98,11 @@ function Aboutuspage() {
                         </p>
                         <br />
                         <h2 className="text-3xl font-serif font-bold text-gray-900 leading-snug mb-4">
-                            Luxurious Mithais,<br />
-                            Accessible To Everyone
+                            Premium Chikki,<br />
+                            Made for Everyone
                         </h2>
                         <p className="text-gray-600 md:text-lg mb-8 text-sm">
-                            We are obsessed with authenticity and believe in curating flavours that suit your taste and your celebrations.
-                            The sweet smelling saffron in our Malpua we get from Kashmir, and the melt-in-your-mouth paneer in our savouries
-                            from Delhi - because great taste can never have boundaries.
+                            At <b>Marvel Crunch</b>, we believe true taste comes from purity and passion. We carefully select the finest peanuts, jaggery, and natural ingredients from across India to craft chikkis that are rich in flavour and irresistible in crunch. Because when ingredients are honest, every bite becomes a celebration.
                         </p>
                     </div>
                     <div className="relative">
@@ -115,7 +115,7 @@ function Aboutuspage() {
                 </div>
             </section>
 
-          <Certifications/>
+            <Certifications />
         </>
     )
 }

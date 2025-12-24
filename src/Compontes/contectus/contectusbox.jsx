@@ -5,8 +5,8 @@ function Contectusbox() {
     useScrollAnimation()
     return (
         <>
-            <section className="py-12 px-6 slideU">
-                <div className="max-w-5xl mx-auto text-center shadow-2xl p-8 rounded-2xl ">
+            <section className="py-12 px-6 slideU bg-[#F4F1EA]">
+                <div className="max-w-5xl mx-auto text-center shadow-2xl p-8 rounded-2xl bg-white">
                     <p className="inline-block text-sm font-semibold tracking-widest text-[#E09F40] mb-6 border-l-4 border-[#E09F40] pl-3">
                         OUR CONTACTS
                     </p>
