@@ -23,13 +23,13 @@ function Aboutuspage() {
                 </div>
             </div>
 
+        <div className='bg-[#F4F1EA]'>
             <section className="max-w-6xl mx-auto text-center py-12 px-6 slideU">
                 <h1 className="text-3xl md:text-4xl font-bold text-[#713722] mb-4 ">
-                    Excellence in Every Morsel
+                    Excellence in Every Crunch
                 </h1>
                 <p className="text-gray-600 md:text-lg mb-8 text-sm">
-                    For over 3 decades, Dairy has grown to be synonymous with premium quality Indian Sweets. It has created a niche
-                    for itself for being one of the most premium and giftable brands in Surat today.
+                    For years, <b>Marvel Crunch Chikki</b> has stood for authentic taste and premium craftsmanship. With carefully selected ingredients and perfected techniques, we’ve earned a reputation as a trusted and gift-worthy brand for delicious, high-quality chikki.
                 </p>
                 <img
                     src={mainimg}
@@ -93,7 +93,7 @@ function Aboutuspage() {
             <section className="w-full py-10 slideRight">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                     <div>
-                        <p className="text-sm font-semibold tracking-widest text-[#c19b5a] mb-2 border-l-4 border-[#c19b5a] pl-3">
+                        <p className="text-sm font-semibold tracking-widest text-[#713722] mb-2 border-l-4 border-[#713722] pl-3">
                             Our Philosophy
                         </p>
                         <br />
@@ -116,6 +116,7 @@ function Aboutuspage() {
             </section>
 
             <Certifications />
+            </div>
         </>
     )
 }

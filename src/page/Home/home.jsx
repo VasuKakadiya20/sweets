@@ -16,7 +16,7 @@ function Home() {
             <Bestseller />
             <AboutSectionHome/>
             <BestSellingDishes/>
-            <section className="w-full py-10 slideU">
+            <section className="bg-[#F4F1EA] w-full py-10 slideU">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                     <div>
                         <p className="text-sm font-semibold tracking-widest text-[#713722] mb-2 border-l-4 border-[#713722] pl-3">
@@ -25,14 +25,14 @@ function Home() {
                         <br />
 
                         <h2 className="text-3xl font-serif font-bold text-gray-900 leading-snug mb-4">
-                            Luxurious Mithais,<br />
-                            Accessible To Everyone
+                           Premium Chikki,<br />
+                            Made for Everyone
                         </h2>
 
                         <p className="text-gray-600 md:text-lg mb-8 text-sm">
-                            We are obsessed with authenticity and believe in curating flavours that suit your taste and your celebrations.
-                            The sweet smelling saffron in our Malpua we get from Kashmir, and the melt-in-your-mouth paneer in our savouries
-                            from Delhi - because great taste can never have boundaries.
+                            At <b>Marvel Crunch</b>, we believe true taste comes from purity and passion. We carefully select the finest peanuts, jaggery, and natural 
+                            ingredients from across India to craft chikkis that are rich in flavour and irresistible in crunch. Because when ingredients are honest, every 
+                            bite becomes a celebration.
                         </p>
 
                     </div>
