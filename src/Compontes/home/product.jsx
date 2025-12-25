@@ -90,9 +90,8 @@ import { fetchDataFromApi } from "../../api";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-
-import shape1 from "../../assets/shape1.png";
-import shape2 from "../../assets/shape2.png"; 
+import shape1 from "../../assets/Swiper_shape_1.png";
+import shape2 from "../../assets/Swiper_shape_2.png";
 
 function Bestseller() {
   const [product, setProduct] = useState([]);
@@ -122,8 +121,7 @@ function Bestseller() {
       opacity-90 
       hidden lg:block 
       float-updown
-    "
-      />
+    "/>
 
       <img
         src={shape2}
@@ -136,8 +134,7 @@ function Bestseller() {
       opacity-90 
       hidden lg:block 
       float-updown-delay
-    "
-      />
+    "/>
 
       <div className="max-w-7xl mx-auto px-6 text-center">
 
@@ -163,43 +160,40 @@ function Bestseller() {
             <SwiperSlide key={item._id}>
               <div className="flex flex-col items-center mb-10">
 
-        <div className="relative w-[170px] h-[170px] mb-[-90px] z-10 flex items-center justify-center mt-5">
-  <div
-    className="
-      absolute
-      w-[175px] h-[175px] 
-      rounded-full
-      border-2
-      border-dashed
-      border-[#E09F40]
-      animate-rotate
-      z-20
-    "
-  ></div>
+                <div className="relative w-[170px] h-[170px] mb-[-90px] z-10 flex items-center justify-center mt-5">
+                  <div
+                    className="
+                    absolute
+                    w-[175px] h-[175px] 
+                    rounded-full
+                    border-2
+                    border-dashed
+                    border-[#E09F40]
+                    animate-rotate
+                    z-20
+                  "
+                  ></div>
 
-  <img
-    src={item.images[0]}
-    // src="https://fresheat-nextjs.vercel.app/assets/img/food-items/item1_3.png"
-    alt={item.itemtitle}
-    className="
-      w-[160px] h-[160px] 
-      object-cover
-      rounded-full
-      z-10
-    "
-  />
-</div>
+                  <img
+                    src={item.images[0]}
+                    alt={item.itemtitle}
+                    className="
+                    w-[160px] h-[160px] 
+                    object-cover
+                    rounded-full
+                    z-10
+                  "/>
+                </div>
 
-                <div className="bg-white rounded-2xl w-full h-[220px] pt-24 px-6 shadow-md flex flex-col items-center">
+                <div className="bg-white rounded-2xl w-full h-[190px] pt-24 px-6 shadow-md flex flex-col items-center">
                   <h3 className="text-lg font-bold text-[#713722] text-center">
                     {item.itemtitle}
                   </h3>
 
-                  <p className="text-[#E09F40] font-bold text-lg mt-3">
+                  <p className="text-[#E09F40] font-bold text-lg">
                     ₹ {item.price}
                   </p>
                 </div>
-
               </div>
             </SwiperSlide>
           ))}

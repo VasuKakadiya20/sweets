@@ -39,7 +39,7 @@
 }
 
 .sellingcar:hover {
-  background-color: #0B1A27;
+  background-image: url("../../assets/item_Bg_img.png");
   transform: translateY(-6px);
 }
 
@@ -53,6 +53,10 @@
 
 .sellingcar:hover .product-img {
   transform: scale(1.05);
+}
+
+.sellingcar:hover .price{
+  color: #ffffff;
 }
 
 .add-to-cart-btn {
@@ -106,6 +110,26 @@
   z-index: 1;
   pointer-events: none;
 }
+
+.floating-shape3 {
+  position: absolute;
+  top: 60px;
+  left: -20px;
+  width: 180px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.floating-shape4 {
+  position: absolute;
+  bottom: 60px;
+  right: 30px;
+   width: 180px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
 
 /* .btn-viewall{
   background: #E09F40;

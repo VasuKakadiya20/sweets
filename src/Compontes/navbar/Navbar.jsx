@@ -75,7 +75,7 @@ export default function Navbar() {
         </div>
 
         {menuOpen && (
-          <ul className="flex flex-col gap-4 mt-4 md:hidden text-lg font-medium ml-5">
+          <ul className="flex flex-col gap-4 mt-4 md:hidden text-lg font-medium ml-5 mb-4">
             <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
               HOME
             </NavLink>
@@ -114,7 +114,7 @@ export default function Navbar() {
             </NavLink>
 
             <NavLink to="/cart" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
-              Cart
+              CART
             </NavLink>
           </ul>
         )}

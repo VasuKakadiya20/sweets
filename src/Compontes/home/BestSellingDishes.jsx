@@ -2,6 +2,7 @@ import { FaShoppingBag } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import shape1 from "../../assets/Best_Selling.png";
 import shape2 from "../../assets/Best_Selling_2.png";
+import shape3 from "../../assets/Best_Selling_3.png";
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { mycontext } from '../../App';
 import { fetchDataFromApi, postData } from '../../api';
@@ -74,9 +75,19 @@ export default function BestSellingDishes() {
             className="floating-shape float-updown hidden md:block"
           />
           <img
+            src={shape3}
+            alt="shape"
+            className="floating-shape3 float-updown hidden md:block"
+          />
+          <img
             src={shape2}
             alt="shape"
             className="floating-shape2 float-updown hidden md:block"
+          />
+          <img
+            src={shape3}
+            alt="shape"
+            className="floating-shape4 float-updown hidden md:block"
           />
           <div className="text-center mb-14">
             <div className="text-[#E09F40] font-bold tracking-widest mb-2 text-[16px]">
@@ -110,7 +121,7 @@ export default function BestSellingDishes() {
 
                 <div className="relative z-20 text-center pb-6 px-4">
                   <h3 className="text-lg font-bold mb-1 text-[#713722] group-hover:text-white">{item.itemtitle}</h3>
-                  <span className="font-bold text-lg text-[#E09F40] ">₹ {item.price}</span>
+                  <span className="font-bold text-lg text-[#E09F40] group-hover:text-white price">₹ {item.price}</span>
                   <div className="flex items-center border-1 border-gray-300 rounded-full px-4">
                     <button
                       className="px-3 py-2 text-lg hover:text-[#E09F40] transition-colors add"
@@ -118,7 +129,7 @@ export default function BestSellingDishes() {
                     >
                       −
                     </button>
-                    <span className="px-4 py-2">{quantity[item._id] || 1}</span>
+                    <span className="px-4 py-2 add">{quantity[item._id] || 1}</span>
                     <button
                       className="px-3 py-2 text-lg hover:text-[#E09F40] transition-colors add"
                       onClick={() => updateQty(item._id, 1)}

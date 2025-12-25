@@ -3,8 +3,8 @@ import "./ContactsPage.css";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPaperPlane, FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import contectimg from "../../assets/Contacts_Img.png"
-import Contectusbox from "./contectusbox";
 import useScrollAnimation from "../useScrollAnimation";
+import ContactSection from "./contectusbox";
 
 export default function ContactsPage() {
   useScrollAnimation()
@@ -109,7 +109,7 @@ export default function ContactsPage() {
         </iframe>
       </div>
 
-      <Contectusbox />
+      <ContactSection />
     </>
   );
 }

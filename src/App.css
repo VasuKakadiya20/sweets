@@ -1,4 +1,3 @@
-
 .slideUp {
   animation: slideUp 0.8s ease-out forwards;
 }
@@ -127,3 +126,32 @@
     @apply w-[260px] h-[260px];
   }
 }
+
+/* TODAY'S DELICIOUS CHIKKI Banner */
+@keyframes float-x {
+  0% { transform: translateX(0px); }
+  50% { transform: translateX(12px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes float-y {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(12px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float-x { animation: float-x 4s linear infinite; }
+.animate-float-y { animation: float-y 4s linear infinite; }
+
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up .7s ease forwards;
+}
+
+.delay-150 { animation-delay: .15s; }
+.delay-300 { animation-delay: .30s; }
+.delay-500 { animation-delay: .50s; }
