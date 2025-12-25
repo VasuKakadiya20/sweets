@@ -59,7 +59,8 @@ import React from "react";
 import shape1 from "../../assets/img3.png";
 import shape4 from "../../assets/img2.png";
 import pista from "../../assets/pista.png";
-import shape3 from "../../assets/Strwbarry Chikki.png";
+import shape3 from "../../assets/item_1.png";
+import shape2 from "../../assets/item_5.png";
 import "./AboutSection.css";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -74,10 +75,13 @@ export default function AboutSectionHome() {
         className="hidden d-xxl-block shape-leftside"
         alt="PISTA"
       />
-      <img src={shape3}
-        className="hidden d-xxl-block round-img-left rotate"
-        alt=""
-      />
+     <div className="round-wrapper1 rotate">
+  <img
+    src={shape3}
+    alt=""
+    className="round-image "
+  />
+</div>
 
       <img src={shape4}
         className="hidden d-xxl-block shape-right"
@@ -88,10 +92,18 @@ export default function AboutSectionHome() {
         alt="PISTA"
       />
 
-      <img src={shape3}
+        <div className="round-wrapper2 rotate">
+  <img
+    src={shape2}
+    alt=""
+    className="round-image "
+  />
+</div>
+
+      {/* <img src={shape2}
         className="hidden d-xxl-block round-img-right rotate"
         alt=""
-      />
+      /> */}
 
 
       <div className="container mx-auto relative">

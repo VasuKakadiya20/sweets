@@ -345,7 +345,7 @@ function Bestseller() {
       <div className="max-w-5xl mx-auto px-6 text-center container">
 
         <div className="flex justify-center items-center gap-2 text-[#E09F40] font-bold mb-1">
-          BEST FOOD
+          BEST ITEMS
         </div>
 
         <h2 className="text-4xl font-extrabold text-[#713722]">

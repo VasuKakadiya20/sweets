@@ -3,16 +3,21 @@
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.about-section{
-  padding: 120px 0;       
+.about-section {
+  padding: 120px 0;
   position: relative;
 }
 
-.shape-left{
+.shape-left {
   position: absolute;
   left: 0;
   top: 50%;
@@ -23,7 +28,7 @@
   object-fit: cover;
 }
 
-.shape-right{
+.shape-right {
   position: absolute;
   right: 0;
   top: 50%;
@@ -34,9 +39,9 @@
   object-fit: cover;
 }
 
-.shape-leftside{
+.shape-leftside {
   position: absolute;
-  left: 20%;
+  left: 22%;
   top: 60px;
   transform: translateY(-50%);
   height: 150px;
@@ -44,7 +49,7 @@
   object-fit: cover;
 }
 
-.shape-rightside{
+.shape-rightside {
   position: absolute;
   right: 24%;
   bottom: -60px;
@@ -54,7 +59,7 @@
   object-fit: cover;
 }
 
-.round-img-left{
+/* .round-img-left{
   position: absolute;
   left: 90px;
   top: 50%;
@@ -62,11 +67,32 @@
   height: 340px;
   width: 340px;
   border-radius: 50%;
+} */
+
+.round-wrapper1 {
+  position: absolute;
+  left: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 340px;
+  width: 340px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  z-index: 2;
 }
 
+.round-image {
+  height: 220px;
+  width: 220px;
+  object-fit: cover;
+}
 
-
-.round-img-right{
+.round-wrapper2 {
   position: absolute;
   right: 90px;
   top: 50%;
@@ -74,13 +100,35 @@
   height: 340px;
   width: 340px;
   border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  z-index: 2;
 }
 
-.rotate{
+/* .round-img-right {
+  position: absolute;
+  right: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 340px;
+  width: 340px;
+  border-radius: 50%;
+} */
+
+.rotate {
   animation: rotate 28s linear infinite;
 }
 
 @keyframes rotate {
-  from{ transform: translateY(-50%) rotate(0deg); }
-  to{   transform: translateY(-50%) rotate(360deg); }
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
 }

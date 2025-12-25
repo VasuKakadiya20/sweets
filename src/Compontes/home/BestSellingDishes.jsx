@@ -91,7 +91,7 @@ export default function BestSellingDishes() {
           />
           <div className="text-center mb-14">
             <div className="text-[#E09F40] font-bold tracking-widest mb-2 text-[16px]">
-              POPULAR Iten
+              POPULAR ITEM
             </div>
             <h2 className="text-[40px] font-bold text-[#713722] mb-5 leading-tight max-lg:text-[32px]">
               Best Selling Item
