@@ -56,9 +56,7 @@ export default function ContactSection() {
             alt="Delicious Food"
             className="rounded-[0%_50%_50%_0%] w-[933px] h-[634px] hidden lg:block object-cover"
           />
-           {/* w-full */}
         </div>
-
 
         <div className="bg-white p-8 rounded-lg shadow-sm md:h-[600px]">
           <h3 className="text-3xl font-bold mb-6 mt-3">Get In Touch</h3>

@@ -25,6 +25,7 @@ export default function ContactsPage() {
 
       <section className="w-full py-20 bg-[#F4F1EA]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 slideU">
+          
           <div className="relative">
             <img
               src={contectimg}
@@ -32,8 +33,8 @@ export default function ContactsPage() {
               className="rounded-lg w-full object-cover shadow-md"
             />
           </div>
-        <div>
-          
+
+          <div>
             <p className="text-sm font-semibold tracking-widest text-[#E09F40] mb-2 border-l-4 border-[#E09F40] pl-3">
               OUR CONTACTS
             </p>
@@ -94,7 +95,9 @@ export default function ContactsPage() {
                 <Link to={"https://www.instagram.com/"}><FaInstagram className="text-lg" /></Link>
               </button>
             </div>
+
           </div>
+
         </div>
       </section>
 

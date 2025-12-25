@@ -4,6 +4,7 @@ import shape2 from "../../assets/Best_Selling_3.png"
 import shape3 from "../../assets/banner_2.png"
 import shape4 from "../../assets/banner_3.png"
 import { FaArrowRight } from "react-icons/fa";
+import bg_img from "../../assets/banner_bg.png"
 
 export default function CtaSection() {
   return (
@@ -12,7 +13,7 @@ export default function CtaSection() {
   className="relative overflow-hidden bg-cover bg-center bg-no-repeat py-20"
   style={{
     backgroundImage:
-      "url('https://fresheat-nextjs.vercel.app/assets/img/bg/ctaBG1_1.jpg')",
+      `url(${bg_img})`,
   }}
 >
   <img src={shape1} className="hidden 2xl:block absolute top-10 left-10 animate-float-x w-36" alt="" />

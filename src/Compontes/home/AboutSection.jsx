@@ -75,13 +75,9 @@ export default function AboutSectionHome() {
         className="hidden d-xxl-block shape-leftside"
         alt="PISTA"
       />
-     <div className="round-wrapper1 rotate">
-  <img
-    src={shape3}
-    alt=""
-    className="round-image "
-  />
-</div>
+      <div className="round-wrapper1 rotate">
+        <img src={shape3} alt="" className="round-image" />
+      </div>
 
       <img src={shape4}
         className="hidden d-xxl-block shape-right"
@@ -92,19 +88,13 @@ export default function AboutSectionHome() {
         alt="PISTA"
       />
 
-        <div className="round-wrapper2 rotate">
-  <img
-    src={shape2}
-    alt=""
-    className="round-image "
-  />
-</div>
-
-      {/* <img src={shape2}
-        className="hidden d-xxl-block round-img-right rotate"
-        alt=""
-      /> */}
-
+      <div className="round-wrapper2 rotate">
+        <img
+          src={shape2}
+          alt=""
+          className="round-image "
+        />
+      </div> 
 
       <div className="container mx-auto relative">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-20"></div>

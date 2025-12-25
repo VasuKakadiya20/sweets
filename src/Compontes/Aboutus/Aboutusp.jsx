@@ -67,32 +67,6 @@ function Aboutuspage() {
                     </div>
                 </section>
 
-                {/* <section className="w-full py-10 slideLeft">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
-                    <div className="relative">
-                        <img
-                            src={img2}
-                            alt="Chocolate"
-                            className="rounded-lg w-full object-cover shadow-md"
-                        />
-                    </div>
-                    <div>
-                        <p className="text-sm font-semibold tracking-widest text-[#713722] mb-2 border-l-4 border-[#713722] pl-3">
-                            About Us
-                        </p>
-                        <br />
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 leading-snug mb-4">
-                            Luxury<br />
-                            Modern Brand Feel
-                        </h2>
-                        <p className="text-gray-600 md:text-lg mb-8 text-sm">
-                            <b>Marvel Crunch</b> is where tradition meets innovation in every chikki bite.
-                            Crafted with premium ingredients and hygienic processes, our chikkis deliver unmatched freshness and crunch.Every piece reflects quality, care, and authentic Indian taste.
-                        </p>
-                    </div>
-                </div>
-            </section> */}
-
                 <section className="w-full py-10 slideLeft">
                     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                         <div className="relative">
