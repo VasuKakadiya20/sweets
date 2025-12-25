@@ -49,7 +49,7 @@ import foodImage from "../../assets/Contect_box.jpg";
 export default function ContactSection() {
   return (
     <section className="bg-[#F4F1EA] py-16">
-      <div className= "px-10 lg:pr-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className= "px-10 lg:px-0 lg:pr-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="flex justify-center md:justify-start">
           <img
             src={foodImage}
