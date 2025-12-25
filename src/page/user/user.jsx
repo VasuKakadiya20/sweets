@@ -72,7 +72,7 @@ export default function UserProfile() {
                     <div className="">
                         <button
                             onClick={() => logout()}
-                            className="px-5 py-2 bg-[#E09F40] text-white rounded-full hover:bg-[#cf8f32] mr-3 gap-2"
+                            className="px-5 py-2 bg-[#E09F40] text-white rounded-md hover:bg-[#cf8f32] mr-3 gap-2"
                         >
                             <FaSignOutAlt className="mr-2 text-base" />
                             Logout
@@ -80,7 +80,7 @@ export default function UserProfile() {
                         {!editing && (
                             <button
                                 onClick={() => setEditing(true)}
-                                className="px-5 py-2 bg-[#E09F40] text-white rounded-full hover:bg-[#cf8f32] mt-2"
+                                className="px-5 py-2 bg-[#E09F40] text-white rounded-md hover:bg-[#cf8f32] mt-2"
                             >
                                 Edit
                             </button>
@@ -99,7 +99,7 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="First Name"
                             className={`
-        w-full px-4 py-3 rounded-full border 
+        w-full px-4 py-3 rounded-xl border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
         focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
@@ -118,7 +118,7 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="Last Name"
                             className={`
-        w-full px-4 py-3 rounded-full border 
+        w-full px-4 py-3 rounded-xl border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
         focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
@@ -137,7 +137,7 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="Phone Number"
                             className={`
-        w-full px-4 py-3 rounded-full border 
+        w-full px-4 py-3 rounded-xl border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
         focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
@@ -156,7 +156,7 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="Email"
                             className={`
-        w-full px-4 py-3 rounded-full border 
+        w-full px-4 py-3 rounded-xl border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
         focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
@@ -175,7 +175,7 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="Landmark"
                             className={`
-        w-full px-4 py-3 rounded-full border 
+        w-full px-4 py-3 rounded-xl border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
         focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
@@ -194,7 +194,7 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="Pin Code"
                             className={`
-        w-full px-4 py-3 rounded-full border 
+        w-full px-4 py-3 rounded-xll border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
         focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
@@ -213,7 +213,7 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="City"
                             className={`
-        w-full px-4 py-3 rounded-full border 
+        w-full px-4 py-3 rounded-xl border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
         focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
@@ -232,7 +232,7 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="State"
                             className={`
-        w-full px-4 py-3 rounded-full border 
+        w-full px-4 py-3 rounded-xl border 
         ${editing ? "bg-white" : "bg-gray-100"} 
         border-gray-300 text-gray-700
         focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
@@ -250,7 +250,7 @@ export default function UserProfile() {
                           value={editing ? form.password : "******"}
                             onChange={handleChange}
                             className={`
-                            w-full px-4 py-3 rounded-full border 
+                            w-full px-4 py-3 rounded-xl border 
                             ${editing ? "bg-white" : "bg-gray-100"} 
                             border-gray-300 text-gray-700
                             focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
@@ -263,14 +263,14 @@ export default function UserProfile() {
                         <div className="flex gap-4 md:col-span-2 justify-center mt-4 ml-[50%]">
                             <button
                                 onClick={handleSave}
-                                className="px-8 py-3 bg-[#E09F40] text-white rounded-full hover:bg-[#cf8f32]"
+                                className="px-8 py-3 bg-[#E09F40] text-white rounded-md hover:bg-[#cf8f32]"
                             >
                                 Save
                             </button>
 
                             <button
                                 onClick={handleCancel}
-                                className="px-8 py-3 border-1 border-[#E09F40] text-[#E09F40] rounded-full "
+                                className="px-8 py-3 border-1 border-[#E09F40] text-[#E09F40] rounded-md "
                             >
                                 Cancel
                             </button>
