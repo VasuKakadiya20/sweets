@@ -91,10 +91,10 @@ export default function BestSellingDishes() {
           />
           <div className="text-center mb-14">
             <div className="text-[#E09F40] font-bold tracking-widest mb-2 text-[16px]">
-              POPULAR DISHES
+              POPULAR Iten
             </div>
             <h2 className="text-[40px] font-bold text-[#713722] mb-5 leading-tight max-lg:text-[32px]">
-              Best Selling Dishes
+              Best Selling Item
             </h2>
           </div>
           

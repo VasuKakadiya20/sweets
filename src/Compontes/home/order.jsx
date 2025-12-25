@@ -3,6 +3,7 @@ import shape1 from "../../assets/banner_1.png"
 import shape2 from "../../assets/Best_Selling_3.png"
 import shape3 from "../../assets/banner_2.png"
 import shape4 from "../../assets/banner_3.png"
+import { FaArrowRight } from "react-icons/fa";
 
 export default function CtaSection() {
   return (
@@ -47,8 +48,7 @@ export default function CtaSection() {
             href="/items"
             className="inline-flex items-center gap-2 px-8 py-3 bg-[#E09F40] text-white font-semibold rounded-md hover:bg-[#cf8f32] transition"
           >
-            ORDER NOW
-          <i className="bi bi-arrow-right" />
+            ORDER NOW <FaArrowRight/>
         </a>
       </div>
     </div>

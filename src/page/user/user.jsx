@@ -25,7 +25,6 @@ export default function UserProfile() {
 
     useEffect(() => {
         fetchDataFromApi(`/client/${id}`).then((data) => {
-            // console.log("this is a user data:-", data);
             setForm(data)
         })
     }, [])
@@ -38,7 +37,6 @@ export default function UserProfile() {
         e.preventDefault();
         try {
             const res = await updatedata(`/client/${id}`, form)
-            // console.log("this is a data", res)
             setEditing(false);
             toast.success("Profile Updated Successfully!");
         } catch (error) {
@@ -99,12 +97,12 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="First Name"
                             className={`
-        w-full px-4 py-3 rounded-xl border 
-        ${editing ? "bg-white" : "bg-gray-100"} 
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
-        outline-none transition-all duration-200
-      `}
+                            w-full px-4 py-3 rounded-xl border 
+                            ${editing ? "bg-white" : "bg-gray-100"} 
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
+                            outline-none transition-all duration-200
+                        `}
                         />
                     </div>
 
@@ -118,12 +116,12 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="Last Name"
                             className={`
-        w-full px-4 py-3 rounded-xl border 
-        ${editing ? "bg-white" : "bg-gray-100"} 
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
-        outline-none transition-all duration-200
-      `}
+                            w-full px-4 py-3 rounded-xl border 
+                            ${editing ? "bg-white" : "bg-gray-100"} 
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
+                            outline-none transition-all duration-200
+                        `}
                         />
                     </div>
 
@@ -137,12 +135,12 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="Phone Number"
                             className={`
-        w-full px-4 py-3 rounded-xl border 
-        ${editing ? "bg-white" : "bg-gray-100"} 
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
-        outline-none transition-all duration-200
-      `}
+                            w-full px-4 py-3 rounded-xl border 
+                            ${editing ? "bg-white" : "bg-gray-100"} 
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
+                            outline-none transition-all duration-200
+                        `}
                         />
                     </div>
 
@@ -156,12 +154,12 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="Email"
                             className={`
-        w-full px-4 py-3 rounded-xl border 
-        ${editing ? "bg-white" : "bg-gray-100"} 
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
-        outline-none transition-all duration-200
-      `}
+                            w-full px-4 py-3 rounded-xl border 
+                            ${editing ? "bg-white" : "bg-gray-100"} 
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
+                            outline-none transition-all duration-200
+                        `}
                         />
                     </div>
 
@@ -175,12 +173,12 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="Landmark"
                             className={`
-        w-full px-4 py-3 rounded-xl border 
-        ${editing ? "bg-white" : "bg-gray-100"} 
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
-        outline-none transition-all duration-200
-      `}
+                            w-full px-4 py-3 rounded-xl border 
+                            ${editing ? "bg-white" : "bg-gray-100"} 
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
+                            outline-none transition-all duration-200
+                        `}
                         />
                     </div>
 
@@ -194,12 +192,12 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="Pin Code"
                             className={`
-        w-full px-4 py-3 rounded-xll border 
-        ${editing ? "bg-white" : "bg-gray-100"} 
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
-        outline-none transition-all duration-200
-      `}
+                            w-full px-4 py-3 rounded-xll border 
+                            ${editing ? "bg-white" : "bg-gray-100"} 
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
+                            outline-none transition-all duration-200
+                        `}
                         />
                     </div>
 
@@ -213,12 +211,12 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="City"
                             className={`
-        w-full px-4 py-3 rounded-xl border 
-        ${editing ? "bg-white" : "bg-gray-100"} 
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
-        outline-none transition-all duration-200
-      `}
+                            w-full px-4 py-3 rounded-xl border 
+                            ${editing ? "bg-white" : "bg-gray-100"} 
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
+                            outline-none transition-all duration-200
+                        `}
                         />
                     </div>
 
@@ -232,12 +230,12 @@ export default function UserProfile() {
                             onChange={handleChange}
                             placeholder="State"
                             className={`
-        w-full px-4 py-3 rounded-xl border 
-        ${editing ? "bg-white" : "bg-gray-100"} 
-        border-gray-300 text-gray-700
-        focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
-        outline-none transition-all duration-200
-      `}
+                            w-full px-4 py-3 rounded-xl border 
+                            ${editing ? "bg-white" : "bg-gray-100"} 
+                            border-gray-300 text-gray-700
+                            focus:ring-2 focus:ring-[#E09F40] focus:border-[#E09F40]
+                            outline-none transition-all duration-200
+                        `}
                         />
                     </div>
 
@@ -276,7 +274,6 @@ export default function UserProfile() {
                             </button>
                         </div>
                     )}
-
                 </div>
             </div>
         </>

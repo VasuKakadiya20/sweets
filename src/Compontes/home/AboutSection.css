@@ -7,3 +7,80 @@
   to { transform: rotate(360deg); }
 }
 
+.about-section{
+  padding: 120px 0;       
+  position: relative;
+}
+
+.shape-left{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 500px;
+  width: 420px;
+  border-radius: 0 50% 50% 0;
+  object-fit: cover;
+}
+
+.shape-right{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 500px;
+  width: 430px;
+  border-radius: 50% 0 0 50%;
+  object-fit: cover;
+}
+
+.shape-leftside{
+  position: absolute;
+  left: 20%;
+  top: 60px;
+  transform: translateY(-50%);
+  height: 150px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.shape-rightside{
+  position: absolute;
+  right: 24%;
+  bottom: -60px;
+  transform: translateY(-50%);
+  height: 150px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.round-img-left{
+  position: absolute;
+  left: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 340px;
+  width: 340px;
+  border-radius: 50%;
+}
+
+
+
+.round-img-right{
+  position: absolute;
+  right: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 340px;
+  width: 340px;
+  border-radius: 50%;
+}
+
+.rotate{
+  animation: rotate 28s linear infinite;
+}
+
+@keyframes rotate {
+  from{ transform: translateY(-50%) rotate(0deg); }
+  to{   transform: translateY(-50%) rotate(360deg); }
+}
