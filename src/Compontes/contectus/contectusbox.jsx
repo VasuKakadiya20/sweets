@@ -106,7 +106,7 @@ export default function ContactSection() {
 
             <button
               type="submit"
-              className="w-full bg-[#E09F40] text-white py-3 rounded-md font-semibold hover:bg-[#cf8f32] transition flex items-center justify-center gap-2 mt-4"
+              className="w-full bg-[#E09F40] text-white py-3 rounded-md font-semibold hover:bg-[#cf8f32] transition flex items-center justify-center gap-2 mt-4 btn-viewall"
             >
               SUBMIT NOW <i className="bi bi-arrow-right"></i>
             </button>

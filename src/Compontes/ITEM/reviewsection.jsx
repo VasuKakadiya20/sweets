@@ -81,7 +81,7 @@ function Reviewsection() {
               {context.islogin === true ?
                 (
                   !showfrom && (
-                    <button className="px-4 py-2 rounded-full bg-[#E09F40] hover:bg-[#cf8f32] text-white" onClick={() => { setshowfrom(true) }}>
+                    <button className="px-4 py-2 rounded-md bg-[#E09F40] hover:bg-[#cf8f32] text-white theme-btn" onClick={() => { setshowfrom(true) }}>
                       Write a review
                     </button>
                   )

@@ -94,7 +94,7 @@ export default function AboutSectionHome() {
           alt=""
           className="round-image "
         />
-      </div> 
+      </div>
 
       <div className="container mx-auto relative">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-20"></div>
@@ -113,10 +113,13 @@ export default function AboutSectionHome() {
             Authentic traditional sweets prepared with love & purity, using the finest ingredients to bring joy & sweetness to every occasion.
           </p>
 
-          <a
+          {/* <a
             href="/items"
             className="inline-flex items-center gap-2 px-8 py-3 bg-[#E09F40] text-white font-semibold rounded-md hover:bg-[#cf8f32] transition"
           >
+            ORDER NOW <FaArrowRight />
+          </a> */}
+          <a href="/items" className="px-8 py-3 theme-btn">
             ORDER NOW <FaArrowRight />
           </a>
         </div>

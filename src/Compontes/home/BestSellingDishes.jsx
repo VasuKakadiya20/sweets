@@ -170,6 +170,8 @@ export default function BestSellingDishes() {
               View All Item <FaArrowRight />
             </a>
           </button>
+
+          
         </div>
       </section>
     </>

@@ -45,11 +45,14 @@ export default function CtaSection() {
            Limited Stock – Grab Yours Now!
         </p>
 
-       <a
+       {/* <a
             href="/items"
             className="inline-flex items-center gap-2 px-8 py-3 bg-[#E09F40] text-white font-semibold rounded-md hover:bg-[#cf8f32] transition"
           >
             ORDER NOW <FaArrowRight/>
+        </a> */}
+         <a href="/items" className="theme-btn">
+          ORDER NOW <FaArrowRight />
         </a>
       </div>
     </div>

@@ -105,7 +105,7 @@ function Itemdetailpage() {
             </div>
 
             <button
-              className="bg-[#E09F40] text-white px-6 py-3 rounded-full text-sm hover:bg-[#cf8f32] transition"
+              className="bg-[#E09F40] text-white px-6 py-3 rounded-md text-sm hover:bg-[#cf8f32] transition theme-btn"
               onClick={() => Addtocart(product)}
             >
               Add to Cart

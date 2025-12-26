@@ -103,12 +103,12 @@ function Addreviewfrom({ showfrom, setshowfrom, onReviewAdded }) {
 
                     <button
                         type="submit"
-                        className="mt-6 bg-[#E09F40] text-white px-5 py-2 rounded-full h-12 ml-3 hover:bg-[#cf8f32]"
+                        className="mt-6 bg-[#E09F40] text-white px-5 py-2 rounded-md h-12 ml-3 hover:bg-[#cf8f32] theme-btn"
                     >
                         Submit Review
                     </button>
 
-                    <button className="h-12 px-5 py-2 rounded-full text-[#E09F40] hover:bg-[#cf8f32] hover:text-white border-2 border-[#c19b5a] ml-3 mt-3" onClick={() => { setshowfrom(false) }}>
+                    <button className="h-12 px-5 py-2 rounded-md text-white border-2 border-[#E09F40] hover:bg-[#E09F40] hover:text-white hover:border-none ml-3 mt-3 theme-btn" onClick={() => { setshowfrom(false) }}>
                         Cancel Review
                     </button>
                 </form>
