@@ -58,7 +58,7 @@ export default function ContactSection() {
           />
         </div>
 
-        <div className="bg-white p-8 rounded-lg shadow-sm md:h-[600px]">
+        <div className="bg-white p-8 rounded-lg shadow-sm md:h-[540px]">
           <h3 className="text-3xl font-bold mb-6 mt-3">Get In Touch</h3>
           <form className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -94,7 +94,7 @@ export default function ContactSection() {
               className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#E09F40] w-full h-42 resize-none"
             ></textarea>
 
-            <div className="flex items-center space-x-2 mt-3">
+            {/* <div className="flex items-center space-x-2 mt-3">
               <input
                 type="checkbox"
                 className="accent-[#E09F40] w-4 h-4"
@@ -102,11 +102,11 @@ export default function ContactSection() {
               <span className="text-gray-500 text-sm">
                 Collaboratively formulate principle capital. Progressively evolve user
               </span>
-            </div>
+            </div> */}
 
             <button
               type="submit"
-              className="w-full bg-[#E09F40] text-white py-3 rounded-md font-semibold hover:bg-[#cf8f32] transition flex items-center justify-center gap-2 mt-3"
+              className="w-full bg-[#E09F40] text-white py-3 rounded-md font-semibold hover:bg-[#cf8f32] transition flex items-center justify-center gap-2 mt-4"
             >
               SUBMIT NOW <i className="bi bi-arrow-right"></i>
             </button>

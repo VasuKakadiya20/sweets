@@ -350,6 +350,7 @@ function Bestseller() {
 
         <h2 className="text-4xl font-extrabold text-[#713722]">
           Popular Food Items
+          {/* Popular Food Items */}
         </h2>
 
         <Swiper

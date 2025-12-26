@@ -27,7 +27,7 @@ function Aboutuspage() {
             <div className='bg-[#F4F1EA]'>
                   <section className="max-w-6xl mx-auto text-center py-12 px-6 slideU">
                     <h1 className="text-3xl md:text-4xl font-bold text-[#713722] mb-4 ">
-                        Excellence in Every Crunch
+                        {/* Excellence in Every Crunch */}Taste the Crunch, Celebrate the Flavor
                     </h1>
                     <p className="text-gray-600 md:text-lg mb-8 text-sm">
                         For years, <b>Marvel Crunch Chikki</b> has stood for authentic taste and premium craftsmanship. With carefully selected ingredients and perfected techniques, we’ve earned a reputation as a trusted high-quality chikki.
@@ -41,7 +41,7 @@ function Aboutuspage() {
 
                 <AboutSectionHome />
 
-                <section className="w-full py-10 slideRight">
+                {/* <section className="w-full py-10 slideRight">
                     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
                         <div>
                             <p className="text-2xl font-serif font-bold tracking-widest text-[#713722] mb-2 border-l-4 border-[#713722] pl-2">
@@ -65,7 +65,7 @@ function Aboutuspage() {
                             />
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 <section className="w-full py-10 slideLeft">
                     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
@@ -77,7 +77,7 @@ function Aboutuspage() {
                             />
                         </div>
                         <div>
-                            <p className="text-sm font-semibold tracking-widest text-[#713722] mb-2 border-l-4 border-[#713722] pl-3">
+                            <p className="text-sm font-semibold tracking-widest text-[#E09F40] mb-2 border-l-4 border-[#E09F40] pl-3">
                                 Our Philosophy
                             </p>
                             <br />

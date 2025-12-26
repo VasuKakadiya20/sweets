@@ -57,7 +57,7 @@ function Addreviewfrom({ showfrom, setshowfrom, onReviewAdded }) {
                         value={form.Name}
                         onChange={handleChange}
                         placeholder="Enter your name"
-                        className="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-black"
+                        className="w-full lg:w-[70%] border p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#E09F40]"
                         required
                     />
 
@@ -68,7 +68,7 @@ function Addreviewfrom({ showfrom, setshowfrom, onReviewAdded }) {
                         value={form.Email}
                         onChange={handleChange}
                         placeholder="Enter your email"
-                        className="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-black"
+                        className="w-full lg:w-[70%] border p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#E09F40]"
                         required
                     />
 
@@ -86,7 +86,7 @@ function Addreviewfrom({ showfrom, setshowfrom, onReviewAdded }) {
                         value={form.Review_Title}
                         onChange={handleChange}
                         placeholder="Give your review a title"
-                        className="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-black"
+                        className="w-full lg:w-[70%] border p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#E09F40]"
                         required
                     />
 
@@ -97,18 +97,18 @@ function Addreviewfrom({ showfrom, setshowfrom, onReviewAdded }) {
                         value={form.Review_msg}
                         onChange={handleChange}
                         placeholder="Write your comments here"
-                        className="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-black"
+                        className="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#E09F40]"
                         required
                     ></textarea>
 
                     <button
                         type="submit"
-                        className="mt-6 bg-[#c19b5a] text-white px-5 py-2 rounded-full h-12 ml-3"
+                        className="mt-6 bg-[#E09F40] text-white px-5 py-2 rounded-full h-12 ml-3 hover:bg-[#cf8f32]"
                     >
                         Submit Review
                     </button>
 
-                    <button className="h-12 px-5 py-2 rounded-full text-[#c19b5a] hover:bg-[#c19b5a] hover:text-white border-2 border-[#c19b5a] ml-3 mt-3" onClick={() => { setshowfrom(false) }}>
+                    <button className="h-12 px-5 py-2 rounded-full text-[#E09F40] hover:bg-[#cf8f32] hover:text-white border-2 border-[#c19b5a] ml-3 mt-3" onClick={() => { setshowfrom(false) }}>
                         Cancel Review
                     </button>
                 </form>

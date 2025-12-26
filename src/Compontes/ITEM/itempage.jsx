@@ -182,69 +182,29 @@ export default function ProductPage() {
                                   +
                                 </button>
                               </div> */}
-                  <div
-                    className="
-    mt-4
-    mx-auto
-    flex
-    items-center
-    justify-between
-    w-full
-    max-w-[220px]
-    sm:max-w-[260px]
-    border
-    border-gray-300
-    rounded-full
-    px-4
-    py-2
-    text-center
-  "
-                  >
-                    <button
-                      className="
-      w-8 h-8
-      flex items-center justify-center
-      text-lg
-      text-gray-700
-      hover:text-[#E09F40]
-      transition-colors
-      add
-    "
-                      onClick={() => updateQty(item._id, -1)}
-                    >
-                      −
-                    </button>
+                  <div className="mt-3 flex justify-center">
+                    <div className="flex items-center gap-4 border border-gray-300 rounded-full px-6 sm:px-8 py-2.5  w-48 sm:w-56 ">
 
-                    <span
-                      className="
-      min-w-[32px]
-      text-center
-      font-semibold
-      text-gray-800
-      text-sm
-      sm:text-base
-      add
-    "
-                    >
-                      {quantity[item._id] || 1}
-                    </span>
+                      <button
+                        className="px-3 text-xl font-bold hover:text-[#E09F40] transition add"
+                        onClick={() => updateQty(item._id, -1)}
+                      >
+                        −
+                      </button>
 
-                    <button
-                      className="
-      w-8 h-8
-      flex items-center justify-center
-      text-lg
-      text-gray-700
-      hover:text-[#E09F40]
-      transition-colors
-      add
-    "
-                      onClick={() => updateQty(item._id, 1)}
-                    >
-                      +
-                    </button>
+                      <span className="w-12 sm:w-18 text-center text-lg font-semibold add">
+                        {quantity[item._id] || 1}
+                      </span>
+
+                      <button
+                        className="px-3 text-xl font-bold hover:text-[#E09F40] transition add"
+                        onClick={() => updateQty(item._id, 1)}
+                      >
+                        +
+                      </button>
+
+                    </div>
                   </div>
-
                 </div>
               </div>
             ))}
