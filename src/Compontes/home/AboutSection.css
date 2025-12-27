@@ -156,7 +156,6 @@
   z-index: -1;
 }
 
-/* Bottom half - right to left */
 .theme-btn::after {
   content: "";
   position: absolute;

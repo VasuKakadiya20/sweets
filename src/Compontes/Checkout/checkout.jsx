@@ -57,7 +57,7 @@ export default function CheckoutPage() {
       <Toaster position="top-right" reverseOrder={false} />
       <div className="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-10 font-sans">
         <div className="bg-white p-8 rounded-3xl shadow-md">
-          <h2 className="text-2xl font-bold text-[#c19b5a] border-l-4 border-[#c19b5a] pl-4 mb-6">
+          <h2 className="text-2xl font-bold text-[#713722] border-l-4 border-[#713722] pl-4 mb-6">
             Delivery Information
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -71,7 +71,8 @@ export default function CheckoutPage() {
                 value={form.Firstname}
                 onChange={handleChange}
                 placeholder="First Name"
-                className="w-full px-4 py-3 rounded-full border bg-gray-100 border-gray-300 focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a] outline-none transition-all duration-200"
+                required
+                className="w-full px-4 py-3 rounded-md border bg-gray-100  focus:ring-2 focus:ring-[#E09F40] outline-none transition-all duration-200"
               />
             </div>
             <div>
@@ -84,7 +85,8 @@ export default function CheckoutPage() {
                 value={form.Lastname}
                 onChange={handleChange}
                 placeholder="Last Name"
-                className="w-full px-4 py-3 rounded-full border bg-gray-100 border-gray-300 focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a] outline-none transition-all duration-200"
+                required
+                className="w-full px-4 py-3 rounded-md border bg-gray-100  focus:ring-2 focus:ring-[#E09F40] outline-none transition-all duration-200"
               />
             </div>
             <div>
@@ -97,7 +99,8 @@ export default function CheckoutPage() {
                 value={form.phonenumber}
                 onChange={handleChange}
                 placeholder="Phone Number"
-                className="w-full px-4 py-3 rounded-full border bg-gray-100 border-gray-300 focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a] outline-none transition-all duration-200"
+                required
+                className="w-full px-4 py-3 rounded-md border bg-gray-100  focus:ring-2 focus:ring-[#E09F40] outline-none transition-all duration-200"
               />
             </div>
             <div>
@@ -110,12 +113,13 @@ export default function CheckoutPage() {
                 value={form.Email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full px-4 py-3 rounded-full border bg-gray-100 border-gray-300 focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a] outline-none transition-all duration-200"
+                required
+                className="w-full px-4 py-3 rounded-md border bg-gray-100  focus:ring-2 focus:ring-[#E09F40] outline-none transition-all duration-200"
               />
             </div>
             <div className="md:col-span-2">
               <label className="text-gray-600 text-sm mb-1 block">
-                Street address *
+                Street address * {/*border-gray-300*/}
               </label>
               <input
                 type="text"
@@ -123,7 +127,8 @@ export default function CheckoutPage() {
                 value={form.Landmark}
                 onChange={handleChange}
                 placeholder="Street Address"
-                className="w-full px-4 py-3 rounded-full border bg-gray-100 border-gray-300 focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a] outline-none transition-all duration-200"
+                required
+                className="w-full px-4 py-3 rounded-md border bg-gray-100 focus:ring-2 focus:ring-[#E09F40] outline-none transition-all duration-200"
               />
             </div>
             <div>
@@ -134,7 +139,8 @@ export default function CheckoutPage() {
                 value={form.Pin_Code}
                 onChange={handleChange}
                 placeholder="Pin Code"
-                className="w-full px-4 py-3 rounded-full border bg-gray-100 border-gray-300 focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a] outline-none transition-all duration-200"
+                required
+                className="w-full px-4 py-3 rounded-md border bg-gray-100 focus:ring-2 focus:ring-[#E09F40] outline-none transition-all duration-200"
               />
             </div>
             <div>
@@ -145,7 +151,8 @@ export default function CheckoutPage() {
                 value={form.City}
                 onChange={handleChange}
                 placeholder="City"
-                className="w-full px-4 py-3 rounded-full border bg-gray-100 border-gray-300 focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a] outline-none transition-all duration-200"
+                required
+                className="w-full px-4 py-3 rounded-md border bg-gray-100 focus:ring-2 focus:ring-[#E09F40] outline-none transition-all duration-200"
               />
             </div>
             <div>
@@ -156,14 +163,15 @@ export default function CheckoutPage() {
                 value={form.State}
                 onChange={handleChange}
                 placeholder="State"
-                className="w-full px-4 py-3 rounded-full border bg-gray-100 border-gray-300 focus:ring-2 focus:ring-[#c19b5a] focus:border-[#c19b5a] outline-none transition-all duration-200"
+                required
+                className="w-full px-4 py-3 rounded-md border bg-gray-100 focus:ring-2 focus:ring-[#E09F40] outline-none transition-all duration-200"
               />
             </div>
           </div>
         </div>
 
         <div className="bg-white p-8 rounded-3xl shadow-md">
-          <h2 className="text-2xl font-bold text-[#c19b5a] border-l-4 border-[#c19b5a] pl-4 mb-6">
+          <h2 className="text-2xl font-bold text-[#713722] border-l-4 border-[#713722] pl-4 mb-6">
             Order Summary
           </h2>
 
@@ -208,8 +216,8 @@ export default function CheckoutPage() {
               <p>₹ {total}</p>
             </div>
           </div>
-
-          <button className="mt-6 w-full bg-[#C19B3B] text-white py-3 rounded-full font-semibold hover:opacity-90 transition">
+ 
+          <button className="mt-6 py-3 rounded-md font-semibold cart-btn" type="Submit">
             process to pay
           </button>
         </div>

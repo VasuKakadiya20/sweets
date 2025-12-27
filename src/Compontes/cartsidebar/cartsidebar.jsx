@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import cartsvg from '../../assets/cart.svg'
+// import cartsvg from '../../assets/cart.svg'
+import cartsvg from '../../assets/truck.png'
 import { Link } from 'react-router-dom';
 import { Deletedata, fetchDataFromApi, updatedata } from '../../api';
 import toast, { Toaster } from 'react-hot-toast';
@@ -115,7 +116,7 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                                     </div>
                                 ))
                             )}
-                            <div className="flex items-center gap-2 text-xs mt-2">
+                            <div className="flex items-center gap-2 text-xs mt-2 ">
                                 <img src={cartsvg} alt="delivery" className="w-4" />
                                 <span>Delivered fresh in 2–3 days</span>
                             </div>
@@ -128,7 +129,7 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                                     <span>₹ {subtotal}</span>
                                 </div>
                                 <Link to="/Checkout">
-                                    <button className="w-full py-3 bg-[#c19b5a] text-white rounded-full font-medium" onClick={() => setopensidebar(false)}>
+                                    <button className="w-full py-3 rounded-md cart-btn" onClick={() => setopensidebar(false)}>
                                         Check out
                                     </button>
                                 </Link>

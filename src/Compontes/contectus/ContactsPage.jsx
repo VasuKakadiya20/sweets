@@ -69,7 +69,7 @@ export default function ContactsPage() {
               <FaEnvelope className="text-[#E09F40] text-xl" />
               <div>
                 <h4 className="font-semibold">Email</h4>
-                <p className="text-gray-600 text-sm">Info@Dairy.com</p>
+                <p className="text-gray-600 text-sm">Info@MarvelCrunch.com</p>
               </div>
             </div>
 
@@ -95,7 +95,6 @@ export default function ContactsPage() {
                 <Link to={"https://www.instagram.com/"}><FaInstagram className="text-lg" /></Link>
               </button>
             </div>
-
           </div>
 
         </div>

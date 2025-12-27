@@ -132,7 +132,7 @@ const CartPage = () => {
               Tax included. Shipping calculated at checkout.
             </p>
             <Link to='/checkout'>
-              <button className="mt-6 bg-[#C19B3B] text-white w-full py-3 rounded-full font-semibold transition hover:opacity-90">
+              <button className="mt-6 py-3 rounded-md font-semibold cart-btn">
                 CHECK OUT
               </button>
             </Link>

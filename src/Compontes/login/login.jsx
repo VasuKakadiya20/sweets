@@ -98,7 +98,7 @@ export default function AuthDialog({ open, setOpen }) {
             position: "absolute",
             right: 10,
             top: 10,
-            color: "#c19b5a",
+            color: "#E09F40",
             "&:hover": { color: "#a88747" },
           }}
         >
@@ -112,8 +112,8 @@ export default function AuthDialog({ open, setOpen }) {
             centered
             sx={{
               "& .MuiTab-root": { textTransform: "none", fontWeight: 600 },
-              "& .Mui-selected": { color: "#c19b5a !important" },
-              "& .MuiTabs-indicator": { backgroundColor: "#c19b5a" },
+              "& .Mui-selected": { color: "#E09F40 !important" },
+              "& .MuiTabs-indicator": { backgroundColor: "#E09F40" },
             }}
           >
             <Tab label="Login" />
@@ -144,7 +144,7 @@ export default function AuthDialog({ open, setOpen }) {
                   onChange={handleChange}
                   sx={{ "& .MuiOutlinedInput-root": { borderRadius: "10px" } }}
                 />
-                <Button
+                {/* <Button
                   variant="contained"
                   fullWidth
                   sx={{
@@ -154,6 +154,62 @@ export default function AuthDialog({ open, setOpen }) {
                     fontSize: "16px",
                     textTransform: "none",
                     "&:hover": { backgroundColor: "#a88747" },
+                  }}
+                  onClick={handleLogin}
+                  disabled={loading}
+                >
+                  {loading ? "Logging in..." : "Login"}
+                </Button> */}
+                <Button
+                  variant="contained"
+                  fullWidth
+                  sx={{
+                    position: "relative",
+                    overflow: "hidden",
+                    zIndex: 1,
+                    backgroundColor: "#E09F40",
+                    color: "#fff",
+                    fontWeight: 600,
+                    borderRadius: "10px",
+                    py: 1.2,
+                    fontSize: "16px",
+                    textTransform: "none",
+
+                    "&::before": {
+                      content: '""',
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: 0,
+                      height: "50%",
+                      backgroundColor: "#713722",
+                      transition: "width .3s cubic-bezier(.785,.135,.15,.86)",
+                      zIndex: -1
+                    },
+
+                    "&::after": {
+                      content: '""',
+                      position: "absolute",
+                      bottom: 0,
+                      right: 0,
+                      width: 0,
+                      height: "50%",
+                      backgroundColor: "#713722",
+                      transition: "width .3s cubic-bezier(.785,.135,.15,.86)",
+                      zIndex: -1
+                    },
+
+                    "&:hover": {
+                      backgroundColor: "#E09F40"
+                    },
+
+                    "&:hover::before": {
+                      width: "100%"
+                    },
+
+                    "&:hover::after": {
+                      width: "100%"
+                    }
                   }}
                   onClick={handleLogin}
                   disabled={loading}
@@ -211,7 +267,7 @@ export default function AuthDialog({ open, setOpen }) {
                   onChange={handleChange}
                   sx={{ "& .MuiOutlinedInput-root": { borderRadius: "10px" } }}
                 />
-                <Button
+                {/* <Button
                   variant="contained"
                   fullWidth
                   sx={{
@@ -221,6 +277,64 @@ export default function AuthDialog({ open, setOpen }) {
                     fontSize: "16px",
                     textTransform: "none",
                     "&:hover": { backgroundColor: "#a88747" },
+                  }}
+                  onClick={handleRegister}
+                  disabled={loading}
+                >
+                  {loading ? "Registering..." : "Register"}
+                </Button> */}
+                <Button
+                  variant="contained"
+                  fullWidth
+                  sx={{
+                    position: "relative",
+                    overflow: "hidden",
+                    zIndex: 1,
+                    backgroundColor: "#E09F40",
+                    color: "#fff",
+                    fontWeight: 600,
+                    borderRadius: "10px",
+                    py: 1.2,
+                    fontSize: "16px",
+                    textTransform: "none",
+
+                    "&::before": {
+                      content: '""',
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: 0,
+                      height: "50%",
+                      backgroundColor: "#713722",
+                      transition: "width .3s cubic-bezier(.785,.135,.15,.86)",
+                      zIndex: -1
+                    },
+
+                    "&::after": {
+                      content: '""',
+                      position: "absolute",
+                      bottom: 0,
+                      right: 0,
+                      width: 0,
+                      height: "50%",
+                      backgroundColor: "#713722",
+                      transition: "width .3s cubic-bezier(.785,.135,.15,.86)",
+                      zIndex: -1
+                    },
+
+                    "&:hover": {
+                      backgroundColor: "#E09F40"
+                    },
+
+                    "&:hover::before": {
+                      width: "100%"
+                    },
+
+                    "&:hover::after": {
+                      width: "100%"
+                    },
+
+                    "& *": { position: "relative", zIndex: 2 }
                   }}
                   onClick={handleRegister}
                   disabled={loading}
