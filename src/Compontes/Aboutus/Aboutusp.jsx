@@ -7,6 +7,7 @@ import Certifications from './Priority'
 import useScrollAnimation from '../useScrollAnimation'
 import AboutSectionHome from '../home/AboutSection'
 import CtaSection from '../home/order'
+import TestimonialSlider from './testimonials'
 
 function Aboutuspage() {
     useScrollAnimation();
@@ -93,6 +94,7 @@ function Aboutuspage() {
                 </section>
 
                 <CtaSection />
+                <TestimonialSlider/>
                 <Certifications />
             </div>
         </>
