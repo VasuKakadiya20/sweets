@@ -13,7 +13,7 @@ function Items() {
           <div className="breadcrumb">
             <a href="/" className="text-[#E09F40] font-bold text-sm">Home</a>
             <span className='font-bold text-sm text-white'>//</span>
-            <span className='font-bold text-sm text-white'>Items</span>
+            <span className='font-bold text-sm text-white'>Item</span>
           </div>
         </div>
       </div>

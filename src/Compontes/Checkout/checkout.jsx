@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { fetchDataFromApi, Deletedata } from "../../api";
+import { fetchDataFromApi, Deletedata, postData } from "../../api";
+import { useNavigate } from "react-router-dom";
 
 export default function CheckoutPage() {
   const [items, setItems] = useState([]);
+  const Navigate = useNavigate()
+  const userid = localStorage.getItem("username");
   const [form, setForm] = useState({
     Firstname: "",
     Lastname: "",
@@ -15,8 +18,6 @@ export default function CheckoutPage() {
     State: "",
     password: "*******",
   });
-
-  const userid = localStorage.getItem("username");
 
   useEffect(() => {
     fetchDataFromApi(`/Cart/`).then((res) => {
@@ -34,7 +35,6 @@ export default function CheckoutPage() {
     Deletedata(`/Cart/${_id}`).then((res) => {
       toast.success("Item Remove to Cart !")
       fetchDataFromApi(`/Cart/${userid}`).then((res) => {
-        console.log("this is a cart data:-", res)
         setItems(res)
       })
     })
@@ -52,10 +52,50 @@ export default function CheckoutPage() {
   const shippingCharge = 100;
   const total = subtotal + shippingCharge;
 
+  const placeOrder = async (e) => {
+    e.preventDefault();
+    try {
+      const orderData = {
+        userid,
+        Firstname: form.Firstname,
+        Lastname: form.Lastname,
+        Phonenumber: form.phonenumber,
+        Email: form.Email,
+        Landmark: form.Landmark,
+        Pin_code: form.Pin_Code,
+        City: form.City,
+        State: form.State,
+        Total: total,
+        Date: new Date().toISOString().split("T")[0],
+        Status: "Pending",
+        Payment_method: "Card",
+        items: userCartItems.map(item => ({
+          productId: item.productid,
+          name: item.producttitle,
+          price: item.price,
+          qty: item.qty,
+          image: item.itemimg,
+          subtotal: item.totalprice
+        }))
+      };
+
+      const res = await postData("/order/create", orderData);
+      toast.success("Order placed successfully!");
+      await Deletedata(`/Cart/rcart/${userid}`);
+      setTimeout(() => {
+        Navigate("/Order")
+      }, 2000)
+    } catch (error) {
+      console.error(error);
+      toast.error("Order failed. Try again!");
+    }
+  };
+
+
   return (
     <>
       <Toaster position="top-right" reverseOrder={false} />
-      <div className="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-10 font-sans">
+      <form className="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-10 font-sans" onSubmit={placeOrder}>
         <div className="bg-white p-8 rounded-3xl shadow-md">
           <h2 className="text-2xl font-bold text-[#713722] border-l-4 border-[#713722] pl-4 mb-6">
             Delivery Information
@@ -216,12 +256,12 @@ export default function CheckoutPage() {
               <p>₹ {total}</p>
             </div>
           </div>
- 
-          <button className="mt-6 py-3 rounded-md font-semibold cart-btn" type="Submit">
+
+          <button className="mt-6 py-3 rounded-md font-semibold cart-btn" type="Submit" >
             process to pay
           </button>
         </div>
-      </div>
+      </form>
     </>
   );
 }

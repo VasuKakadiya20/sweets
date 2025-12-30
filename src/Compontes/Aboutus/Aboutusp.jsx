@@ -16,11 +16,11 @@ function Aboutuspage() {
             <div className="contact-banner slideU">
                 <div className="overlay"></div>
                 <div className="content">
-                    <h1>About us</h1>
+                    <h1>About Us</h1>
                     <div className="breadcrumb">
                         <a href="/" className="text-[#E09F40] font-bold text-sm">Home</a>
                         <span className="font-bold text-sm text-white">//</span>
-                        <span className="font-bold text-sm text-white">About us</span>
+                        <span className="font-bold text-sm text-white">About Us</span>
                     </div>
                 </div>
             </div>
@@ -42,31 +42,6 @@ function Aboutuspage() {
 
                 <AboutSectionHome />
 
-                {/* <section className="w-full py-10 slideRight">
-                    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
-                        <div>
-                            <p className="text-2xl font-serif font-bold tracking-widest text-[#713722] mb-2 border-l-4 border-[#713722] pl-2">
-                                Quality that delights, In every bite.
-                            </p>
-                            <br />
-                            <p className="text-gray-600 md:text-lg mb-8 text-sm">
-                                At <b>Marvel Crunch</b>, we create chikki with passion, tradition, and precision.
-                                Our artisans combine time-honored methods with modern food science for the perfect crunch.
-                                Each batch is made in a hygienic, state-of-the-art facility to ensure freshness.
-                                We use only carefully selected peanuts, dry fruits, jaggery, and rich chocolate.
-                                No artificial shortcuts—just pure ingredients and authentic taste.
-                                Every bite delivers quality, crunch, and unforgettable flavor.
-                            </p>
-                        </div>
-                        <div className="relative">
-                            <img
-                                src={img1}
-                                alt="Chocolate"
-                                className="rounded-lg w-full object-cover shadow-md"
-                            />
-                        </div>
-                    </div>
-                </section> */}
 
                 <section className="w-full py-10 slideLeft">
                     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">

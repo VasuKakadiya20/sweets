@@ -12,6 +12,7 @@ import CartPage from "./page/cart/cart";
 import { createContext, useState } from "react";
 import UserProfile from "./page/user/user";
 import Checkoutp from "./page/Checkout/Checkoutp";
+import AllOrderList from "./page/order/order";
 
 const mycontext = createContext()
 
@@ -62,6 +63,10 @@ function App() {
             <Route
             path="/Checkout"
             element={islogin ? <Checkoutp /> : <Home/>}
+            />
+            <Route
+            path="/Order"
+            element={islogin ? <AllOrderList /> : <Home/>}
             />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

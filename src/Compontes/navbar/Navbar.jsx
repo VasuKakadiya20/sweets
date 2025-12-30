@@ -23,26 +23,36 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <span className="text-3xl"></span>
             <Link to="/">
-            <img src={Logo} alt="Logo" className="h-22 w-full"/>
+              <img src={Logo} alt="Logo" className="h-22 w-full" />
             </Link>
           </div>
 
           <ul className="hidden md:flex items-center gap-10 text-sm font-medium">
             <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
-              HOME
+              Home
             </NavLink>
 
             <NavLink to="/items" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
-              ITEMS
+              Item
             </NavLink>
 
             <NavLink to="/about" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
-              ABOUT US
+              About Us
             </NavLink>
 
             <NavLink to="/contect" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
-              CONTACTS
+              Contect Us
             </NavLink>
+
+            {context.islogin && (
+              <NavLink
+                to="/Order"
+                className={({ isActive }) => (isActive ? activeLink : normalLink)}
+              >
+               My Orders
+              </NavLink>
+            )}
+
           </ul>
 
           <div className="hidden md:flex items-center">
@@ -77,20 +87,31 @@ export default function Navbar() {
         {menuOpen && (
           <ul className="flex flex-col gap-4 mt-4 md:hidden text-lg font-medium ml-5 mb-4">
             <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
-              HOME
+              Home
             </NavLink>
 
             <NavLink to="/items" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
-              ITEMS
+              Item
             </NavLink>
 
             <NavLink to="/about" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
-              ABOUT US
+              About Us
             </NavLink>
 
             <NavLink to="/contect" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
-              CONTACTS
+              Contect Us
             </NavLink>
+
+            {context.islogin && (
+              <NavLink
+                to="/Order"
+                className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                onClick={() => setMenuOpen(false)}
+              >
+               My Orders
+              </NavLink>
+            )}
+
 
             <NavLink
               to={context.islogin ? "/userinfo" : "/login-placeholder"}
@@ -101,7 +122,7 @@ export default function Navbar() {
                 }
                 setMenuOpen(!menuOpen)
               }
-            }
+              }
               className={({ isActive }) =>
                 !context.islogin
                   ? normalLink
@@ -110,16 +131,16 @@ export default function Navbar() {
                     : normalLink
               }
             >
-              ACCOUNT
+              Account
             </NavLink>
 
             <NavLink to="/cart" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
-              CART
+              Cart
             </NavLink>
           </ul>
         )}
       </nav>
-      
+
       {
         context.islogin === false && (
           <AuthDialog open={openAuth} setOpen={setOpenAuth} />

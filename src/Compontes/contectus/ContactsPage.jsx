@@ -14,11 +14,11 @@ export default function ContactsPage() {
         <div className="overlay"></div>
         <div className="wave-top"></div>
         <div className="content">
-          <h1>Contacts</h1>
+          <h1>Contact Us</h1>
           <div className="breadcrumb">
             <a href="/" className="text-[#E09F40] font-bold text-sm">Home</a>
             <span className="font-bold text-sm text-white">//</span>
-            <span className="font-bold text-sm text-white">Contacts</span>
+            <span className="font-bold text-sm text-white">Contact Us</span>
           </div>
         </div>
       </div>
