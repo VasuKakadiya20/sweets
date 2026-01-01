@@ -65,6 +65,7 @@ export default function CheckoutPage() {
         Pin_code: form.Pin_Code,
         City: form.City,
         State: form.State,
+        shipping_Charge:shippingCharge,
         Total: total,
         Date: new Date().toISOString().split("T")[0],
         Status: "Pending",
