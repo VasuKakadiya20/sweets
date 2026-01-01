@@ -129,7 +129,7 @@ function ALLOrderlist() {
               </div>
             ))}
           </div>
-          <p className="text-end font-bold">shipping Charge : ₹ 100</p>
+          <p className="text-end font-bold">shipping Charge : ₹ {selectedOrder?.shipping_Charge}</p>
           <p className="mt-2 text-end font-bold">Total : ₹ {selectedOrder?.Total}</p>
 
         </DialogContent>
