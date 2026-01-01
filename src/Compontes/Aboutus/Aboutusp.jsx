@@ -1,7 +1,5 @@
 import React from 'react'
 import mainimg from '../../assets/Pattern_Banner_1.png'
-import img1 from '../../assets/Pattern_Banner_2.png'
-import img2 from '../../assets/about-us.png'
 import img3 from "../../assets/Contacts_Img.png"
 import Certifications from './Priority'
 import useScrollAnimation from '../useScrollAnimation'
@@ -26,13 +24,13 @@ function Aboutuspage() {
             </div>
 
             <div className='bg-[#F4F1EA]'>
-                  <section className="max-w-6xl mx-auto text-center py-12 px-6 slideU">
+                <section className="max-w-6xl mx-auto text-center py-12 px-6 slideU">
                     <h1 className="text-3xl md:text-4xl font-bold text-[#713722] mb-4 ">
-                        {/* Excellence in Every Crunch */}Taste the Crunch, Celebrate the Flavor
+                        Crunch with Joy, Taste the Tradition.
                     </h1>
                     <p className="text-gray-600 md:text-lg mb-8 text-sm">
-                        For years, <b>Marvel Crunch Chikki</b> has stood for authentic taste and premium craftsmanship. With carefully selected ingredients and perfected techniques, we’ve earned a reputation as a trusted high-quality chikki.
-                    </p>{/*and gift-worthy brand for delicious, */}
+                        At <b>Marvel Crunch Chikki</b>, we honor tradition with every bite. Crafted using premium ingredients and time-tested techniques, our chikkis deliver authentic taste, rich texture, and the trusted quality our customers love.
+                    </p>
                     <img
                         src={mainimg}
                         alt="sweets pattern"
@@ -41,7 +39,6 @@ function Aboutuspage() {
                 </section>
 
                 <AboutSectionHome />
-
 
                 <section className="w-full py-10 slideLeft">
                     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
@@ -58,18 +55,18 @@ function Aboutuspage() {
                             </p>
                             <br />
                             <h2 className="text-3xl font-serif font-bold text-gray-900 leading-snug mb-4">
-                                Premium Chikki,<br />
-                                Made for Everyone
+                                Authentic Chikki,<br />
+                                Rooted in Tradition
                             </h2>
                             <p className="text-gray-600 md:text-lg mb-8 text-sm">
-                                At <b>Marvel Crunch</b>, we believe true taste comes from purity and passion. We carefully select the finest peanuts, jaggery, and natural ingredients from across India to craft chikkis that are rich in flavour and irresistible in crunch. Because when ingredients are honest, every bite becomes a celebration.
+                                At <b>Marvel Crunch</b>, we believe great taste begins with sincerity and care. We source premium-quality peanuts, jaggery, and natural ingredients from trusted farms across India, ensuring every chikki is full of rich flavor and satisfying crunch. With honest ingredients and heartfelt craftsmanship, every bite is a moment of pure delight.
                             </p>
                         </div>
                     </div>
                 </section>
 
                 <CtaSection />
-                <TestimonialSlider/>
+                <TestimonialSlider />
                 <Certifications />
             </div>
         </>

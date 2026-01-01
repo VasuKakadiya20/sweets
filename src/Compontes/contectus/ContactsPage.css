@@ -45,11 +45,9 @@
 .breadcrumb a {
   color: #E09F40;
   text-decoration: none;
-  /* text-transform: uppercase; */
 }
 
 .breadcrumb span {
-  /* text-transform: uppercase; */
   color: #cfcfcf;
 }
 

@@ -33,7 +33,6 @@ export default function AuthDialog({ open, setOpen }) {
   });
 
   const handleClose = () => setOpen(false);
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -144,22 +143,6 @@ export default function AuthDialog({ open, setOpen }) {
                   onChange={handleChange}
                   sx={{ "& .MuiOutlinedInput-root": { borderRadius: "10px" } }}
                 />
-                {/* <Button
-                  variant="contained"
-                  fullWidth
-                  sx={{
-                    backgroundColor: "#c19b5a",
-                    borderRadius: "10px",
-                    py: 1.2,
-                    fontSize: "16px",
-                    textTransform: "none",
-                    "&:hover": { backgroundColor: "#a88747" },
-                  }}
-                  onClick={handleLogin}
-                  disabled={loading}
-                >
-                  {loading ? "Logging in..." : "Login"}
-                </Button> */}
                 <Button
                   variant="contained"
                   fullWidth
@@ -267,22 +250,6 @@ export default function AuthDialog({ open, setOpen }) {
                   onChange={handleChange}
                   sx={{ "& .MuiOutlinedInput-root": { borderRadius: "10px" } }}
                 />
-                {/* <Button
-                  variant="contained"
-                  fullWidth
-                  sx={{
-                    backgroundColor: "#c19b5a",
-                    borderRadius: "10px",
-                    py: 1.2,
-                    fontSize: "16px",
-                    textTransform: "none",
-                    "&:hover": { backgroundColor: "#a88747" },
-                  }}
-                  onClick={handleRegister}
-                  disabled={loading}
-                >
-                  {loading ? "Registering..." : "Register"}
-                </Button> */}
                 <Button
                   variant="contained"
                   fullWidth

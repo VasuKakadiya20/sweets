@@ -10,7 +10,6 @@ import "./BestSellingDishes.css"
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
-
 export default function BestSellingDishes() {
   const [product, setProduct] = useState([]);
   const [quantity, setQuantity] = useState({});
@@ -91,13 +90,12 @@ export default function BestSellingDishes() {
           />
           <div className="text-center mb-14">
             <div className="text-[#E09F40] font-bold tracking-widest mb-2 text-[16px]">
-              POPULAR ITEM
+              MARVEL CRUNCH COLLECTION
             </div>
-            <h2 className="text-[40px] font-bold text-[#713722] mb-5 leading-tight max-lg:text-[32px]">
-              Best Selling Item
+            <h2 className="text-[35px] font-bold text-[#713722] mb-5 leading-tight max-lg:text-[32px]">
+              All Chikki Varieties Available
             </h2>
           </div>
-
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {randomTen.map((item, i) => (
@@ -109,7 +107,7 @@ export default function BestSellingDishes() {
                   <FaShoppingBag />
                 </button>
 
-                <Link to={`/items/${item._id}`}>
+                <Link to={`/Chikki/${item._id}`}>
                   <div className="relative z-20 p-6 flex justify-center">
                     <img
                       src={item.images[0]}
@@ -122,21 +120,6 @@ export default function BestSellingDishes() {
                 <div className="relative z-20 text-center pb-6 px-4">
                   <h3 className="text-lg font-bold mb-1 text-[#713722] group-hover:text-white">{item.itemtitle}</h3>
                   <span className="font-bold text-lg text-[#E09F40] group-hover:text-white price">₹ {item.price}</span>
-                  {/* <div className="px-4 flex items-center border-1 border-gray-300 rounded-full">
-                    <button
-                      className="px-3 py-2 text-lg hover:text-[#E09F40] transition-colors add"
-                      onClick={() => updateQty(item._id, -1)}
-                    >
-                      −
-                    </button>
-                    <span className="px-4 py-2 add">{quantity[item._id] || 1}</span>
-                    <button
-                      className="px-3 py-2 text-lg hover:text-[#E09F40] transition-colors add"
-                      onClick={() => updateQty(item._id, 1)}
-                    >
-                      +
-                    </button>
-                  </div> */}
                   <div className="mt-3 flex justify-center">
                     <div className="flex items-center gap-4 border border-gray-300 rounded-full px-6 sm:px-8 py-2.5  w-48 sm:w-56 ">
 
@@ -157,7 +140,6 @@ export default function BestSellingDishes() {
                       >
                         +
                       </button>
-
                     </div>
                   </div>
                 </div>
@@ -166,12 +148,11 @@ export default function BestSellingDishes() {
           </div>
 
           <button className="px-8 py-3 rounded-md btn-viewall">
-            <a href="/items">
-              View All Item <FaArrowRight />
+            <a href="/Chikki">
+              View All Chikki <FaArrowRight />
             </a>
           </button>
 
-          
         </div>
       </section>
     </>

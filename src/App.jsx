@@ -13,7 +13,6 @@ import { createContext, useState } from "react";
 import UserProfile from "./page/user/user";
 import Checkoutp from "./page/Checkout/Checkoutp";
 import AllOrderList from "./page/order/order";
-
 const mycontext = createContext()
 
 function App() {
@@ -37,11 +36,11 @@ function App() {
               element={<Home />}
             />
             <Route
-              path="/items"
+              path="/Chikki"
               element={<Items />}
             />
              <Route 
-            path="/items/:id"
+            path="/Chikki/:id"
             element={<Detailpage/>}
             />
             <Route

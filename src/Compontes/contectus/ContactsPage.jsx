@@ -25,7 +25,7 @@ export default function ContactsPage() {
 
       <section className="w-full py-20 bg-[#F4F1EA]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 slideU">
-          
+
           <div className="relative">
             <img
               src={contectimg}
@@ -40,28 +40,30 @@ export default function ContactsPage() {
             </p>
 
             <h2 className="text-3xl font-serif font-bold text-gray-900 leading-snug mb-4">
-              NEED TREATS? GET IN<br />
-              TOUCH WITH US
+              Let’s Connect<br />
+              With Marvel Crunch
             </h2>
 
             <p className="text-gray-600 mb-8">
-              Get in touch to discuss your employee wellbeing needs today.
-              Please give us a call, drop us an email.
+              Get in touch to place an order, discuss custom gift boxes, Call us, drop us an email, or visit us — we’d love to 
+              hear from you.
             </p>
 
-            <div className="flex items-start gap-4 mb-5 transition-transform duration-300 ">
+            <div className="flex items-start gap-4 mb-4 transition-transform duration-300 ">
               <FaMapMarkerAlt className="text-[#E09F40] text-xl" />
               <div>
                 <h4 className="font-semibold">Location</h4>
-                <p className="text-gray-600 text-sm"> 34 Gandhi Road,Surat.</p>
+                <p className="text-gray-600 text-sm mt-2"> Plot No. 133, Shreeji Textile<br />
+                  Velenja Sayan Road, Nr. Ramvatika<br />
+                  Velenja – 394150</p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 mb-5">
+            <div className="flex items-start gap-4 mb-4">
               <FaPhoneAlt className="text-[#E09F40] text-xl" />
               <div>
                 <h4 className="font-semibold">Phone</h4>
-                <p className="text-gray-600 text-sm"> +91 99461 37919</p>
+                <p className="text-gray-600 text-sm mt-2"> +91 99461 37919</p>
               </div>
             </div>
 
@@ -69,7 +71,7 @@ export default function ContactsPage() {
               <FaEnvelope className="text-[#E09F40] text-xl" />
               <div>
                 <h4 className="font-semibold">Email</h4>
-                <p className="text-gray-600 text-sm">Info@MarvelCrunch.com</p>
+                <p className="text-gray-600 text-sm mt-2">Info@MarvelCrunch.com</p>
               </div>
             </div>
 

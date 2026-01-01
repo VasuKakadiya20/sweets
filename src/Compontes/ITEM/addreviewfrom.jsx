@@ -6,13 +6,13 @@ import { postData } from "../../api";
 function Addreviewfrom({ showfrom, setshowfrom, onReviewAdded }) {
     const todaydate = new Date().toISOString().split("T")[0];
     const userid = localStorage.getItem("username")
+    const [rating, setRating] = useState(4);
     const [form, setForm] = useState({
         Name: "",
         Email: "",
         Review_Title: "",
         Review_msg: ""
     });
-    const [rating, setRating] = useState(4);
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };

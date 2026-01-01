@@ -21,7 +21,6 @@ function Reviewsection() {
 
   const totalReviews = clientreview.length;
   const avgRating = clientreview.reduce((sum, r) => sum + r.Rating, 0) / totalReviews;
-
   const starCounts = {
     5: 0,
     4: 0,
@@ -38,7 +37,6 @@ function Reviewsection() {
   const starData = [5, 4, 3, 2, 1].map((star) => {
     const count = starCounts[star];
     const percent = totalReviews ? (count / totalReviews) * 100 : 0;
-
     return { star, count, percent: Math.round(percent) };
   });
 

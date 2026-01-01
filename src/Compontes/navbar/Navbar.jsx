@@ -32,8 +32,8 @@ export default function Navbar() {
               Home
             </NavLink>
 
-            <NavLink to="/items" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
-              Item
+            <NavLink to="/Chikki" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+              Chikki
             </NavLink>
 
             <NavLink to="/about" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
@@ -90,8 +90,8 @@ export default function Navbar() {
               Home
             </NavLink>
 
-            <NavLink to="/items" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
-              Item
+            <NavLink to="/Chikki" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>
+              Chikki
             </NavLink>
 
             <NavLink to="/about" className={({ isActive }) => (isActive ? activeLink : normalLink)} onClick={() => setMenuOpen(!menuOpen)}>

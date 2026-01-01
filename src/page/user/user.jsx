@@ -67,10 +67,10 @@ export default function UserProfile() {
             <div className="max-w-3xl mx-auto shadow-xl p-10 rounded-3xl mt-10 mb-10">
                 <div className="flex justify-between items-center mb-8 gap-2">
                     <h2 className="text-2xl font-bold text-[#713722] border-l-4 border-[#713722] pl-4">Your Profile</h2>
-                    <div className="">
+                    <div className="flex">
                         <button
                             onClick={() => logout()}
-                            className="px-5 py-2 bg-[#E09F40] text-white rounded-md hover:bg-[#cf8f32] mr-3 gap-2"
+                            className="px-5 py-2  text-white rounded-md hover:bg-[#cf8f32] mr-3 gap-2 btn-viewall"
                         >
                             <FaSignOutAlt className="mr-2 text-base" />
                             Logout
@@ -78,7 +78,7 @@ export default function UserProfile() {
                         {!editing && (
                             <button
                                 onClick={() => setEditing(true)}
-                                className="px-5 py-2 bg-[#E09F40] text-white rounded-md hover:bg-[#cf8f32] mt-2"
+                                className="px-5 py-2 bg-[#E09F40] text-white rounded-md hover:bg-[#cf8f32] btn-viewall"
                             >
                                 Edit
                             </button>
@@ -261,7 +261,7 @@ export default function UserProfile() {
                         <div className="flex gap-4 md:col-span-2 justify-center mt-4 ml-[50%]">
                             <button
                                 onClick={handleSave}
-                                className="px-8 py-3 bg-[#E09F40] text-white rounded-md hover:bg-[#cf8f32]"
+                                className="px-8 py-3 bg-[#E09F40] text-white rounded-md hover:bg-[#cf8f32] theme-btn"
                             >
                                 Save
                             </button>

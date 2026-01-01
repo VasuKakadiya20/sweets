@@ -59,7 +59,7 @@ function Itemdetailpage() {
         <div className="flex flex-col items-center gap-4">
           <div className="w-12 h-12 border-4 border-[#E09F40] border-t-transparent rounded-full animate-spin"></div>
           <p className="text-[#E09F40] font-semibold tracking-wide">
-            Loading product...
+            Just a moment — loading...
           </p>
         </div>
       </div>
@@ -76,7 +76,7 @@ function Itemdetailpage() {
           <img
             src={activeImage}
             alt={product.itemtitle}
-            className="w-full h-96 md:h-[500px] object-cover rounded-lg shadow-md transition-all"
+            className="w-full h-96 md:h-[500px] object-cover rounded-lg shadow-md transition-all bg-white"
           />
 
           <div className="flex gap-4 mt-4">

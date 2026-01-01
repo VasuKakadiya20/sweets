@@ -38,20 +38,14 @@ export default function CtaSection() {
         </h6>
 
         <h3 className="text-white text-4xl md:text-5xl font-bold mt-3 animate-fade-up delay-150">
-         TODAY'S DELICIOUS CHIKKI  
+         Fresh Chikki of the Day 
         </h3>
 
         <p className="text-gray-300 mt-3 animate-fade-up delay-300 mb-3">
-           Limited Stock – Grab Yours Now!
+           Limited Stock — Don’t Miss Out!
         </p>
 
-       {/* <a
-            href="/items"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-[#E09F40] text-white font-semibold rounded-md hover:bg-[#cf8f32] transition"
-          >
-            ORDER NOW <FaArrowRight/>
-        </a> */}
-         <a href="/items" className="theme-btn">
+         <a href="/Chikki" className="theme-btn">
           ORDER NOW <FaArrowRight />
         </a>
       </div>

@@ -55,7 +55,6 @@ const CartPage = () => {
   };
 
   const userCartItems = items.filter(item => item.userid === userid);
-
   const subtotal = userCartItems.reduce((sum, item) => sum + item.qty * item.price, 0);
 
   return (
@@ -63,7 +62,7 @@ const CartPage = () => {
       <Toaster position="top-right" reverseOrder={false} />
       <div className="max-w-7xl mx-auto px-4 py-10 font-sans">
         <div className="hidden md:grid grid-cols-4 font-medium text-gray-600 pb-4 border-b">
-          <p>Product</p>
+          <p>Items</p>
           <p className="text-center">Price</p>
           <p className="text-center">Quantity</p>
           <p className="text-right">Total</p>
@@ -75,7 +74,7 @@ const CartPage = () => {
             className="grid grid-cols-2 md:grid-cols-4 py-6 border-b gap-4 md:items-center"
           >
             <div className="flex gap-4 items-start">
-              <Link to={`/items/${item.itemid}`}>
+              <Link to={`/Chikki/${item.itemid}`}>
                 <img
                   src={item.itemimg}
                   alt={item.producttitle}

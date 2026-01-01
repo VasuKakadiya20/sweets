@@ -91,7 +91,6 @@ export default function CheckoutPage() {
     }
   };
 
-
   return (
     <>
       <Toaster position="top-right" reverseOrder={false} />

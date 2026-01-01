@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import cartsvg from '../../assets/cart.svg'
 import cartsvg from '../../assets/truck.png'
 import { Link } from 'react-router-dom';
 import { Deletedata, fetchDataFromApi, updatedata } from '../../api';
@@ -9,10 +8,12 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
     const [cartItems, setCartItems] = useState([]);
     const userid = localStorage.getItem('username')
     useEffect(() => {
-        fetchDataFromApi(`/Cart/`).then((res) => {
-            setCartItems(res)
-        })
-    }, [])
+       if (opensidebar) {
+    fetchDataFromApi(`/Cart/${userid}`).then((res) => {
+      setCartItems(res);
+    });
+  }
+    }, [opensidebar,userid])
 
     const updateQty = async (_id, type) => {
         const updatedItems = cartItems.map((item) =>
@@ -86,7 +87,7 @@ function Cartsidebar({ opensidebar, setopensidebar, }) {
                             ) : (
                                 userCartItems.map((item, index) => (
                                     <div key={index} className="mb-6 flex gap-4">
-                                        <Link to={`/items/${item.itemid}`} onClick={()=> setopensidebar(false)}>
+                                        <Link to={`/Chikki/${item.itemid}`} onClick={()=> setopensidebar(false)}>
                                             <img src={item.itemimg} alt={item.producttitle} className="w-20 h-20 border" />
                                         </Link>
                                         <div className="flex flex-col flex-1">

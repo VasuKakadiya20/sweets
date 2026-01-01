@@ -1,6 +1,5 @@
 .sellingcar:hover {
   background-color: #0B1A27;
-  /* transform: translateY(-8px); */
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
 }
 
@@ -122,28 +121,12 @@
 
 .floating-shape4 {
   position: absolute;
-  bottom: 60px;
+  bottom: 20px;
   right: 30px;
    width: 180px;
   z-index: 1;
   pointer-events: none;
 }
-
-
-
-/* .btn-viewall{
-  background: #E09F40;
-} */
-
-/* .btn-viewall {
-  display: block;
-  margin: 40px auto 0;
-  background-color: #E09F40;
-  color: #ffffff;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  cursor: pointer;
-} */
 
 .btn-viewall {
   position: relative;
@@ -172,13 +155,12 @@
   z-index: -1;
 }
 
-/* Bottom half - right to left */
 .btn-viewall::after {
   content: "";
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 0;       /* start with 0 width */
+  width: 0;     
   height: 50%;   
   background-color: #713722; 
   transition: width 0.3s cubic-bezier(.785, .135, .15, .86);
